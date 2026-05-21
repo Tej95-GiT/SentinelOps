@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="ebc3bc803b41c310982a9dc643e45ad8" label="Release Gate" max_length="40" name="x_1858206_sentin_0_release_gate" type="collection">
+        <element label="Tech Debt Score" max_length="40" name="tech_debt_score" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" default="draft" label="State" max_length="255" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="draft"/>
+                <element inactive_on_update="false" label="In Review" sequence="1" value="in_review"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+            </choice>
+        </element>
+        <element label="Target Go-Live" max_length="40" name="target_go_live" type="glide_date_time"/>
+        <element label="Release Name" max_length="100" name="release_name" type="string"/>
+    </element>
+</database>
