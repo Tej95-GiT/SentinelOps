@@ -4,13 +4,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>782ea0213b4d8f10982a9dc643e45abb</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>497383253b010350982a9dc643e45afb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>assigned_to</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>342ea0213b4d8f10982a9dc643e45abc</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>057383253b010350982a9dc643e45afc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>cmdb_ci</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>fc2ea0213b4d8f10982a9dc643e45abc</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>cd7383253b010350982a9dc643e45afc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,195 +46,265 @@
             <element>target_environment</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>b82ea0213b4d8f10982a9dc643e45abd</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>897383253b010350982a9dc643e45afd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>active</element>
-            <position>4</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>742ea0213b4d8f10982a9dc643e45abe</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>5</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>302ea0213b4d8f10982a9dc643e45abf</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>priority</element>
-            <position>6</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>f82ea0213b4d8f10982a9dc643e45abf</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>assessment_type</element>
-            <position>7</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>b42ea0213b4d8f10982a9dc643e45ac0</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>policy</element>
-            <position>8</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>702ea0213b4d8f10982a9dc643e45ac1</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>service_ci</element>
-            <position>9</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>3c2ea0213b4d8f10982a9dc643e45ac1</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>state</element>
-            <position>10</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>f42ea0213b4d8f10982a9dc643e45ac2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>parent</element>
-            <position>11</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>b02ea0213b4d8f10982a9dc643e45ac3</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>457383253b010350982a9dc643e45afe</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>017383253b010350982a9dc643e45aff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>c97383253b010350982a9dc643e45aff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>policy</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>8573c3253b010350982a9dc643e45a00</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>8573c3253b010350982a9dc643e45a26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assessment_type</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>4173c3253b010350982a9dc643e45a27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>service_ci</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>0d73c3253b010350982a9dc643e45a27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>c573c3253b010350982a9dc643e45a28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>readiness_score</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>8173c3253b010350982a9dc643e45a29</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pass_threshold</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>4d73c3253b010350982a9dc643e45a29</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gate_result</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>0973c3253b010350982a9dc643e45a2a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>12</position>
+            <position>15</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>7c2ea0213b4d8f10982a9dc643e45ac3</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>c173c3253b010350982a9dc643e45a2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>short_description</element>
-            <position>13</position>
+            <position>16</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>382ea0213b4d8f10982a9dc643e45ac4</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>8d73c3253b010350982a9dc643e45a2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>description</element>
-            <position>14</position>
+            <position>17</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>f02ea0213b4d8f10982a9dc643e45ac5</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>4973c3253b010350982a9dc643e45a2c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>work_notes</element>
-            <position>15</position>
+            <position>18</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>bc2ea0213b4d8f10982a9dc643e45ac5</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>0573c3253b010350982a9dc643e45a2d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>risk_tier</element>
-            <position>16</position>
+            <position>19</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 01:27:32</sys_created_on>
-            <sys_id>782ea0213b4d8f10982a9dc643e45ac6</sys_id>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>cd73c3253b010350982a9dc643e45a2d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 01:27:32</sys_updated_on>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>criteria_total</element>
+            <position>20</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>8973c3253b010350982a9dc643e45a2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>criteria_passed</element>
+            <position>21</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-24 12:19:55</sys_created_on>
+            <sys_id>4573c3253b010350982a9dc643e45a2f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1858206_sentin_0_readiness_assessment" sys_domain="global" view="Default view">f2c694193b890f10982a9dc643e45aba</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-24 12:19:55</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -7,7 +7,9 @@
                 <element inactive_on_update="false" label="Pass" value="pass"/>
             </choice>
         </element>
+        <element label="Pass Threshold" max_length="40" name="pass_threshold" type="integer"/>
         <element label="Readiness Score" max_length="40" name="readiness_score" type="integer"/>
+        <element label="Criteria Passed" max_length="40" name="criteria_passed" type="integer"/>
         <element label="Service CI" max_length="32" name="service_ci" reference="cmdb_ci_service" type="reference"/>
         <element choice="1" label="Assessment Type" max_length="40" name="assessment_type" type="choice">
             <choice>
@@ -17,6 +19,7 @@
             </choice>
         </element>
         <element label="Policy" max_length="32" name="policy" reference="x_1858206_sentin_0_readiness_policy" type="reference"/>
+        <element label="Criteria Total" max_length="40" name="criteria_total" type="integer"/>
         <element choice="1" label="Target Environment " max_length="40" name="target_environment" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Staging" value="staging"/>

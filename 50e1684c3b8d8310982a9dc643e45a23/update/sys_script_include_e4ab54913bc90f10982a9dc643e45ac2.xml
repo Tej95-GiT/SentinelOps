@@ -16,37 +16,47 @@ ReadinessScorer.prototype = {
 
     calculateScore: function(assessmentSysId) {
 
-        var totalWeight = 0;
-        var earnedWeight = 0;
-        var mandatoryFailure = false;
+        gs.info('SCORER INPUT: ' + assessmentSysId);
 
         var gr = new GlideRecord('x_1858206_sentin_0_checklist_result');
-        gr.addQuery('assessment', assessmentSysId);
+
+        gr.addQuery('assessment', assessmentSysId.toString());
         gr.query();
+
+        var total = 0;
+        var passed = 0;
+        var mandatoryFail = false;
 
         while (gr.next()) {
 
-            var weight = parseInt(gr.weight, 10) || 0;
-            totalWeight += weight;
+            total++;
 
-            if (gr.result == 'pass') {
-                earnedWeight += weight;
+            var result = gr.result + '';
+
+            gs.info('FOUND RESULT: ' + result);
+
+            if (result == 'pass') {
+                passed++;
             }
 
-            if (gr.is_mandatory == true && gr.result == 'fail') {
-                mandatoryFailure = true;
+            if (gr.mandatory == true && result != 'pass') {
+                mandatoryFail = true;
             }
         }
 
-        var score = 0;
+        var score = (total == 0) ? 0 : Math.round((passed / total) * 100);
 
-        if (totalWeight > 0) {
-            score = Math.round((earnedWeight / totalWeight) * 100);
+        var gate = 'fail';
+
+        if (!mandatoryFail && score >= 70) {
+            gate = 'pass';
         }
 
         return {
             score: score,
-            mandatory_failure: mandatoryFailure
+            passed: passed,
+            total: total,
+            gate: gate
         };
     },
 
@@ -56,13 +66,13 @@ ReadinessScorer.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-23 05:29:54</sys_created_on>
         <sys_id>e4ab54913bc90f10982a9dc643e45ac2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>ReadinessScorer</sys_name>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_script_include_e4ab54913bc90f10982a9dc643e45ac2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-23 05:29:54</sys_updated_on>
+        <sys_updated_on>2026-05-24 11:11:18</sys_updated_on>
     </sys_script_include>
 </record_update>

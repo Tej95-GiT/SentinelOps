@@ -29,25 +29,26 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous) {
 
+    gs.info('BR RUNNING');
+
     if (!current.assessment)
         return;
 
     var scorer = new ReadinessScorer();
     var result = scorer.calculateScore(current.assessment);
 
-    var assessmentGR = new GlideRecord('x_1858206_sentin_0_assessment');
+    var assessmentGR = new GlideRecord('x_1858206_sentin_0_readiness_assessment');
 
     if (assessmentGR.get(current.assessment)) {
 
+        assessmentGR.criteria_total = result.total;
+        assessmentGR.criteria_passed = result.passed;
         assessmentGR.readiness_score = result.score;
-
-        if (result.mandatory_failure || result.score < assessmentGR.pass_threshold) {
-            assessmentGR.gate_result = 'fail';
-        } else {
-            assessmentGR.gate_result = 'pass';
-        }
+        assessmentGR.gate_result = result.gate;
 
         assessmentGR.update();
+
+		gs.info('ASSESSMENT UPDATED');
     }
 
 })(current, previous);]]></script>
@@ -57,7 +58,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c34d50953bc90f10982a9dc643e45afd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Calculate Readiness Score</sys_name>
         <sys_overrides/>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
@@ -65,7 +66,7 @@
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_script_c34d50953bc90f10982a9dc643e45afd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-23 06:01:33</sys_updated_on>
+        <sys_updated_on>2026-05-24 12:06:28</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
