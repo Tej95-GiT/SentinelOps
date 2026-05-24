@@ -9,12 +9,29 @@ Commit references follow the format `[Phase X.Y]`.
 ## [Unreleased]
 
 ### Planned
-- Phase 2: ACL security layer
 - Phase 3: Script Includes and Business Rules
 - Phase 4: Flow Designer orchestration
 - Phase 5: Dashboards and Reports
 - Phase 6: ATF full test suite
 - Phase 7: Demo polish and documentation
+
+---
+
+## [Phase 2] — In Progress
+
+### Added
+- `docs/security-model.md` — Full Phase 2 ACL implementation guide:
+  - Table ACL matrix (4 tables × 3 roles)
+  - ACL creation order (Blocks A–D + Field ACLs F1–F6)
+  - ServiceNow navigation paths
+  - ACL condition scripts for ownership restriction
+  - Field-level ACL list for computed fields
+  - Impersonation validation checklist (22 scenarios)
+  - Scoped app pitfall reference table
+- `src/acl-scripts/assessorRead.js` — Assessment read condition script
+- `src/acl-scripts/assessorWrite.js` — Assessment write condition script
+- `src/acl-scripts/checklistRead.js` — Checklist result read condition script
+- `src/acl-scripts/checklistWrite.js` — Checklist result write condition script
 
 ---
 
