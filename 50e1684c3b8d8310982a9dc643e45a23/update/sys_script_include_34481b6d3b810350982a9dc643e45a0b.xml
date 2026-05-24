@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1858206_sentin_0.ChecklistGenerator</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ChecklistGenerator</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ChecklistGenerator = Class.create();
+ChecklistGenerator.prototype = {
+
+    initialize: function() {},
+
+    generateFromPolicy: function(assessmentGR) {
+
+        if (!assessmentGR.policy)
+            return;
+
+        var existing = new GlideRecord('x_1858206_sentin_0_checklist_result');
+
+        existing.addQuery('assessment', assessmentGR.getUniqueValue());
+        existing.setLimit(1);
+        existing.query();
+
+        if (existing.hasNext()) {
+            return;
+        }
+
+        var criteriaGR = new GlideRecord('x_1858206_sentin_0_policy_criteria');
+
+        criteriaGR.addQuery('policy', assessmentGR.policy);
+        criteriaGR.addQuery('active', true);
+        criteriaGR.query();
+
+        while (criteriaGR.next()) {
+
+            var checklistGR = new GlideRecord('x_1858206_sentin_0_checklist_result');
+
+            checklistGR.initialize();
+
+            checklistGR.assessment = assessmentGR.sys_id;
+            checklistGR.criteria = criteriaGR.sys_id;
+            checklistGR.mandatory = criteriaGR.mandatory;
+            checklistGR.weight = criteriaGR.weight;
+            checklistGR.result = 'pending';
+
+            checklistGR.insert();
+        }
+    },
+
+    type: 'ChecklistGenerator'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-24 13:51:27</sys_created_on>
+        <sys_id>34481b6d3b810350982a9dc643e45a0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ChecklistGenerator</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_script_include_34481b6d3b810350982a9dc643e45a0b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-24 13:51:27</sys_updated_on>
+    </sys_script_include>
+</record_update>
