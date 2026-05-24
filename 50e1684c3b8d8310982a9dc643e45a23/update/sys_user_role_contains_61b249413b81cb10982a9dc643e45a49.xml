@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_1858206_sentin_0.assessor" name="x_1858206_sentin_0.assessor">7a0578c53b01cb10982a9dc643e45af9</contains>
+        <role display_value="x_1858206_sentin_0.admin" name="x_1858206_sentin_0.admin">60e1684c3b8d8310982a9dc643e45a5f</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-22 13:40:28</sys_created_on>
+        <sys_id>61b249413b81cb10982a9dc643e45a49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1858206_sentin_0.assessor.x_1858206_sentin_0.admin</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_user_role_contains_61b249413b81cb10982a9dc643e45a49</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-22 13:40:28</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

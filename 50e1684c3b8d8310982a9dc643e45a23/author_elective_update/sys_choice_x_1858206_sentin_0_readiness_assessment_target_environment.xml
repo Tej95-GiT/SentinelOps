@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="target_environment" table="x_1858206_sentin_0_readiness_assessment" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>target_environment</element>
+            <name>x_1858206_sentin_0_readiness_assessment</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-23 04:53:58</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>target_environment</sys_name>
+            <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+            <sys_update_name>sys_choice_x_1858206_sentin_0_readiness_assessment_target_environment</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-23 04:53:58</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>target_environment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Disaster Recovery</label>
+            <language>en</language>
+            <name>x_1858206_sentin_0_readiness_assessment</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-23 04:54:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-23 11:39:20</sys_updated_on>
+            <value>disaster_recovery</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>target_environment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Production</label>
+            <language>en</language>
+            <name>x_1858206_sentin_0_readiness_assessment</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-23 04:53:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-23 11:39:43</sys_updated_on>
+            <value>production</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>target_environment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Staging</label>
+            <language>en</language>
+            <name>x_1858206_sentin_0_readiness_assessment</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-23 04:54:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-23 11:39:33</sys_updated_on>
+            <value>staging</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

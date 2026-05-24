@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="6053cd813b81cb10982a9dc643e45a93" label="Readiness Policy" max_length="40" name="x_1858206_sentin_0_readiness_policy" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
+        <element label="Pass threshold" max_length="40" name="pass_threshold" type="integer"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element choice="1" label="Service Type" max_length="40" name="service_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Business Service" value="business_service"/>
+                <element inactive_on_update="false" label="Application Service" value="application_service"/>
+                <element inactive_on_update="false" label="Infrastructure Service" value="Infrastructure_service"/>
+                <element inactive_on_update="false" label="Technical Service" value="technical_service"/>
+            </choice>
+        </element>
+        <element label="Version" max_length="40" name="version" type="integer"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <index name="index">
+            <element name="owner"/>
+        </index>
+    </element>
+</database>

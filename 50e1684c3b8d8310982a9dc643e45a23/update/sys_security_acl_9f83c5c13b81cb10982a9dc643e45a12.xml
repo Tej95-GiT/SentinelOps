@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for records in x_1858206_sentin_0_readiness_policy, for users with role x_1858206_sentin_0.readiness_policy_user.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_1858206_sentin_0_readiness_policy</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-22 13:44:08</sys_created_on>
+        <sys_id>9f83c5c13b81cb10982a9dc643e45a12</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1858206_sentin_0_readiness_policy</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_security_acl_9f83c5c13b81cb10982a9dc643e45a12</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-22 13:44:11</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="941288593b450f10982a9dc643e45a32" extends="task" label="Readiness Assessment" max_length="40" name="x_1858206_sentin_0_readiness_assessment" type="collection">
+        <element choice="1" label="Gate Result" max_length="40" name="gate_result" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" value="pending"/>
+                <element inactive_on_update="false" label="Fail" value="fail"/>
+                <element inactive_on_update="false" label="Pass" value="pass"/>
+            </choice>
+        </element>
+        <element label="Readiness Score" max_length="40" name="readiness_score" type="integer"/>
+        <element label="Service CI" max_length="32" name="service_ci" reference="cmdb_ci_service" type="reference"/>
+        <element choice="1" label="Assessment Type" max_length="40" name="assessment_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Major Change" value="major_change"/>
+                <element inactive_on_update="false" label="Reassessment" value="reassessment"/>
+                <element inactive_on_update="false" label="New Service" value="new_service"/>
+            </choice>
+        </element>
+        <element label="Policy" max_length="32" name="policy" reference="x_1858206_sentin_0_readiness_policy" type="reference"/>
+        <element choice="1" label="Target Environment " max_length="40" name="target_environment" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Staging" value="staging"/>
+                <element inactive_on_update="false" label="Production" value="production"/>
+                <element inactive_on_update="false" label="Disaster Recovery" value="disaster_recovery"/>
+            </choice>
+        </element>
+        <element choice="1" label="Risk Tier" max_length="40" name="risk_tier" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" value="high"/>
+                <element inactive_on_update="false" label="Low" value="low"/>
+                <element inactive_on_update="false" label="Critical" value="critical"/>
+                <element inactive_on_update="false" label="Medium" value="medium"/>
+            </choice>
+        </element>
+    </element>
+</database>

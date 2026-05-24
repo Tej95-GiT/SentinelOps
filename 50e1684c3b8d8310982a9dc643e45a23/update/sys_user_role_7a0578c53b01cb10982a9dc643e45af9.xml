@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>87bxVvuZRvSuUG2PfYrH40gWNz3sKDTptxGSYonphb0=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1858206_sentin_0.assessor</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>assessor</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-22 12:40:55</sys_created_on>
+        <sys_id>7a0578c53b01cb10982a9dc643e45af9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1858206_sentin_0.assessor</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_user_role_7a0578c53b01cb10982a9dc643e45af9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-22 12:40:55</sys_updated_on>
+    </sys_user_role>
+</record_update>
