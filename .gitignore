@@ -1,0 +1,79 @@
+# ── macOS ──────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── IDE — VS Code ───────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ── IDE — JetBrains (IntelliJ, WebStorm, etc.) ─────────
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# ── IDE — Sublime Text ─────────────────────────────────
+*.sublime-project
+*.sublime-workspace
+
+# ── IDE — Eclipse ──────────────────────────────────────
+.project
+.classpath
+.settings/
+
+# ── Node / npm ─────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# ── ServiceNow Local Artifacts ─────────────────────────
+# Local cache and temp files created by ServiceNow Studio
+# and source control sync tooling — never commit these.
+.snc/
+*.snc
+sn_appcreator_cache/
+sn_studio_cache/
+.sn_cache/
+
+# ServiceNow Now CLI local config
+.now-cli/
+now-cli.json
+
+# ServiceNow local test results (if exported locally)
+atf_results_local/
+
+# ── Environment / Secrets ──────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+
+# ── Logs ───────────────────────────────────────────────
+logs/
+*.log
+
+# ── OS ─────────────────────────────────────────────────
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── Temp / Build ───────────────────────────────────────
+tmp/
+temp/
+dist/
+build/
+*.tmp
+*.bak
+*.swp
+*~
