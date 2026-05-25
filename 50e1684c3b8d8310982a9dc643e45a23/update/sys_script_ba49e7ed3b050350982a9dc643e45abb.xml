@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1858206_sentin_0_readiness_assessment</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>State Transition Guard</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    gs.info('STATE GUARD FIRED');
+
+    // Safety guard
+    if (!previous) {
+        gs.info('NO PREVIOUS OBJECT');
+        return;
+    }
+
+    // Only run if state changed
+    if (!current.state.changes()) {
+        return;
+    }
+
+    var fromState = previous.getValue('state');
+    var toState = current.getValue('state');
+
+    gs.info('FROM=' + fromState + ' TO=' + toState);
+
+    // Allowed transitions
+    var allowed = {
+
+        '1':   ['10', '100'],          // Draft
+        '10':  ['1', '30', '100'],     // Submitted
+        '30':  ['1', '10', '40', '50', '100'], // In Review
+        '40':  [],                     // Approved (terminal)
+        '50':  ['10', '100'],          // Blocked
+        '100': []                      // Cancelled (terminal)
+    };
+
+    // Unknown state safety
+    if (!allowed[fromState]) {
+        gs.info('UNKNOWN STATE - ALLOWING');
+        return;
+    }
+
+    // Validate transition
+    if (allowed[fromState].indexOf(toState) === -1) {
+
+        gs.info('BLOCKED');
+
+        gs.addErrorMessage(
+            'Invalid state transition from "' +
+            previous.state.getDisplayValue() +
+            '" to "' +
+            current.state.getDisplayValue() +
+            '"'
+        );
+
+        current.setAbortAction(true);
+        return;
+    }
+
+    gs.info('ALLOWED');
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-24 15:06:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ba49e7ed3b050350982a9dc643e45abb</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>State Transition Guard</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_script_ba49e7ed3b050350982a9dc643e45abb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-25 13:59:53</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=ba49e7ed3b050350982a9dc643e45abb"/>
+</record_update>

@@ -26,12 +26,12 @@
             <sequence>100</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 03:45:05</sys_created_on>
+            <sys_created_on>2026-05-25 07:49:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 03:45:05</sys_updated_on>
+            <sys_updated_on>2026-05-25 07:49:55</sys_updated_on>
             <value>1</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -45,12 +45,12 @@
             <sequence>200</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 03:45:21</sys_created_on>
+            <sys_created_on>2026-05-25 07:50:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 03:45:21</sys_updated_on>
+            <sys_updated_on>2026-05-25 07:50:37</sys_updated_on>
             <value>10</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -58,37 +58,18 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Validating</label>
+            <label>In Review</label>
             <language>en</language>
             <name>x_1858206_sentin_0_readiness_assessment</name>
             <sequence>300</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 03:45:49</sys_created_on>
+            <sys_created_on>2026-05-25 07:52:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 03:45:49</sys_updated_on>
-            <value>20</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Under Review</label>
-            <language>en</language>
-            <name>x_1858206_sentin_0_readiness_assessment</name>
-            <sequence>400</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 03:46:02</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 03:46:02</sys_updated_on>
+            <sys_updated_on>2026-05-25 07:52:25</sys_updated_on>
             <value>30</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -99,15 +80,15 @@
             <label>Approved</label>
             <language>en</language>
             <name>x_1858206_sentin_0_readiness_assessment</name>
-            <sequence>500</sequence>
+            <sequence>400</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 03:46:27</sys_created_on>
+            <sys_created_on>2026-05-25 07:52:52</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 03:46:27</sys_updated_on>
+            <sys_updated_on>2026-05-25 07:52:52</sys_updated_on>
             <value>40</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -118,15 +99,15 @@
             <label>Blocked</label>
             <language>en</language>
             <name>x_1858206_sentin_0_readiness_assessment</name>
-            <sequence>600</sequence>
+            <sequence>500</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 03:46:47</sys_created_on>
+            <sys_created_on>2026-05-25 07:53:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 03:46:47</sys_updated_on>
+            <sys_updated_on>2026-05-25 07:53:15</sys_updated_on>
             <value>50</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -137,15 +118,15 @@
             <label>Cancelled</label>
             <language>en</language>
             <name>x_1858206_sentin_0_readiness_assessment</name>
-            <sequence>700</sequence>
+            <sequence>600</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-24 03:47:01</sys_created_on>
+            <sys_created_on>2026-05-25 07:53:30</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-24 03:47:45</sys_updated_on>
+            <sys_updated_on>2026-05-25 07:53:30</sys_updated_on>
             <value>100</value>
         </sys_choice>
     </sys_choice>

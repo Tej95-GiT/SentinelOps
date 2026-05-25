@@ -2,8 +2,8 @@
     <sys_script action="INSERT_OR_UPDATE">
         <abort_action>false</abort_action>
         <access>package_private</access>
-        <action_delete>true</action_delete>
-        <action_insert>false</action_insert>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
@@ -19,7 +19,7 @@
         <is_rest>false</is_rest>
         <message/>
         <name>Calculate Readiness Score</name>
-        <order>100</order>
+        <order>200</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -29,26 +29,26 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous) {
 
-    gs.info('BR RUNNING');
+	gs.info('BR RUNNIG');
 
-    if (!current.assessment)
-        return;
+    var assessmentId = current.getValue('assessment');
+    if (!assessmentId) return;
 
     var scorer = new ReadinessScorer();
-    var result = scorer.calculateScore(current.assessment);
+    var result = scorer.calculateScore(assessmentId);
 
-    var assessmentGR = new GlideRecord('x_1858206_sentin_0_readiness_assessment');
+    var gr = new GlideRecord('x_1858206_sentin_0_readiness_assessment');
+    if (gr.get(assessmentId)) {
 
-    if (assessmentGR.get(current.assessment)) {
+        gr.setValue('criteria_total', result.total);
+        gr.setValue('criteria_passed', result.passed);
+        gr.setValue('readiness_score', result.score);
+        gr.setValue('gate_result', result.gate);
 
-        assessmentGR.criteria_total = result.total;
-        assessmentGR.criteria_passed = result.passed;
-        assessmentGR.readiness_score = result.score;
-        assessmentGR.gate_result = result.gate;
+        gr.autoSysFields(false);
+        gr.setWorkflow(false);   // IMPORTANT: stops cascade loop
 
-        assessmentGR.update();
-
-		gs.info('ASSESSMENT UPDATED');
+        gr.update();
     }
 
 })(current, previous);]]></script>
@@ -58,7 +58,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c34d50953bc90f10982a9dc643e45afd</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Calculate Readiness Score</sys_name>
         <sys_overrides/>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
@@ -66,7 +66,7 @@
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_script_c34d50953bc90f10982a9dc643e45afd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-24 13:49:57</sys_updated_on>
+        <sys_updated_on>2026-05-25 04:51:48</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
