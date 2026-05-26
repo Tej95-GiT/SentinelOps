@@ -1,0 +1,458 @@
+[1mdiff --git a/CHANGELOG.md b/CHANGELOG.md[m
+[1mindex b60740b..7ae7e52 100644[m
+[1m--- a/CHANGELOG.md[m
+[1m+++ b/CHANGELOG.md[m
+[36m@@ -1,49 +1,63 @@[m
+ # Changelog[m
+ [m
+[31m-All notable changes to SentinelOps are documented here.[m
+[32m+[m[32mAll notable changes to SentinelOps are documented here.[m[41m  [m
+ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).[m
+[31m-Commit references follow the format `[Phase X.Y]`.[m
+ [m
+ ---[m
+ [m
+ ## [Unreleased][m
+ [m
+ ### Planned[m
+[31m-- Phase 3: Script Includes and Business Rules[m
+[31m-- Phase 4: Flow Designer orchestration[m
+[31m-- Phase 5: Dashboards and Reports[m
+[31m-- Phase 6: ATF full test suite[m
+[32m+[m[32m- Phase 3.1: `ReadinessScorer` upgrade — weighted scoring, dynamic threshold, risk_tier computation[m
+[32m+[m[32m- Phase 3.2: `SentinelOpsValidator` Script Include — CMDB relationship validation[m
+[32m+[m[32m- Phase 3.3: ATF Pass 1 — scoring engine tests (ATF-001 through ATF-005)[m
+[32m+[m[32m- Phase 3.4: UI Policies — field behavior by state[m
+[32m+[m[32m- Phase 4: Flow Designer — FL-001 orchestration, SF-001, SF-002[m
+[32m+[m[32m- Phase 5: Dashboards — 4 governance reports[m
+[32m+[m[32m- Phase 6: ATF Pass 2 — full integration suite[m
+ - Phase 7: Demo polish and documentation[m
+ [m
+ ---[m
+ [m
+[31m-## [Phase 2] — In Progress[m
+[32m+[m[32m## [Phase 2.5] — 2026-05-25[m
+[32m+[m
+[32m+[m[32m### Changed — Documentation Upgrade[m
+[32m+[m[32m- `docs/architecture.md` — Rewritten from source: platform overview, governance philosophy, lifecycle state machine (from actual BR adjacency list), table architecture (from XML dictionary entries), Business Rule internals (from XML scripts), scoring engine algorithm (from ReadinessScorer source), ACL model (from 24 committed ACLs), update set strategy, REST API layer, scaling considerations[m
+[32m+[m[32m- `docs/decisions.md` — 12 ADR records (D-001 through D-012) grounded in actual implementation decisions with XML artifact evidence paths[m
+[32m+[m[32m- `docs/flow-specifications.md` — Flow Designer specs aligned to actual state values (1/10/30/40/50/100), scorer output shape ({score, passed, total, gate}), approval routing, SLA escalation, notification orchestration[m
+[32m+[m[32m- `docs/testing-strategy.md` — Testing strategy aligned to actual ReadinessScorer algorithm (unweighted, 70% hardcoded, mandatory override), actual State Transition Guard adjacency list, actual ACL condition scripts, negative testing suite[m
+[32m+[m[32m- `docs/implementation_plan.md` — Rewritten as professional roadmap with completed phase evidence (183 XML artifacts, 24 ACLs, 34 role bindings, 4 Business Rules, 2 Script Includes), known technical debt inventory[m
+[32m+[m[32m- `CHANGELOG.md` — Updated with accurate Phase 2.5 entries[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## [Phase 2] — 2026-05-25[m
+ [m
+ ### Added[m
+[31m-- `docs/security-model.md` — Full Phase 2 ACL implementation guide:[m
+[31m-  - Table ACL matrix (4 tables × 3 roles)[m
+[31m-  - ACL creation order (Blocks A–D + Field ACLs F1–F6)[m
+[31m-  - ServiceNow navigation paths[m
+[31m-  - ACL condition scripts for ownership restriction[m
+[31m-  - Field-level ACL list for computed fields[m
+[31m-  - Impersonation validation checklist (22 scenarios)[m
+[31m-  - Scoped app pitfall reference table[m
+[31m-- `src/acl-scripts/assessorRead.js` — Assessment read condition script[m
+[31m-- `src/acl-scripts/assessorWrite.js` — Assessment write condition script[m
+[31m-- `src/acl-scripts/checklistRead.js` — Checklist result read condition script[m
+[31m-- `src/acl-scripts/checklistWrite.js` — Checklist result write condition script[m
+[32m+[m[32m- 24 table-level ACLs across 4 primary tables (CRUD × roles)[m
+[32m+[m[32m  - `readiness_assessment`: 6 ACLs (admin full, assessor ownership-scoped, viewer read-only)[m
+[32m+[m[32m  - `readiness_policy`: 4 ACLs (admin full, all read)[m
+[32m+[m[32m  - `policy_criteria`: 4 ACLs (admin full, all read)[m
+[32m+[m[32m  - `checklist_result`: 6 ACLs (admin full, assessor parent-ownership-scoped, viewer read-only)[m
+[32m+[m[32m  - `release_gate`: 4 ACLs[m
+[32m+[m[32m- 34 ACL role binding records[m
+[32m+[m[32m- `src/acl-scripts/assessorRead.js` — assessment read condition: assessor sees own records via `assigned_to == gs.getUserID()`[m
+[32m+[m[32m- `src/acl-scripts/assessorWrite.js` — assessment write condition: assessor edits own records only[m
+[32m+[m[32m- `src/acl-scripts/checklistRead.js` — checklist read condition: assessor sees items linked to own assessment via `getRefRecord()` traversal[m
+[32m+[m[32m- `src/acl-scripts/checklistWrite.js` — checklist write condition: assessor edits items linked to own assessment[m
+[32m+[m[32m- `docs/security-model.md` — full ACL matrix, creation order (Blocks A–D + Field ACLs F1–F6), impersonation testing checklist (22 scenarios)[m
+ [m
+ ---[m
+ [m
+ ## [Phase 1.5] — 2026-05-24[m
+ [m
+ ### Added[m
+[31m-- Repository structure: `docs/`, `src/`, `flows/`, `atf/`, `demo/` folders[m
+[32m+[m[32m- Repository structure: `docs/`, `src/`, `flows/`, `atf/`, `demo/` directories[m
+ - `docs/security-model.md` — ACL matrix and role hierarchy reference[m
+ - `docs/testing-strategy.md` — ATF test plan and coverage targets[m
+[31m-- `docs/flow-specifications.md` — Flow Designer specs for all flows and subflows[m
+[32m+[m[32m- `docs/flow-specifications.md` — Flow Designer specs for FL-001, SF-001, SF-002[m
+ - `docs/demo-script.md` — Interview walkthrough narrative (Phase 7 placeholder)[m
+[31m-- `flows/assessment-orchestration.md` — Main flow spec[m
+[32m+[m[32m- `flows/assessment-orchestration.md` — Main flow summary spec[m
+ - `flows/cmdb-validation-subflow.md` — CMDB validation subflow spec[m
+ - `flows/score-calculation-subflow.md` — Score calculation subflow spec[m
+ - `atf/test-plan.md` — ATF test suite structure and test case definitions[m
+[36m@@ -51,34 +65,77 @@[m [mCommit references follow the format `[Phase X.Y]`.[m
+ - `demo/seed-data-setup.md` — Demo data loading instructions[m
+ - `src/script-includes/README.md` — Placeholder for Script Include mirrors[m
+ - `src/business-rules/README.md` — Placeholder for Business Rule mirrors[m
+[31m-- `src/acl-scripts/README.md` — Placeholder for ACL condition script mirrors[m
+[32m+[m[32m- `src/acl-scripts/README.md` — ACL condition script documentation[m
+ - `src/ui-policies/README.md` — UI Policy behavior documentation[m
+[31m-- `.gitignore` — Excludes macOS, IDE, ServiceNow local artifacts, node_modules[m
+[32m+[m[32m- `.gitignore` — ServiceNow artifacts, IDE files, OS files exclusion[m
+ - `CHANGELOG.md` — This file[m
+[32m+[m[32m- `LICENSE` — MIT[m
+ [m
+ ### Changed[m
+[31m-- `README.md` — Updated repository structure section[m
+[32m+[m[32m- `README.md` — Updated with repository structure and phase status table[m
+ [m
+ ---[m
+ [m
+[31m-## [Phase 1] — 2026-05-24[m
+[32m+[m[32m## [Phase 1] — 2026-05-21 to 2026-05-23[m
+ [m
+[31m-### Added[m
+[31m-- Scoped application created (`x_1858206_sentin_0`)[m
+[31m-- Source control linked to GitHub repository[m
+[31m-- Roles: admin, assessor, viewer[m
+[31m-- Tables:[m
+[31m-  - `x_1858206_sentin_0_readiness_assessment` (extends Task)[m
+[31m-  - `x_1858206_sentin_0_readiness_policy`[m
+[31m-  - `x_1858206_sentin_0_policy_criteria`[m
+[31m-  - `x_1858206_sentin_0_checklist_result`[m
+[31m-- Reference relationships configured between tables[m
+[31m-- State model stabilized (Draft → Submitted → In Review → Approved/Rejected/Cancelled)[m
+[31m-- Choice list conflicts resolved[m
+[31m-- Demo policy + criteria seed data loaded[m
+[31m-- `docs/architecture.md`[m
+[31m-- `docs/current-state.md`[m
+[31m-- `docs/implementation-roadmap.md`[m
+[31m-- `docs/decisions.md`[m
+[31m-- `LICENSE` (MIT)[m
+[31m-- Initial `README.md`[m
+[32m+[m[32m### Added — Platform Foundation[m
+[32m+[m[32m- Scoped application created: `x_1858206_sentin_0` (SentinelOps)[m
+[32m+[m[32m- Source control linked to GitHub repository (`Tej95-GiT/SentinelOps`)[m
+[32m+[m[32m- Application dependency registered: Task table schema[m
+[32m+[m
+[32m+[m[32m### Added — Roles[m
+[32m+[m[32m- `x_1858206_sentin_0.admin` — Full CRUD on all tables[m
+[32m+[m[32m- `x_1858206_sentin_0.assessor` — Create and manage own assessments[m
+[32m+[m[32m- `x_1858206_sentin_0.viewer` — Read-only access[m
+[32m+[m[32m- Role containment: admin contains assessor and viewer[m
+[32m+[m
+[32m+[m[32m### Added — Tables[m
+[32m+[m[32m- `x_1858206_sentin_0_readiness_assessment` — extends `task`, primary governance record[m
+[32m+[m[32m- `x_1858206_sentin_0_readiness_policy` — governance ruleset definitions[m
+[32m+[m[32m- `x_1858206_sentin_0_policy_criteria` — individual readiness checks with weight and mandatory flags[m
+[32m+[m[32m- `x_1858206_sentin_0_checklist_result` — per-criterion evaluation outcomes[m
+[32m+[m[32m- `x_1858206_sentin_0_release_gate` — external release submission records[m
+[32m+[m
+[32m+[m[32m### Added — Choice Lists[m
+[32m+[m[32m- `readiness_assessment.state`: Draft (1), Submitted (10), In Review (30), Approved (40), Blocked (50), Cancelled (100)[m
+[32m+[m[32m- `readiness_assessment.gate_result`: pending, pass, fail[m
+[32m+[m[32m- `readiness_assessment.risk_tier`: low, medium, high, critical[m
+[32m+[m[32m- `readiness_assessment.assessment_type`: initial, reassessment, periodic, emergency[m
+[32m+[m[32m- `readiness_assessment.target_environment`: production, staging, dr[m
+[32m+[m[32m- `readiness_policy.service_type`: infrastructure, application, platform, data, security[m
+[32m+[m[32m- `policy_criteria.category`: infrastructure, security, monitoring, runbook, change_management, architecture[m
+[32m+[m[32m- `policy_criteria.validation_type`: manual, automated, evidence[m
+[32m+[m[32m- `checklist_result.result`: pending, pass, fail, not_applicable[m
+[32m+[m[32m- `checklist_result.validation_method`: manual, automated, evidence[m
+[32m+[m[32m- `release_gate.state`: pending, approved, rejected[m
+[32m+[m
+[32m+[m[32m### Added — Script Includes[m
+[32m+[m[32m- `ReadinessScorer` — scoring engine: `calculateScore(assessmentSysId)` returns `{ score, passed, total, gate }`[m
+[32m+[m[32m- `ChecklistGenerator` — auto-generates checklist results from policy criteria with idempotency guard[m
+[32m+[m
+[32m+[m[32m### Added — Business Rules[m
+[32m+[m[32m- `State Transition Guard` — before/update on `readiness_assessment`, order 100, enforces adjacency-list state transitions via `setAbortAction(true)`[m
+[32m+[m[32m- `Generate Checklist Results` — after/insert on `readiness_assessment`, order 200, delegates to `ChecklistGenerator`[m
+[32m+[m[32m- `Calculate Readiness Score` — after/insert+update on `checklist_result`, order 200, condition `result.changes()`, delegates to `ReadinessScorer`, uses `setWorkflow(false)` to prevent cascades[m
+[32m+[m[32m- `Evaluate Operational Governance` — before/insert+update on `release_gate`, order 100, threshold comparison on `tech_debt_score`[m
+[32m+[m
+[32m+[m[32m### Added — REST API[m
+[32m+[m[32m- `SentinelOps Ingestion` — Scripted REST API at `/api/x_1858206_sentin_0/sentinel_ops`[m
+[32m+[m[32m- `Submit Release` — POST `/submit`, creates `release_gate` record, triggers governance evaluation[m
+[32m+[m
+[32m+[m[32m### Added — Cross-Scope Privileges[m
+[32m+[m[32m- `GlideRecord.insert` — execute access to Global[m
+[32m+[m[32m- `GlideRecord.update` — execute access to Global[m
+[32m+[m[32m- `sys_choice` — read access to Global[m
+[32m+[m[32m- `Glide API: user roles and groups` — execute access to Global[m
+[32m+[m
+[32m+[m[32m### Added — Infrastructure[m
+[32m+[m[32m- Auto-numbering configured for `release_gate` (`sys_number` record)[m
+[32m+[m[32m- Form layouts for assessment (4 sections), policy, criteria, checklist[m
+[32m+[m[32m- Application modules and navigation menus for all tables[m
+[32m+[m[32m- Embedded help role records[m
+[32m+[m
+[32m+[m[32m### Resolved[m
+[32m+[m[32m- Choice list conflicts on `state` field — custom values (1/10/30/40/50/100) coexisting with inherited Task state choices[m
+[32m+[m[32m- Reference relationship configuration between all four primary tables[m
+[32m+[m[32m- Scope privilege requirements for GlideRecord operations in condition scripts[m
+[1mdiff --git a/diagrams/README.md b/diagrams/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8f63202[m
+[1m--- /dev/null[m
+[1m+++ b/diagrams/README.md[m
+[36m@@ -0,0 +1,100 @@[m
+[32m+[m[32m# Diagrams[m
+[32m+[m
+[32m+[m[32m> This directory contains architecture and flow diagrams for SentinelOps.[m[41m  [m
+[32m+[m[32m> Diagrams are referenced in `docs/architecture.md` and `docs/flow-specifications.md`.[m[41m  [m
+[32m+[m[32m> Diagrams are authored during Phase 7 (Demo Polish) and exported as PNG/SVG.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Diagram Inventory[m
+[32m+[m
+[32m+[m[32m| Filename | Description | Format | Phase |[m
+[32m+[m[32m|---|---|---|---|[m
+[32m+[m[32m| *(pending)* | State machine — lifecycle transitions | PNG / Mermaid | Phase 7 |[m
+[32m+[m[32m| *(pending)* | Entity relationship diagram — 4 tables | PNG / Mermaid | Phase 7 |[m
+[32m+[m[32m| *(pending)* | ACL model — role × table × operation matrix | PNG | Phase 7 |[m
+[32m+[m[32m| *(pending)* | Flow Designer — FL-001 orchestration flow | PNG | Phase 7 |[m
+[32m+[m[32m| *(pending)* | Flow Designer — SF-001 CMDB validation subflow | PNG | Phase 7 |[m
+[32m+[m[32m| *(pending)* | Flow Designer — SF-002 score calculation subflow | PNG | Phase 7 |[m
+[32m+[m[32m| *(pending)* | Scoring engine — weighted algorithm flowchart | PNG | Phase 7 |[m
+[32m+[m[32m| *(pending)* | Component architecture — high-level system overview | PNG | Phase 7 |[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Naming Convention[m
+[32m+[m
+[32m+[m[32m```[m
+[32m+[m[32m{subject}_{type}_{YYYY-MM-DD}.{ext}[m
+[32m+[m
+[32m+[m[32mExamples:[m
+[32m+[m[32m  state_machine_lifecycle_2026-06-01.png[m
+[32m+[m[32m  erd_four_tables_2026-06-01.png[m
+[32m+[m[32m  flow_fl001_orchestration_2026-06-01.png[m
+[32m+[m[32m  scoring_algorithm_flowchart_2026-06-01.png[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Tooling[m
+[32m+[m
+[32m+[m[32m| Diagram Type | Recommended Tool |[m
+[32m+[m[32m|---|---|[m
+[32m+[m[32m| State machine, ERD, flow diagrams | [Mermaid](https://mermaid.js.org/) — inline in markdown, export to PNG |[m
+[32m+[m[32m| ACL matrix visual | Table screenshot from `docs/security-model.md` |[m
+[32m+[m[32m| ServiceNow Flow Designer screenshots | ServiceNow PDI — screenshot during Phase 7 |[m
+[32m+[m[32m| System architecture overview | [draw.io](https://draw.io) or Mermaid |[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Mermaid State Machine (Source — Reference)[m
+[32m+[m
+[32m+[m[32mThe following Mermaid source produces the SentinelOps lifecycle state machine diagram.[m[41m  [m
+[32m+[m[32mRender at [mermaid.live](https://mermaid.live) or embed in `docs/architecture.md`.[m
+[32m+[m
+[32m+[m[32m```mermaid[m
+[32m+[m[32mstateDiagram-v2[m
+[32m+[m[32m    [*] --> Draft[m
+[32m+[m[32m    Draft --> Submitted : Assessor submits[m
+[32m+[m[32m    Submitted --> In_Review : Flow scores + validates[m
+[32m+[m[32m    Submitted --> Cancelled : CMDB validation fails[m
+[32m+[m[32m    In_Review --> Pending_Approval : Gate passes[m
+[32m+[m[32m    In_Review --> Rejected : Gate fails[m
+[32m+[m[32m    Pending_Approval --> Approved : Approver approves[m
+[32m+[m[32m    Pending_Approval --> Rejected : Approver rejects[m
+[32m+[m[32m    Approved --> [*][m
+[32m+[m[32m    Rejected --> [*][m
+[32m+[m[32m    Cancelled --> [*][m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Mermaid ERD (Source — Reference)[m
+[32m+[m
+[32m+[m[32m```mermaid[m
+[32m+[m[32merDiagram[m
+[32m+[m[32m    READINESS_POLICY ||--o{ POLICY_CRITERIA : "has criteria"[m
+[32m+[m[32m    READINESS_POLICY ||--o{ READINESS_ASSESSMENT : "applied to"[m
+[32m+[m[32m    READINESS_ASSESSMENT ||--o{ CHECKLIST_RESULT : "generates"[m
+[32m+[m[32m    POLICY_CRITERIA ||--o{ CHECKLIST_RESULT : "evaluated as"[m
+[32m+[m
+[32m+[m[32m    READINESS_POLICY {[m
+[32m+[m[32m        string name[m
+[32m+[m[32m        int pass_threshold[m
+[32m+[m[32m        bool active[m
+[32m+[m[32m    }[m
+[32m+[m[32m    POLICY_CRITERIA {[m
+[32m+[m[32m        int weight[m
+[32m+[m[32m        bool mandatory[m
+[32m+[m[32m        int order[m
+[32m+[m[32m    }[m
+[32m+[m[32m    READINESS_ASSESSMENT {[m
+[32m+[m[32m        int state[m
+[32m+[m[32m        int readiness_score[m
+[32m+[m[32m        string gate_result[m
+[32m+[m[32m        string risk_tier[m
+[32m+[m[32m    }[m
+[32m+[m[32m    CHECKLIST_RESULT {[m
+[32m+[m[32m        string result[m
+[32m+[m[32m        string notes[m
+[32m+[m[32m    }[m
+[32m+[m[32m```[m
+[1mdiff --git a/docs/architecture.md b/docs/architecture.md[m
+[1mindex a6811de..1b14fbe 100644[m
+[1m--- a/docs/architecture.md[m
+[1m+++ b/docs/architecture.md[m
+[36m@@ -1,38 +1,553 @@[m
+ # SentinelOps — Architecture[m
+ [m
+[31m-## Identity[m
+[31m-Operational readiness governance platform for ServiceNow.[m
+[31m-[m
+[31m-## Core Purpose[m
+[31m-Prevent services from entering production without validated operational readiness.[m
+[31m-[m
+[31m-## MVP Scope[m
+[31m-- Readiness assessments[m
+[31m-- Policy-driven validation[m
+[31m-- CMDB relationship checks[m
+[31m-- Governance scoring[m
+[31m-- Approval orchestration[m
+[31m-- Dashboards[m
+[31m-- ATF coverage[m
+[31m-[m
+[31m-## Core Tables[m
+[31m-| Table | Purpose |[m
+[31m-|---|---|[m
+[31m-| Readiness Assessment | Primary governance record |[m
+[31m-| Readiness Policy | Governance rules |[m
+[31m-| Policy Criteria | Individual readiness checks |[m
+[31m-| Checklist Result | Validation outcomes |[m
+[31m-[m
+[31m-## Technical Direction[m
+[31m-- Scoped application[m
+[31m-- Task-extended assessment model[m
+[31m-- Rule-based scoring[m
+[31m-- Flow Designer orchestration[m
+[31m-- CMDB validation[m
+[31m-- ACL-secured governance workflow[m
+[31m-[m
+[31m-## Explicit Non-Goals[m
+[31m-- External integrations[m
+[31m-- Complex AI claims[m
+[31m-- Full ITOM replacement[m
+[31m-- Full CSDM enforcement[m
+[32m+[m[32m> **Scope:** `x_1858206_sentin_0`[m[41m  [m
+[32m+[m[32m> **Platform:** ServiceNow Australia Release[m[41m  [m
+[32m+[m[32m> **Source of Truth:** `50e1684c3b8d8310982a9dc643e45a23/` (ServiceNow-managed)[m[41m  [m
+[32m+[m[32m> **Human Layer:** `src/`, `docs/`, `flows/`, `atf/` (manually maintained)[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 1 — Platform Overview[m
+[32m+[m
+[32m+[m[32mSentinelOps is a scoped ServiceNow application that enforces operational readiness governance before business services enter production. It answers one question: *Has this service been validated against all mandatory governance criteria before it can go live?*[m
+[32m+[m
+[32m+[m[32mThe application evaluates services against configurable governance policies, computes weighted readiness scores from structured checklist validation, enforces approval gates based on score outcomes and mandatory criterion results, and surfaces governance posture through dashboards — all within the ServiceNow platform.[m
+[32m+[m
+[32m+[m[32m### What Exists Today[m
+[32m+[m
+[32m+[m[32m| Layer | Artifact | Status |[m
+[32m+[m[32m|---|---|---|[m
+[32m+[m[32m| Data Model | 5 tables, 3 roles, dictionary entries, choice lists, form layouts | ✅ Committed to SN source control |[m
+[32m+[m[32m| Scoring Engine | `ReadinessScorer` Script Include — unweighted pass/total with mandatory override, 70% hardcoded threshold | ✅ Live in PDI, XML in `update/` |[m
+[32m+[m[32m| Checklist Generator | `ChecklistGenerator` Script Include — auto-creates `checklist_result` records from policy criteria | ✅ Live in PDI |[m
+[32m+[m[32m| State Machine | 6-state lifecycle with `State Transition Guard` Business Rule using adjacency-list enforcement | ✅ Live in PDI, 16 revisions |[m
+[32m+[m[32m| Score Recalculation | `Calculate Readiness Score` Business Rule — fires on `checklist_result` insert/update when `result` changes | ✅ Live in PDI |[m
+[32m+[m[32m| Checklist Generation | `Generate Checklist Results` Business Rule — fires on `readiness_assessment` after insert | ✅ Live in PDI |[m
+[32m+[m[32m| ACL Model | 24 table ACLs + associated role bindings across 4 primary tables, 4 condition scripts | ✅ Live in PDI |[m
+[32m+[m[32m| REST API | `SentinelOps Ingestion` — POST `/api/x_1858206_sentin_0/sentinel_ops/submit` for release gate data | ✅ Live in PDI |[m
+[32m+[m[32m| Release Gate Engine | `Evaluate Operational Governance` Business Rule on `release_gate` — threshold-based tech debt scoring | ✅ Live in PDI |[m
+[32m+[m[32m| Cross-Scope Privileges | `GlideRecord.insert`, `GlideRecord.update`, `sys_choice` read, `Glide API: user roles and groups` | ✅ Configured |[m
+[32m+[m[32m| Flow Designer | Assessment orchestration, CMDB validation subflow, score calculation subflow | ⬜ Design specs authored, not yet built |[m
+[32m+[m[32m| Dashboards | 4 governance reports + dashboard assembly | ⬜ Phase 5 |[m
+[32m+[m
+[32m+[m[32m### Design Philosophy[m
+[32m+[m
+[32m+[m[32mSentinelOps is deliberately not a full GRC or ITOM platform. It is a focused governance gate — an enforcement point that sits between development completion and production promotion. The design follows three principles:[m
+[32m+[m
+[32m+[m[32m1. **Auditable scoring.** Every gate outcome is traceable to individual criterion results. No black-box ML. The `ReadinessScorer` uses `Math.round((passed / total) * 100)` with a mandatory-fail override. An interviewer can read the algorithm in under 60 seconds.[m
+[32m+[m
+[32m+[m[32m2. **Platform-native architecture.** Task extension, ACL condition scripts, Business Rule state enforcement, Flow Designer orchestration. No external dependencies, no custom UI frameworks, no integrations outside the ServiceNow instance.[m
+[32m+[m
+[32m+[m[32m3. **Defense in depth.** Security is enforced at three layers simultaneously: ACL condition scripts (data layer), Business Rule state guards (logic layer), and UI Policies (presentation layer). A single bypass at any one layer does not compromise governance integrity.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 2 — Governance Lifecycle and State Machine[m
+[32m+[m
+[32m+[m[32mThe assessment lifecycle is implemented as a finite state machine on the `state` field of `x_1858206_sentin_0_readiness_assessment`. State values are defined as ServiceNow choice list entries and enforced by the `State Transition Guard` Business Rule.[m
+[32m+[m
+[32m+[m[32m### State Values (from `author_elective_update/sys_choice_..._state.xml`)[m
+[32m+[m
+[32m+[m[32m| State | Value | Sequence | Terminal |[m
+[32m+[m[32m|---|---|---|---|[m
+[32m+[m[32m| Draft | `1` | 100 | No |[m
+[32m+[m[32m| Submitted | `10` | 200 | No |[m
+[32m+[m[32m| In Review | `30` | 300 | No |[m
+[32m+[m[32m| Approved | `40` | 400 | Yes |[m
+[32m+[m[32m| Blocked | `50` | 500 | No |[m
+[32m+[m[32m| Cancelled | `100` | 600 | Yes |[m
+[32m+[m
+[32m+[m[32m### Transition Map (from `State Transition Guard` Business Rule)[m
+[32m+[m
+[32m+[m[32mThe actual transition adjacency list as implemented in the production Business Rule:[m
+[32m+[m
+[32m+[m[32m```javascript[m
+[32m+[m[32mvar allowed = {[m
+[32m+[m[32m    '1':   ['10', '100'],              // Draft → Submitted, Cancelled[m
+[32m+[m[32m    '10':  ['1', '30', '100'],         // Submitted → Draft, In Review, Cancelled[m
+[32m+[m[32m    '30':  ['1', '10', '40', '50', '100'], // In Review → Draft, Submitted, Approved, Blocked, Cancelled[m
+[32m+[m[32m    '40':  [],                         // Approved → nothing (terminal)[m
+[32m+[m[32m    '50':  ['10', '100'],              // Blocked → Submitted (retry), Cancelled[m
+[32m+[m[32m    '100': []                          // Cancelled → nothing (terminal)[m
+[32m+[m[32m};[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m```[m
+[32m+[m[32m                    ┌──────────────────────────────────────────────────┐[m
+[32m+[m[32m                    │                                                  ▼[m
+[32m+[m[32mDraft (1) ──────► Submitted (10) ──────► In Review (30) ──────► Approved (40)[m
+[32m+[m[32m  ▲                  │  ▲                  │  │  │                [terminal][m
+[32m+[m[32m  │                  │  │                  │  │  │[m
+[32m+[m[32m  │                  │  └──────────────────┘  │  └──────► Blocked (50)[m
+[32m+[m[32m  │                  │                        │              │[m
+[32m+[m[32m  │                  └──── (return to draft) ─┘              │[m
+[32m+[m[32m  │                                                          ▼[m
+[32m+[m[32m  └──────────────────────────────────────────────── Cancelled (100)[m
+[32m+[m[32m                                                        [terminal][m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m### Enforcement Mechanism[m
+[32m+[m
+[32m+[m[32mThe guard runs as a **before** Business Rule on update (`order: 100`). If `current.state.changes()` is true and the target state is not in the allowed list for the current state, the rule calls `current.setAbortAction(true)` and adds an error message showing the attempted transition. The record is never saved.[m
+[32m+[m
+[32m+[m[32mKey behaviors:[m
+[32m+[m[32m- Unknown source states are **allowed** through as a safety valve (`if (!allowed[fromState]) return`)[m
+[32m+[m[32m- Terminal states (Approved, Cancelled) have empty allowed-next arrays — no transitions are possible[m
+[32m+[m[32m- Blocked assessments can retry submission (`50 → 10`) or be cancelled (`50 → 100`)[m
+[32m+[m[32m- In Review allows regression to Draft (`30 → 1`) for rework — an intentional design decision[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 3 — Table Architecture[m
+[32m+[m
+[32m+[m[32mSentinelOps defines five tables. Four are part of the core governance model. One (`release_gate`) supports a secondary release ingestion pipeline.[m
+[32m+[m
+[32m+[m[32m### Table Inventory (from `update/sys_db_object_*.xml`)[m
+[32m+[m
+[32m+[m[32m| Table | sys_id | Extends | Purpose |[m
+[32m+[m[32m|---|---|---|---|[m
+[32m+[m[32m| `x_1858206_sentin_0_readiness_assessment` | `941288593b450f10982a9dc643e45a32` | `task` | Primary governance record |[m
+[32m+[m[32m| `x_1858206_sentin_0_readiness_policy` | `d9d494113b890f10982a9dc643e45a39` | — | Governance ruleset definitions |[m
+[32m+[m[32m| `x_1858206_sentin_0_policy_criteria` | `6053cd813b81cb10982a9dc643e45a93` | — | Individual readiness checks within a policy |[m
+[32m+[m[32m| `x_1858206_sentin_0_checklist_result` | `2708df013bc10f10982a9dc643e45a61` | — | Per-criterion evaluation outcomes per assessment |[m
+[32m+[m[32m| `x_1858206_sentin_0_release_gate` | `ebc3bc803b41c310982a9dc643e45ad8` | — | External release submission records (REST ingestion) |[m
+[32m+[m
+[32m+[m[32m### Entity Relationships[m
+[32m+[m
+[32m+[m[32m```[m
+[32m+[m[32mreadiness_policy ─────(1:N)─────► policy_criteria[m
+[32m+[m[32m       │                                 │[m
+[32m+[m[32m       │ (referenced by)           

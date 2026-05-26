@@ -1,268 +1,196 @@
-# SentinelOps — Operational Engineering Review
+# SentinelOps — Implementation Plan
+
+> **Current Phase:** Phase 3 — Business Logic (in progress)  
+> **Last Updated:** 2026-05-25  
+> **Platform:** ServiceNow Australia Release, Scope `x_1858206_sentin_0`
 
 ---
 
-## 1. Missing Repository Artifacts
+## Completed Phases
 
-### Currently Have
-| File | Status |
+### Phase 1 — Foundation (2026-05-21 to 2026-05-23)
+
+Delivered the data model, role hierarchy, and initial governance logic.
+
+| Deliverable | Status | Evidence |
+|---|---|---|
+| Scoped application `x_1858206_sentin_0` | ✅ | `sys_app_50e1684c3b8d8310982a9dc643e45a23.xml` (4.4MB) |
+| 3 roles: admin, assessor, viewer | ✅ | `update/sys_user_role_*.xml` (8 files) |
+| 5 tables: assessment, policy, criteria, checklist, release_gate | ✅ | `update/sys_db_object_*.xml` (5 files) |
+| `readiness_assessment` extends `task` | ✅ | Task dependency in `50e1684c3b8d8310982a9dc643e45a23/README.md` |
+| Field schemas + dictionary entries | ✅ | `update/sys_dictionary_*.xml` (50 files) |
+| Choice lists: state, gate_result, risk_tier, result, assessment_type, etc. | ✅ | `author_elective_update/sys_choice_*.xml` (13 files) |
+| State model: Draft → Submitted → In Review → Approved/Blocked/Cancelled | ✅ | 6 state choices committed |
+| Form layouts for all tables | ✅ | `update/sys_ui_section_*.xml` (5 files) |
+| Application modules and navigation | ✅ | `update/sys_app_module_*.xml`, `sys_ui_module_*.xml` |
+| REST API: `SentinelOps Ingestion` POST endpoint | ✅ | `update/sys_ws_definition_*.xml`, `sys_ws_operation_*.xml` |
+| Cross-scope privileges: GlideRecord, sys_choice, Glide API | ✅ | `update/sys_scope_privilege_*.xml` (4 files) |
+| `ReadinessScorer` Script Include | ✅ | `update/sys_script_include_e4ab54913bc90f10982a9dc643e45ac2.xml` |
+| `ChecklistGenerator` Script Include | ✅ | `update/sys_script_include_34481b6d3b810350982a9dc643e45a0b.xml` |
+| `State Transition Guard` Business Rule | ✅ | `update/sys_script_ba49e7ed3b050350982a9dc643e45abb.xml` |
+| `Generate Checklist Results` Business Rule | ✅ | `update/sys_script_a3aed3ed3b810350982a9dc643e45a9c.xml` |
+| `Calculate Readiness Score` Business Rule | ✅ | `update/sys_script_c34d50953bc90f10982a9dc643e45afd.xml` |
+| `Evaluate Operational Governance` Business Rule (release_gate) | ✅ | `update/sys_script_bc2c43e03b050b10982a9dc643e45a96.xml` |
+| Demo policy + criteria seed data | ✅ | Loaded in PDI |
+
+### Phase 1.5 — Repository Structure (2026-05-24)
+
+Established the human-readable engineering layer alongside ServiceNow's XML artifacts.
+
+| Deliverable | Status |
 |---|---|
-| `current-state.md` | ✅ |
-| `architecture.md` | ✅ |
-| `implementation-roadmap.md` | ✅ |
-| `decisions.md` | ✅ |
-| `README.md` | ✅ |
+| `docs/` directory with architecture, decisions, security-model, flow-specs, testing-strategy, demo-script | ✅ |
+| `src/` directory with ACL script mirrors and README placeholders | ✅ |
+| `flows/` directory with human-readable flow specifications | ✅ |
+| `atf/` directory with test plan and test data specifications | ✅ |
+| `demo/` directory with seed data setup guide | ✅ |
+| `CHANGELOG.md`, `.gitignore`, `LICENSE` | ✅ |
 
-### Missing — Add Before Scripting Begins
+### Phase 2 — Security (2026-05-24 to 2026-05-25)
 
-| File | Purpose | Priority |
+Delivered the complete ACL model.
+
+| Deliverable | Status | Evidence |
 |---|---|---|
-| `CHANGELOG.md` | Track what changed per commit/phase. Recruiters scan this. | **High** |
-| `security-model.md` | ACL matrix, role hierarchy, field-level locks. Standalone reference during ACL implementation. | **High** |
-| `testing-strategy.md` | ATF test plan — what gets tested, expected coverage, test data requirements. | **Medium** |
-| `flow-specifications.md` | Flow Designer specs — triggers, steps, subflow interfaces. Write BEFORE building flows. | **Medium** |
-| `demo-script.md` | Interview walkthrough script. The 3-minute demo narrative. | **Low (Phase 7)** |
+| 24 table-level ACLs across 4 tables × CRUD × 3 roles | ✅ | `update/sys_security_acl_*.xml` (24 files) |
+| ACL role bindings | ✅ | `update/sys_security_acl_role_*.xml` (34 files) |
+| `assessorRead.js` condition script | ✅ | `src/acl-scripts/assessorRead.js` |
+| `assessorWrite.js` condition script | ✅ | `src/acl-scripts/assessorWrite.js` |
+| `checklistRead.js` condition script | ✅ | `src/acl-scripts/checklistRead.js` |
+| `checklistWrite.js` condition script | ✅ | `src/acl-scripts/checklistWrite.js` |
+| `docs/security-model.md` — full ACL matrix and impersonation checklist | ✅ |
 
-### Missing — Governance Quality
+---
 
-| File | Purpose |
+## Current Phase: Phase 3 — Business Logic Refinement
+
+### 3.1 — Scoring Engine Upgrade
+
+The `ReadinessScorer` is live and functional but has two known gaps (documented in `decisions.md` D-010):
+
+| Gap | Current State | Required Change |
+|---|---|---|
+| Unweighted scoring | `passed / total * 100` — all criteria equal | Multiply by `weight / sum_of_weights` for weighted scoring |
+| Hardcoded threshold | `score >= 70` | Read from `pass_threshold` on the assessment or policy record |
+
+### 3.2 — SentinelOpsValidator Implementation
+
+The CMDB validation Script Include referenced by SF-001 does not exist yet.
+
+| Task | Description |
 |---|---|
-| `.gitignore` | Exclude SN local cache artifacts, `.DS_Store`, IDE files |
-| `LICENSE` | MIT or Apache 2.0. Makes the repo look professional. |
-| `CONTRIBUTING.md` | Not operationally needed, but signals engineering maturity to recruiters scanning the repo. Optional. |
+| Create `SentinelOpsValidator` | OOP Script Include with `validateCMDBRelationships(sysid)` |
+| Cross-scope access test | `cmdb_ci_service.isValid()` and `cmdb_rel_ci.isValid()` from scoped app |
+| Mirror to `src/script-includes/` | Copy script body to `SentinelOpsValidator.js` |
+
+### 3.3 — ATF Pass 1
+
+Run scoring engine tests (ATF-001 through ATF-005) against the upgraded `ReadinessScorer`.
+
+### 3.4 — UI Policies
+
+| Policy | Table | Condition | Effect |
+|---|---|---|---|
+| Computed fields read-only | `readiness_assessment` | Always | `readiness_score`, `gate_result`, `risk_tier`, `criteria_passed`, `criteria_total` read-only |
+| Form lock on terminal states | `readiness_assessment` | state ∈ {40, 100} | All fields read-only |
+| Form lock during review | `readiness_assessment` | state ∈ {30} | Most fields read-only except admin |
 
 ---
 
-## 2. Repository Folder Structure
+## Upcoming Phases
 
-> [!IMPORTANT]
-> ServiceNow source control auto-generates the `update/` folder with XML artifacts. That's the platform source of truth. The structure below is the **human-readable engineering layer** alongside it.
+### Phase 4 — Flow Designer
 
-```
-sentinelops/
-│
-├── README.md
-├── CHANGELOG.md
-├── LICENSE
-├── .gitignore
-│
-├── docs/
-│   ├── architecture.md              # Table model, ERD, design decisions
-│   ├── current-state.md             # Living doc: what's done, what's next
-│   ├── implementation-roadmap.md    # Phase-by-phase execution plan
-│   ├── decisions.md                 # ADR-style decision log
-│   ├── security-model.md           # ACL matrix, role hierarchy
-│   ├── flow-specifications.md      # Flow/subflow design specs
-│   ├── testing-strategy.md         # ATF plan and coverage targets
-│   └── demo-script.md              # Interview walkthrough narrative
-│
-├── src/
-│   ├── script-includes/
-│   │   ├── ReadinessScorer.js       # Scoring engine
-│   │   └── SentinelOpsValidator.js  # CMDB validation functions
-│   ├── business-rules/
-│   │   ├── stateTransitionGuard.js  # State enforcement BR
-│   │   └── scoreRecalculation.js    # Trigger rescoring on checklist change
-│   ├── acl-scripts/
-│   │   └── assessorWriteCondition.js # Condition: own records only
-│   └── ui-policies/
-│       └── (document form behavior per state)
-│
-├── flows/
-│   ├── assessment-orchestration.md   # Main flow: human-readable spec
-│   ├── cmdb-validation-subflow.md    # Subflow spec
-│   └── score-calculation-subflow.md  # Subflow spec
-│
-├── atf/
-│   ├── test-plan.md                  # Which tests, what they validate
-│   └── test-data.md                  # Required seed data for test runs
-│
-├── demo/
-│   ├── seed-data-setup.md            # How to load demo policies + criteria
-│   └── screenshots/                  # Dashboard/form screenshots for README
-│
-└── update/                           # ← ServiceNow-managed. DO NOT manually edit.
-    ├── sys_script_include_*.xml
-    ├── sys_script_*.xml
-    ├── sys_security_acl_*.xml
-    └── ...
-```
-
-### Rules
-
-| Rule | Why |
+| Task | Prerequisite |
 |---|---|
-| `src/` contains `.js` files that mirror what's in ServiceNow | Recruiters read `.js` on GitHub. Nobody reads XML. |
-| `src/` is manually maintained | Copy script body into `.js` file after each scripting commit. |
-| `update/` is never manually edited | ServiceNow owns it. Source control sync populates it. |
-| `flows/` contains markdown specs, not code | Flow Designer has no code export. Document the design. |
-| `atf/` contains test plan, not test code | ATF tests live in SN. Document what and why here. |
+| Test flow trigger on state → Submitted | ATF Pass 1 complete |
+| Build SF-001 (CMDB Validation subflow) | `SentinelOpsValidator` committed |
+| Build SF-002 (Score Calculation subflow) | `ReadinessScorer` upgrade committed |
+| Build FL-001 (Assessment Orchestration flow) | SF-001 + SF-002 tested |
+| Create notification templates NOTIF-001 through NOTIF-005 | Before FL-001 activation |
+
+See `docs/flow-specifications.md` for complete flow step specifications.
+
+### Phase 5 — Dashboards and Reports
+
+| Report | Type | Data Source |
+|---|---|---|
+| Gate pass/fail rate | Pie chart | `readiness_assessment.gate_result` |
+| Top failing checklist items | Bar chart | `checklist_result` grouped by criteria where result = fail |
+| Readiness by business service | Grouped list | `readiness_assessment` grouped by `service_ci` |
+| Mean time to readiness | Trend line | `readiness_assessment` — Created to Approved duration |
+
+### Phase 6 — ATF Pass 2 (Full Integration)
+
+| Suite | Tests | Validates |
+|---|---|---|
+| Lifecycle | ATF-012, ATF-013 | State transition guard — all valid and invalid paths |
+| ACL | ATF-014, ATF-015, ATF-016 | Assessor ownership, cross-user denial, viewer read-only |
+| Integration | ATF-010, ATF-011, ATF-017, ATF-018, ATF-019 | Gate enforcement, auto-generation, recalculation, flow trigger |
+| Negative | ATF-020, ATF-021, ATF-022 | No-policy handling, idempotency, unknown state safety |
+
+See `docs/testing-strategy.md` for complete test specifications.
+
+### Phase 7 — Demo Polish
+
+| Task | Output |
+|---|---|
+| Walkthrough script | `docs/demo-script.md` |
+| Form screenshots | `screenshots/` or `demo/screenshots/` |
+| Architecture diagrams | `diagrams/` |
+| Final README update | Repository structure, phase statuses |
+| Final CHANGELOG update | All phases documented |
 
 ---
 
-## 3. Commit Strategy
+## Commit Plan
 
-One commit per completed implementation unit. Commit message format:
-
-```
-[Phase X.Y] Brief description of what was implemented
-```
-
-### Commit Plan
-
-| Commit | Contents | Commit Message |
+| Commit | Phase | Message |
 |---|---|---|
-| **C1** | Roles + table schemas + demo data | `[Phase 1] Foundation: roles, tables, fields, demo data` |
-| **C2** | Docs cleanup + repo structure | `[Phase 1.5] Repository structure and documentation` |
-| **C3** | ACLs (table + field level) | `[Phase 2] Security: ACLs for all tables and computed fields` |
-| **C4** | Script Includes | `[Phase 3.1] Script Includes: ReadinessScorer, SentinelOpsValidator` |
-| **C5** | ATF for scoring logic | `[Phase 3.2] ATF: scoring engine validation tests` |
-| **C6** | Business Rules + UI Policies | `[Phase 3.3] Business Rules: state enforcement, score triggers` |
-| **C7** | Flow Designer (main + subflows) | `[Phase 4] Flows: assessment orchestration, CMDB validation` |
-| **C8** | Dashboards + Reports | `[Phase 5] Dashboards: 4 core reports + dashboard assembly` |
-| **C9** | ATF full suite | `[Phase 6] ATF: complete test suite (scoring, gates, ACLs)` |
-| **C10** | Demo data + walkthrough + screenshots | `[Phase 7] Polish: demo script, screenshots, final docs` |
-
-> [!TIP]
-> After every commit, update `current-state.md` and `CHANGELOG.md`. This discipline is what makes the repo look professionally maintained.
+| C1 | 1 | `[Phase 1] Foundation: roles, tables, fields, demo data` |
+| C2 | 1.5 | `[Phase 1.5] Repository structure and documentation` |
+| C3 | 2 | `[Phase 2] Security: ACLs for all tables and computed fields` |
+| C4 | 3 | `[Phase 3] Script Includes: ReadinessScorer upgrade, SentinelOpsValidator` |
+| C5 | 3 | `[Phase 3] ATF: scoring engine validation tests` |
+| C6 | 3 | `[Phase 3] UI Policies: field behavior by state` |
+| C7 | 4 | `[Phase 4] Flows: assessment orchestration, CMDB validation` |
+| C8 | 5 | `[Phase 5] Dashboards: governance reports` |
+| C9 | 6 | `[Phase 6] ATF: complete integration test suite` |
+| C10 | 7 | `[Phase 7] Polish: demo script, screenshots, final docs` |
 
 ---
 
-## 4. Implementation Sequencing — Validated With One Adjustment
+## Known Technical Debt
 
-### Proposed (yours):
-```
-Security → Script Includes → Business Rules → Flows → Dashboards → ATF
-```
-
-### Adjusted (recommended):
-```
-Security → Script Includes → ATF (scoring only) → Business Rules → Flows → Dashboards → ATF (full suite)
-```
-
-**Why split ATF into two passes:**
-
-| Pass | What It Tests | Why Now |
+| Item | Risk | Phase to Address |
 |---|---|---|
-| **ATF Pass 1** (after Script Includes) | `ReadinessScorer` calculation logic — weighted scoring, mandatory fail override, threshold comparison | Your scoring engine is the core intellectual property. Validate it BEFORE Business Rules and Flows build on top of it. If scoring is wrong, everything downstream is wrong. |
-| **ATF Pass 2** (after Dashboards) | Gate enforcement, state transitions, ACL behavior, end-to-end flow | Full integration testing after all components exist. |
-
-This also gives you a better interview story: *"I tested the scoring engine in isolation before wiring it into flows."* That's engineering discipline, not just test coverage.
-
-### Detailed Phase Order
-
-```
-Phase 2 — Security
-  2.1  Table ACLs (CRUD × 4 tables × 3 roles)
-  2.2  Field ACLs (computed fields: readiness_score, gate_result, 
-       pass_threshold, risk_tier, criteria_passed, criteria_total)
-  2.3  Impersonation testing (admin/assessor/viewer)
-  COMMIT C3
-
-Phase 3 — Business Logic
-  3.1  Script Include: ReadinessScorer
-  3.2  Script Include: SentinelOpsValidator
-  COMMIT C4
-  3.3  ATF Pass 1: scoring logic tests
-  COMMIT C5
-  3.4  Business Rule: state transition enforcement (before, server)
-  3.5  Business Rule: score recalculation trigger (after, server)
-  3.6  Business Rule: populate pass_threshold from policy (before, insert)
-  3.7  Business Rule: auto-generate checklist results from policy criteria (after, insert)
-  3.8  UI Policy: field read-only by state
-  COMMIT C6
-
-Phase 4 — Flow Designer
-  4.1  Subflow: CMDB Validation
-  4.2  Subflow: Calculate Readiness Score (calls Script Include)
-  4.3  Main Flow: Assessment Orchestration (trigger: state → Submitted)
-  4.4  Flow actions: notifications
-  COMMIT C7
-
-Phase 5 — Dashboards
-  5.1  Report: Gate pass/fail rate (pie + bar)
-  5.2  Report: Top failing checklist items
-  5.3  Report: Readiness by business service
-  5.4  Report: Mean time to readiness
-  5.5  Dashboard assembly
-  COMMIT C8
-
-Phase 6 — ATF Pass 2
-  6.1  Test: gate blocks when score < threshold
-  6.2  Test: gate blocks when mandatory criterion fails
-  6.3  Test: state transitions enforce valid paths only
-  6.4  Test: assessor cannot edit another user's assessment
-  6.5  Test suite assembly
-  COMMIT C9
-```
+| `ReadinessScorer` uses unweighted scoring | All criteria counted equally despite weight field existing | Phase 3.1 |
+| Gate threshold hardcoded at 70% | `pass_threshold` field exists but unused by scorer | Phase 3.1 |
+| `risk_tier` not computed by scorer | Field exists on assessment but never set by any automation | Phase 3.1 |
+| `SentinelOpsValidator` not implemented | SF-001 subflow cannot be built | Phase 3.2 |
+| Field ACLs for computed fields | Designed in `security-model.md` but not yet created in PDI | Phase 3 |
+| `src/script-includes/` has no `.js` mirrors | README placeholder only | Phase 3 (after scripting) |
+| `src/business-rules/` has no `.js` mirrors | README placeholder only | Phase 3 (after scripting) |
+| SLA definitions not created | Design specs exist in `flow-specifications.md` | Phase 4 |
+| Release gate → assessment integration | Two separate governance models not yet linked | Post-MVP |
 
 ---
 
-## 5. Workflow Split
+## Workflow Reference
 
-| Tool | Use For | Do NOT Use For |
-|---|---|---|
-| **Claude Chat** (this) | Architecture decisions, pressure testing, sequencing guidance, interview prep, reviewing approach before building | Writing final scripts (no PDI validation loop) |
-| **Claude IDE** | Writing Script Include / Business Rule code, debugging Glide scripts, generating ATF test scripts, reviewing XML diffs | Architecture decisions (lacks project context) |
-| **GPT Orchestration** | Documentation drafting, CHANGELOG entries, demo script writing, decision log maintenance | Script writing (inferior Glide API knowledge vs Claude) |
-| **ServiceNow PDI** | ALL actual implementation — tables, fields, ACLs, flows, dashboards, ATF execution, impersonation testing | Script drafting (use IDE, paste into SN) |
-| **GitHub** | Commits after each phase, `src/` mirror updates, docs updates, portfolio presentation | Storing SN config outside `update/` (SN manages that) |
+| Tool | Role |
+|---|---|
+| **ServiceNow PDI** | All implementation — tables, fields, ACLs, flows, dashboards, ATF execution |
+| **AI Coding Assistant** | Script drafting, architecture review, documentation |
+| **GitHub** | Source control, `src/` mirror updates, portfolio presentation |
 
-### Recommended Session Workflow
-
+Session loop:
 ```
-1. Claude Chat → get exact specs for next implementation unit
-2. Claude IDE → draft scripts (if scripting phase)
-3. ServiceNow PDI → implement/paste/configure/test
+1. Review spec for next implementation unit
+2. Draft scripts if scripting phase
+3. Implement in ServiceNow PDI
 4. PDI → Source Control → commit to GitHub
-5. Local repo → update src/ mirrors, docs, CHANGELOG
-6. Git push
-7. Update current-state.md
-8. Return to step 1
+5. Update src/ mirrors and docs
+6. Update CHANGELOG.md and current-state.md
+7. Repeat
 ```
-
----
-
-## 6. Hidden Technical Debt & Scoped App Gotchas
-
-### Critical — Fix Before Scripting
-
-| Issue | Risk | Action |
-|---|---|---|
-| **Cross-scope access to `cmdb_ci_service`** | Your Script Include needs to query `cmdb_ci_service` and `cmdb_rel_ci`. Scoped apps can't access all tables by default. | **Test now:** In your scoped app, open Scripts - Background, run `gs.info(new GlideRecord('cmdb_ci_service').isValid());`. If `false`, you need to set table's "Accessible from" = "All application scopes" or use the cross-scope access request. |
-| **Cross-scope access to `cmdb_rel_ci`** | Same issue. Relationship table is critical for CMDB validation. | Same test. `new GlideRecord('cmdb_rel_ci').isValid()` |
-| **GlideRecord in scoped apps uses `sn_` prefix API differences** | Some Global-scope Glide methods don't exist in scoped apps. e.g., `gs.log()` → use `gs.info()`. `current.operation()` works differently. | When drafting scripts in IDE, always specify "scoped app context." |
-
-### Moderate — Be Aware During Implementation
-
-| Issue | Risk | Mitigation |
-|---|---|---|
-| **Task state field choice inheritance** | You resolved choice conflicts already, but adding custom states (1, 10, 20, 30, 40, 50, 100) on a Task-extended table can resurface on upgrade. | Document your custom state values in `decisions.md`. If SN upgrade adds new Task states that collide with yours, you'll know what's yours. |
-| **Flow Designer trigger on state change** | Flow triggers on `x_snops_assessment` state change work, but the trigger condition syntax for custom states on extended Task tables can be quirky. | Test the trigger with a simple flow (log a message) BEFORE building the full orchestration flow. 10 minutes of testing saves hours of debugging. |
-| **ATF in scoped apps** | Some ATF step types (especially impersonation + server-side steps) behave differently in scoped apps. `Record Validation` steps work. `Server-side Script` steps may have scope context issues. | Use `Record Validation` and `Record Query` steps as primary assertion methods. Avoid complex server-side script steps unless necessary. |
-| **Business Rule ordering** | Multiple BRs on the same table (state enforcement + score recalculation + auto-generate checklist) can create execution order dependencies. | Set explicit Order values: state enforcement = 100 (runs first), auto-generate checklist = 200, score recalculation = 300. Document in `decisions.md`. |
-| **Computed field updates in before vs after BRs** | If `readiness_score` is updated in an `after` BR, the form won't show the new value without a refresh. If in a `before` BR, the record saves with the computed value. | Score recalculation should happen in a `before` BR on `x_snops_checklist_result` update, so the parent assessment saves with the new score atomically. But this requires querying up to the parent — test the GlideRecord scope access. |
-
-### Low — Phase 2+ Awareness
-
-| Issue | Future Impact |
-|---|---|
-| No `sys_properties` for configurable thresholds | Currently hardcoded in policy records (fine for MVP). If you later want instance-wide defaults, you'll need system properties. Not now. |
-| No event-driven architecture | BRs directly call Script Includes. Fine for MVP. At scale, you'd use events + script actions for decoupling. Not now. |
-| Single-level CMDB relationship check | Validator checks direct `cmdb_rel_ci` relationships. Multi-hop dependency analysis (A → B → C) is Phase 2. Don't build it now, but design the validator function signature to accept a `depth` parameter for future extensibility. |
-
----
-
-## Immediate Next Actions
-
-```
-1. Run the cross-scope access tests for cmdb_ci_service and cmdb_rel_ci
-2. Create the repo folder structure (docs/, src/, flows/, atf/, demo/)
-3. Move existing docs into docs/
-4. Add CHANGELOG.md, .gitignore, LICENSE
-5. Commit: "[Phase 1.5] Repository structure and documentation"
-6. Begin Phase 2: ACL implementation
-```
-
-> [!WARNING]
-> Do NOT start writing Script Includes until the cross-scope access test passes. If `cmdb_ci_service` and `cmdb_rel_ci` aren't accessible from your scoped app, your entire validation engine is blocked. Test this first.
