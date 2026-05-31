@@ -27,6 +27,7 @@
                 <element inactive_on_update="false" label="Disaster Recovery" value="disaster_recovery"/>
             </choice>
         </element>
+        <element default="true" label="Approval Required" max_length="40" name="approval_required" type="boolean"/>
         <element choice="1" label="Risk Tier" max_length="40" name="risk_tier" type="choice">
             <choice>
                 <element inactive_on_update="false" label="High" value="high"/>

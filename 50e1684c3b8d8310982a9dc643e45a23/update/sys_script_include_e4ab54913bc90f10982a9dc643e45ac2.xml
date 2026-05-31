@@ -19,6 +19,46 @@ ReadinessScorer.prototype = {
 
         gs.info('SCORER INPUT: ' + assessmentSysId);
 
+        var threshold = 70;
+
+        var assessmentGR = new GlideRecord('x_1858206_sentin_0_readiness_assessment');
+
+        if (assessmentGR.get(assessmentSysId)) {
+
+            gs.info('ASSESSMENT FOUND: ' + assessmentGR.getDisplayValue());
+
+            var policyId = assessmentGR.getValue('policy');
+
+            if (policyId) {
+
+                var policyGR = new GlideRecord('x_1858206_sentin_0_readiness_policy');
+
+                if (policyGR.get(policyId)) {
+
+                    var policyThreshold = parseInt(
+                        policyGR.getValue('pass_threshold'),
+                        10
+                    );
+
+                    if (!isNaN(policyThreshold)) {
+                        threshold = policyThreshold;
+                    }
+
+                    gs.info(
+                        'POLICY: ' +
+                        policyGR.getDisplayValue() +
+                        ' | PASS THRESHOLD: ' +
+                        threshold
+                    );
+                }
+            } else {
+                gs.info('NO POLICY FOUND ON ASSESSMENT - USING DEFAULT THRESHOLD 70');
+            }
+
+        } else {
+            gs.info('ASSESSMENT NOT FOUND - USING DEFAULT THRESHOLD 70');
+        }
+
         var gr = new GlideRecord('x_1858206_sentin_0_checklist_result');
 
         gr.addQuery('assessment', assessmentSysId.toString());
@@ -45,23 +85,36 @@ ReadinessScorer.prototype = {
 
             if (mandatory == 'true' && result != 'pass') {
                 mandatoryFail = true;
+
+                gs.info(
+                    'MANDATORY FAILURE DETECTED: ' +
+                    gr.getDisplayValue()
+                );
             }
         }
 
-        var score = (total == 0)
+        var score = (total === 0)
             ? 0
             : Math.round((passed / total) * 100);
 
         var gate = 'fail';
 
-        if (!mandatoryFail && score >= 70) {
+        if (!mandatoryFail && score >= threshold) {
             gate = 'pass';
         }
 
         gs.info(
-            'FINAL SCORE: ' +
+            'SCORING SUMMARY | PASSED=' +
+            passed +
+            ' | TOTAL=' +
+            total +
+            ' | SCORE=' +
             score +
-            ' | GATE: ' +
+            ' | THRESHOLD=' +
+            threshold +
+            ' | MANDATORY_FAIL=' +
+            mandatoryFail +
+            ' | GATE=' +
             gate
         );
 
@@ -79,13 +132,13 @@ ReadinessScorer.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-23 05:29:54</sys_created_on>
         <sys_id>e4ab54913bc90f10982a9dc643e45ac2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>ReadinessScorer</sys_name>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_script_include_e4ab54913bc90f10982a9dc643e45ac2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-28 02:55:41</sys_updated_on>
+        <sys_updated_on>2026-05-31 07:13:29</sys_updated_on>
     </sys_script_include>
 </record_update>

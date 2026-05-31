@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard">
+    <par_dashboard action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_dashboard/>
+        <certified>false</certified>
+        <description/>
+        <experience display_value="Advanced Dashboards">8adc36706f01011089060168e25b3693</experience>
+        <grid>48</grid>
+        <name>SentinelOps Governance Dashboard</name>
+        <ready_to_migrate>Not Applicable</ready_to_migrate>
+        <sys_class_name>par_dashboard</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 12:42:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5dee23fe3b814b50982a9dc643e45a18</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SentinelOps Governance Dashboard</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>par_dashboard_5dee23fe3b814b50982a9dc643e45a18</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 12:43:14</sys_updated_on>
+        <sys_ux_app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</sys_ux_app_config>
+        <sys_ux_app_route display_value="SentinelOps Governance Dashboard">942f6bb63bc14b50982a9dc643e45a45</sys_ux_app_route>
+        <sys_ux_macroponent display_value="SentinelOps Governance Dashboard default">550f67b63bc14b50982a9dc643e45a3d</sys_ux_macroponent>
+        <sys_ux_screen display_value="SentinelOps Governance Dashboard default">030fe7b63bc14b50982a9dc643e45ae7</sys_ux_screen>
+        <sys_ux_screen_type display_value="SentinelOps Governance Dashboard">a6fe67b63bc14b50982a9dc643e45a37</sys_ux_screen_type>
+    </par_dashboard>
+</record_update>
