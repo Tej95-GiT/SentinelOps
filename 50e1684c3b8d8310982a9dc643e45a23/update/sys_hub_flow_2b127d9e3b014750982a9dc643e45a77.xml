@@ -16,7 +16,7 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>fl001_assessment_orchestration</internal_name>
-        <label_cache>[{"name":"Updated_1.current.state","label":"Trigger - Record Updated➛Readiness Assessment Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"state","choices":[{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Draft"}},"sequence":100.0,"label":"Draft","selected":false,"used":false,"reference":false,"rawLabel":"Draft","missing":false,"image":"","value":"1"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Submitted"}},"sequence":200.0,"label":"Submitted","selected":false,"used":false,"reference":false,"rawLabel":"Submitted","missing":false,"image":"","value":"10"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"In Review"}},"sequence":300.0,"label":"In Review","selected":false,"used":false,"reference":false,"rawLabel":"In Review","missing":false,"image":"","value":"30"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Approved"}},"sequence":400.0,"label":"Approved","selected":false,"used":false,"reference":false,"rawLabel":"Approved","missing":false,"image":"","value":"40"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Blocked"}},"sequence":500.0,"label":"Blocked","selected":false,"used":false,"reference":false,"rawLabel":"Blocked","missing":false,"image":"","value":"50"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}},"sequence":600.0,"label":"Cancelled","selected":false,"used":false,"reference":false,"rawLabel":"Cancelled","missing":false,"image":"","value":"100"}],"usedInstances":{"a8ba209d-3efb-4e5d-9ef5-bb6590e65e0f":["condition"]}},{"name":"482e4040-d574-4270-88ac-03bc5a3ac595.record","label":"3 - Update Record➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{"f50c220b-9640-4dbb-b9a5-eb41585fc89f":["record"],"33a0de1a-18f1-40b4-acdc-838db416e2a7":["record"],"5568b453-937b-4d5d-b702-d5694f3d81ae":["record"],"7b4d5890-14f0-4719-a86f-a19b24f8bb96":["record"],"482e4040-d574-4270-88ac-03bc5a3ac595":["record"],"fdd3fadc-e412-4475-9a93-588bc41f0375":["record"]},"attributes":{}},{"name":"33a0de1a-18f1-40b4-acdc-838db416e2a7.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Readiness Assessment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"sys_id","usedInstances":{"f9803ad9-e12b-4ece-a108-40fe5c8c90d6":[null,"conditions"],"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"]}},{"name":"62c91799-c265-4a49-ae78-a0c0eb7ae537.gate","label":"1 - Calculate Readiness Score➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"20af3d55-14cf-4929-a265-82eaa2ec6cbd":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6a9233b4-768c-4dae-9791-c0769566bbfe"}},{"name":"Updated_1.current.assignment_group","label":"Trigger - Record Updated➛Readiness Assessment Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"assignment_group","choices":[{"order":0.0}],"usedInstances":{"33a0de1a-18f1-40b4-acdc-838db416e2a7":["approval_conditions"]}},{"name":"undefined","label":" - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record","usedInstances":{},"attributes":{}},{"name":"Updated_1.current.service_ci","label":"Trigger - Record Updated➛Readiness Assessment Record➛Service CI","reference":"cmdb_ci_service","reference_display":"Service","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"service_ci","usedInstances":{"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"]}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.current.service_ci","label":"Trigger - Record Updated➛Readiness Assessment Record➛Service CI","reference":"cmdb_ci_service","reference_display":"Service CI","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"service_ci","usedInstances":{"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"],"7ff093ae-799f-408a-9b7b-1227246aba27":["service_ci"]}},{"name":"undefined","label":" - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record","usedInstances":{},"attributes":{}},{"name":"Updated_1.current.assignment_group","label":"Trigger - Record Updated➛Readiness Assessment Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"assignment_group","choices":[{"order":0.0}],"usedInstances":{"33a0de1a-18f1-40b4-acdc-838db416e2a7":["approval_conditions"]}},{"name":"62c91799-c265-4a49-ae78-a0c0eb7ae537.gate","label":"1 - Calculate Readiness Score➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"20af3d55-14cf-4929-a265-82eaa2ec6cbd":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6a9233b4-768c-4dae-9791-c0769566bbfe"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Readiness Assessment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"sys_id","usedInstances":{"f9803ad9-e12b-4ece-a108-40fe5c8c90d6":[null,"conditions"],"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"]}},{"name":"33a0de1a-18f1-40b4-acdc-838db416e2a7.approval_state","label":"7 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{"f50c220b-9640-4dbb-b9a5-eb41585fc89f":["record"],"33a0de1a-18f1-40b4-acdc-838db416e2a7":["record"],"5568b453-937b-4d5d-b702-d5694f3d81ae":["record"],"7b4d5890-14f0-4719-a86f-a19b24f8bb96":["record"],"482e4040-d574-4270-88ac-03bc5a3ac595":["record"],"fdd3fadc-e412-4475-9a93-588bc41f0375":["record"],"29d8c1f3-bb91-436a-bf6b-2f87b30b3b96":["record"]},"attributes":{}},{"name":"482e4040-d574-4270-88ac-03bc5a3ac595.record","label":"6 - Update Record➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment Record","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.state","label":"Trigger - Record Updated➛Readiness Assessment Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"state","choices":[{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Draft"}},"sequence":100.0,"label":"Draft","selected":false,"used":false,"reference":false,"rawLabel":"Draft","missing":false,"image":"","value":"1"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Submitted"}},"sequence":200.0,"label":"Submitted","selected":false,"used":false,"reference":false,"rawLabel":"Submitted","missing":false,"image":"","value":"10"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"In Review"}},"sequence":300.0,"label":"In Review","selected":false,"used":false,"reference":false,"rawLabel":"In Review","missing":false,"image":"","value":"30"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Approved"}},"sequence":400.0,"label":"Approved","selected":false,"used":false,"reference":false,"rawLabel":"Approved","missing":false,"image":"","value":"40"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Blocked"}},"sequence":500.0,"label":"Blocked","selected":false,"used":false,"reference":false,"rawLabel":"Blocked","missing":false,"image":"","value":"50"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}},"sequence":600.0,"label":"Cancelled","selected":false,"used":false,"reference":false,"rawLabel":"Cancelled","missing":false,"image":"","value":"100"}],"usedInstances":{"a8ba209d-3efb-4e5d-9ef5-bb6590e65e0f":["condition"]}},{"name":"7ff093ae-799f-408a-9b7b-1227246aba27.governance_pass","label":"2 - SF001 CMDB Validation➛Governance Pass","reference_display":"Governance Pass","type":"boolean","base_type":"boolean","usedInstances":{"87014a9a-87fe-4aef-a2ff-8e1c3c3557d6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"acd58234-90ed-4f2f-8eef-d94a1aea915c"}}]</label_cache>
         <master_snapshot>5c168a663b8d8750982a9dc643e45ad7</master_snapshot>
         <master_snapshot_digest/>
         <name>FL001 Assessment Orchestration</name>
@@ -29,7 +29,7 @@
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>published</status>
+        <status>draft</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2b127d9e3b014750982a9dc643e45a77</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>FL001 Assessment Orchestration</sys_name>
         <sys_overrides/>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
@@ -45,11 +45,11 @@
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_hub_flow_2b127d9e3b014750982a9dc643e45a77</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 08:56:10</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:39:06</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>06b15db93b5d4b90982a9dc643e45a26</version_record>
+        <version_record>d4640e713b918b90982a9dc643e45ad5</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=2b127d9e3b014750982a9dc643e45a77"/>
     <sys_variable_value action="delete_multiple" query="document_key=2b127d9e3b014750982a9dc643e45a77"/>
@@ -390,7 +390,7 @@
         <trigger_type>record_update</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN03ea65403b9dcf50982a9dc643e45ab7,1bee79663b4d8750982a9dc643e45a17,2ddf39663b4d8750982a9dc643e45adf,374fa1083b9dcf50982a9dc643e45ad7,a4458ee23b8d8750982a9dc643e45ae3,e93079483b9dcf50982a9dc643e45add"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN03ea65403b9dcf50982a9dc643e45ab7,1ba3ca313b918b90982a9dc643e45ac1,1bee79663b4d8750982a9dc643e45a17,2ddf39663b4d8750982a9dc643e45adf,374fa1083b9dcf50982a9dc643e45ad7,a4458ee23b8d8750982a9dc643e45ae3,e93079483b9dcf50982a9dc643e45add"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
         <action_type_parent/>
@@ -400,21 +400,45 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>4</order>
+        <order>7</order>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 00:17:56</sys_created_on>
         <sys_id>03ea65403b9dcf50982a9dc643e45ab7</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-01 01:03:11</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:37:56</sys_updated_on>
         <ui_id>33a0de1a-18f1-40b4-acdc-838db416e2a7</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1YTW/bOBD9K4bOjpeyLEX2LUCQoovdLeCkvcSBQJOjmIVMKaLUxmv4v+9QpD5iJ443dtEWyCUBhxzOm5n3pLFu147gzsSBUeD5+Oc89og7dEkIQRiyMaEsDAJ/5Dl9R9Il4EmaZXn6jSZRDlSlEjdwUeqdKVAuJCjVu1AK/y1BFr0Le7w3hYdS5MDRgQuVJXT15f/6sYVIeA7Smdze9Z2M5oiogNyZrLe2ilUGUULnkOD110Uu5D26H5po7diBYDN9sQQ6IG6oOlSac41r2HfgsQDJEf4kpomCvrOkktMizVeNBW/hn2TSGhZCFnibow8/KvEvXu0GRB+MAXNkYDabZWQLasxskQoGn7JCILTKUtB5Yn1YmpRL+Y/JQ7cCYlomRd0KtJQK74NMg9YoLKT4epF+n9YBr4Ss8rObScpo0qxogVWYlwUo3ZhS3GzVxlj+2u4OJKAbHy2xumiJdIlFFQVBLwf3CS4GcZJ+R3RK3MsBZTrDARaTDq7QflmZv9Bc6HT/xmvQWYf7LMVDCR9194PhPBiTkJ/xmMzPRqHnn1EG5AwC1wefB8x3PWdTlTZ6KHVSpki2HJGpKB5QLBdZcYEQvoHNfNO3WiJuPITxeEjmLiEeIaHPSOjB3DsPzj3Kw2eIFAtIeEdK9cauWDo7b5PDlQ7VqxjQPxjvjiSuLOCXErGCqJaRNMFOLoqQkJ+kiiIvjxHFj+H6a7w1Cb9CXraXDNB5EXxNy1zu4W60EKpq6Ysc7pw4FZcPgF87/2nwb1N5O609TPbemfwLM/k83EcFRtqW58Cwox0Kr9efM0QIPHIHrMyxKMVms8vjN/P2MmVlNeV8vKyJewDa2ntaw92Gb6nK7e2R4C1XyX6uGhocQlVv+E7UEz9y/X2tj8dtp3mJJUFedqk6cwzSmTOZOTKVMHP6M0efijQfKjOeQITNRmVbb8y6zKl1dzvL1pfTlapOKrYAXibG+sRieG3tp9TJtQ3Qu0TUf9yIznP+9Zo1YiuN/7NlrAf3OhNTN9F9yvsne8qPftMZ/seN5lEzzqJWUOBHz96jvbyADgmaIYSlkguNV3VkZQZdUFP4CqxQF3L14faZt8KAKp1ZVZ37PC2zzeZul//HXfY26bQ/XpHWqpbNAeVp3jLWb2+5rHzaH8TWyUpndKqXzs+bj35N7RwrkznbO22wtu+mdq0wHiM39MMhCSKF0YSMiP4KYr7fRLT5fnPYV543s/tGo3oy+B+Q0RPn3Qwtl6vl1qDvnnDQf6fx8TS++w+41WxrtxQAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=03ea65403b9dcf50982a9dc643e45ab7"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 12:35:27</sys_created_on>
+        <sys_id>1ba3ca313b918b90982a9dc643e45ac1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 12:38:57</sys_updated_on>
+        <ui_id>29d8c1f3-bb91-436a-bf6b-2f87b30b3b96</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K8bPwdj5Is1b15DSh7aQbX3pWiFb14moLHmSnI+F/Pdd2XKatlsXSmAMlpegq/txztGRdb8NOQvHYR9YnJwlw6yX9HrdOO6O+kk67KVJl/UoQBJ2QkkLwEwNmdIM10sqKhfYbr+WjFpgJImySmuQdrfDfcZNKejmzqdhJFtwwXA/HN8/dMKSauxoQYfj7astuymBCJqCwMKJyqoCmwZXE+xxLNq2etbCfQ3fzcA1890Jd0HccniSuBPC2oJkgONyKgx0woJKpKn0JhxbXWFAA2W3Umz2GQsubcO0oGvDf2D/fuzyckBqmVdhvyReoVYcxTO4LS1XsolYmopWOSWqQt40FJy2kNNK2ANtK4P9oHSQHYgGYf55oVazdt6Uy5qdRytURsV+Ra3VPK0sGHccIKAWpaBlyeWclFoteV2MUIpoLnAR5UKtcKbhcxnRzOGOUCAaTTE+qcN3VHNH4hrbYPGuJk++V25uQ8MDJjXnmjCpDwpTTaZ5ac+x8RI8zF3H2zUdvGeA7Oz5vA96Plt2TZLRYNSNh8TgcC5JTNxhcgnGEGoM/jn6b008a7OC88Osjxn7i4MW3DTQjqX1ovg3NL21X8S8swcnc/boLznbI/rHrP0nQ8fdd79oBydde9gcmNlY/Ph+q+K4xwbx40rpJyIVkm1Cl2oJWlLUKLjEvCCnXAAbBxfXk0/BxVUgaPZkAioDtZKgo7eWP3X7D94VKBAUDmhgdY5WrW0w5SCY+YWM7WXxA8jSD9g/BSe7Mckwrn//X4QTvggPPwH0aa+ZwggAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1ba3ca313b918b90982a9dc643e45ac1"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Calculate Readiness Score">0a37b5ea3b0d8750982a9dc643e45a06</action_type>
         <action_type_parent display_value="Calculate Readiness Score">02a1f16a3bc98750982a9dc643e45aee</action_type_parent>
@@ -448,16 +472,16 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>3</order>
+        <order>6</order>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 09:58:25</sys_created_on>
         <sys_id>2ddf39663b4d8750982a9dc643e45adf</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-01 01:03:10</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:37:55</sys_updated_on>
         <ui_id>482e4040-d574-4270-88ac-03bc5a3ac595</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1UUWvbMBD+K8HPxshxEtK8FUKgD2sh2/rSFSFLl0Qgy54kp8lC/vtOtpymadeFEiiD+cXodPfd99196GEXSRFNogEIkl6lI56lWdYnpD8epPkoy9O+yBhAGsWRZgVgpgFeGoHnNVO1D+x23yvBHAiaJrw2BrTb7/FeSFsptr0PaRjhK6kE3keTh8c4qphBRAcmmuxOrty2AqpYDgoLpyWvCwTt3UwR41y2XfW8o3tK3/fAswjoVPogXnk+KYkj2DjQArDdgikLcVQwjTJLs40mztQYMMDEnVbbQ8ZKatcqLdjGyl+IPyA+bwEojYcpHI40TKgbTik53FVOlrqNOJarbnKlqgt920rws4UFq5U7mm1tEQ8qT9mTaBkuvq7Kp3nXbyZ1oy6wVSVn6nBizhmZ1w6sXwcoaIZSsKqSekkrU65lU4xUimSp8JAsVPmEPa1c6oRxzzvBAbFkhvFpE75nRnoRXxAGi/eNePqz9n1bGYEwbTQ3gmmzKEy13MjKXSPwGgLNfRzsmg/fMwC/et73EeazZTc0HQ/HfTKiFptLTQn1y5QarKXMWvx5+a9NPO+yetfHWR8z9jdPrXfbUjtX1oviP8gM1n4RC84eXszZ409ydmD0j1n7b4Ym/XdftKNNNx62R2a2Dh/fHzUhmcjIa8ueXn/Qq1AgqINeCxufzboDmElQwr4hozNraEDXocHhKb6YY9MRab7/L/IFX+TH3zX5YHFCCAAA</values>
@@ -472,16 +496,16 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>6</order>
+        <order>9</order>
         <parent_ui_id>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 00:37:06</sys_created_on>
         <sys_id>374fa1083b9dcf50982a9dc643e45ad7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-01 01:03:13</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:37:56</sys_updated_on>
         <ui_id>e58c1ab4-56d7-4e2c-97cf-5f7763d3e632</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1S32vbMBD+V4KfEyP/Sp28FUphD2uhG33pipClSyuQZU+S02Qh//tOtpxm7VpK6RiD+cXc6e6777v7bnaRFNEyykGQZJHMeZZkWUpIWuZJNc+qJBUZA0iiaaRZDVhpgDdGYLxmqvOJ3S4vU8hJTmaiOMlneXpCZmXJ+IxkFS9YxnixKOKhb7/HTiFtq9j2OgBght9LJQzoaHlzO41aZnCWAxMtd0+e3LYFqlgFChvPGt7VoN3k0xlivFXH2H01CnkqzM/AWAR0Kn0SnzyfhEwj2DjQAnDciikL06hmWjDXmG20dKbDhAEmLrXaHirupXaD0pptrPyB+DnxdStAaTxs4RDSsKFxOY3kcNk62egh41ilxs01qqv1xSDB7xZWrFPuaLedRTxoPWVPYmC4+nLfPFyN886l7tUFtqrhTB0i5pyRVefA+nOAgn4pNWtbqe9oa5q17JuRSh3fKQzilWoecKaVdzpm3POOcUEsPsf8WZ++ZkZ6EZ8RBpv3vXj6vfNzBxmBMO0194JpfygstdzI1p0i8BoCzf00GJmkrxoAHu/d+9ceGdk65uBbR0gmcvLcpk+f3+fZr1AjqIPJADt9M+sR4FyCEvY3MoJtXRhA12HAwbkfZt1kTvrvv4H/gIGr4jUr8MXj5Y8wH028oUlZlCmZU4vDpaaE+pNKDdZSZi3+vPzn9r4aqyanx1XvdLmnNrkYqL1V1i/NL8gcTX6cCwYvPszf5V9ydmD0j1n7JUPf/gToC03dXAgAAA==</values>
@@ -496,16 +520,16 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>9</order>
+        <order>12</order>
         <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:22:06</sys_created_on>
         <sys_id>a4458ee23b8d8750982a9dc643e45ae3</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 08:48:09</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:37:58</sys_updated_on>
         <ui_id>5568b453-937b-4d5d-b702-d5694f3d81ae</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1VXWvbMBT9K8bPxthxEtK8BULKHtZCtvWl64Rs3STaZMmT5Hws5L/vypbTtN26UAJjML8YXV2de87VkXS/DzkLx2EfWJJepcMiS7OslyS9UT/Nh1me9lhGAdIwCiUtATM1FEozHK+pqF1gv/9UMWqBkTQuaq1B2sMB5xk3laC7O5+GkWLFBcP5cHz/EIUV1YhoQYfj/bMpu6uACJqDwIVTVdQlggbvpohxLttu9byj+5y+q4Fj5tEJd0GccnzSJApha0EywHILKgxEYUklylR6F46trjGggbJbKXbHjBWXtlVa0q3hPxC/n7i8BaC0wnfhOCS+Q11zFC/gtrJcyTZiaS66zilRl/KmleB6CwtaC3vS29ogHlSOsiPRMlx8WKnNvKs347JR59kKVVBxHFFrNc9rC8ZtBwhomlLSquJySSqt1rxZjFTKeClwEC+E2mBNw5cypoXjHWODaDzD+LQJ31HNnYj3CIOLD4148r12dVsZnjBpNDeCSbNRmGoKzSs7QeA1eJqHyNs1H7xmgOLqcb9PMB8tuyXpaDDqJUNisDiXJCFuM7kEYwg1Bn9O/ksTz7usYHKa9TZjf3TUgpuW2rmyniz+jUxv7Scx7+zBxZw9+kvO9oz+MWv/ydBJ79Ub7WSnGw+bEzMbi5fv5zpJMjZIvmyU/kakQrFt6FqtQUuKPQquMS9YUC6AjYNJ5YRTEWj4CgXe3vFLt18Q+Y0nBErkg9gto+jsXnUAMw6CmV80rzsivgBZ+wLHB+Bi5yQdJs33/x244Dvw8BM3yTh7uAgAAA==</values>
@@ -520,23 +544,46 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>7</order>
+        <order>10</order>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 00:41:02</sys_created_on>
         <sys_id>e93079483b9dcf50982a9dc643e45add</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-01 01:03:13</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:37:57</sys_updated_on>
         <ui_id>fdd3fadc-e412-4475-9a93-588bc41f0375</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1SXWvbMBT9K8HPxshxEtK8FUJgD2sh2/rSFSFLN4lAlj1JTpOF/Pdd2XKSpmsJpaUM5hej+3HuOfee+10kRTSJBiBIepWOeJZmWZ+Q/niQ5qMsT/siYwBpFEeaFYCVBnhpBL7XTNU+sNv9qARzIGia8NoY0G6/x7yQtlJsexfKMMJXUgnMR5P7hziqmEFEByaa7M5SblsBVSwHhY3TktcFgva+TBHjUrZd97yje07fz8C3COhU+iCmPJ+UxBFsHGgBOG7BlIU4KphGmaXZRhNnagwYYOJWq+2hYiW1a5UWbGPlb8QfEF+3AJTGwxYOTxo21C2nlBxuKydL3UYcy1W3uVLVhb5pJfjdwoLVyp3straIB5Wn7Em0DBffVuXjvJs3k7pRF9iqkjN1eDHnjMxrB9afAxQ0SylYVUm9pJUp17JpRipFslT4SBaqfMSZVi51wrjnneCCWDLD+LQJ3zEjvYivCIPN+0Y8/VX7ua2MQJg2mhvBtDkUllpuZOWuEXgNgeY+DnYl/VcNAMd7Ny61J3a1Dr36syYkE0Py3Kbn6bd59jsUCOqg18LGF7PuAGYSlLB/kRFs68IAug4DDs59N+umI9J8/w38AQbOh69ZgV8dL3+CeTTxhqbj4bhPRtTicKkpof6kUoO1lFmLPy//ub3nXVXv+rTqjS731Ho3LbVLZT1pfkFmZ/LTWDD48N38Pf4kZwdG/5i1XzL0wx/eSvV7QggAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=e93079483b9dcf50982a9dc643e45add"/>
-    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN2a2542623b8d8750982a9dc643e45a94,54fea9443b9dcf50982a9dc643e45a44,f58fb5663b4d8750982a9dc643e45a33"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN5161467d3b518b90982a9dc643e45a52"/>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <show_stages>false</show_stages>
+        <subflow display_value="SF001 CMDB Validation">715275393b118b90982a9dc643e45a87</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/41SW2vbMBT+K0PPjrFj5+K8jY1CYVthXftSijiSjhOBLKuynDYL+e87sr0kbB3szfrO5bscPx2ZVmzDKljMV4uiKkSer0WVVes5VEouywLLBayBJcxCg9TZod9riVxqwvZg+ggejw9OQUDF81T23qMN6aXxdKJWpTtn4PA4TRAid9ooamWbp+eEOfBEENCzzfGPUjg45AYEGhr8jjVSRSJt+F/pv2fvR0kfPt3+w09kIsxfcbReRU15wvAtoFVInDWYDhPWgCXTrT+cEY+g7qy5ADttw+i2gbdO/6TtxTy5Itgw2ShB7HwSwq6qfArtIn2IraWPOxd0a8fVAYR5f5NsTd/Yb6PTeASsoTfh6gh9RyzoorGodJJd3+/a13PSN9oOGUxF00ow5xeE4LXoA3bxcL3+8XeEI/jlnQOiwYZ4eQPOabvlzrd7PXCR9CbdGnqktWlfSWOntzYFGW2nFDukN4R/HuBH8Dpm8JXW0HBkfLD6pcfb+IOsMlFKkVWzbCmzWVnMYVblq3qmxLKGxRJFVQp2GmLnL320NkY1hcLHmKmhk1678JEk7HHyf3r+Baay92hCAwAA</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 12:25:29</sys_created_on>
+        <sys_id>5161467d3b518b90982a9dc643e45a52</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 12:38:55</sys_updated_on>
+        <ui_id>7ff093ae-799f-408a-9b7b-1227246aba27</ui_id>
+        <updation_source/>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN2a2542623b8d8750982a9dc643e45a94,4b4382313b918b90982a9dc643e45a46,54fea9443b9dcf50982a9dc643e45a44,f58fb5663b4d8750982a9dc643e45a33"/>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">b8b58e263b8d8750982a9dc643e45a8f</block>
@@ -548,20 +595,47 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>8</order>
+        <order>11</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:21:41</sys_created_on>
         <sys_id>2a2542623b8d8750982a9dc643e45a94</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 08:53:45</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:39:04</sys_updated_on>
         <ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5e74ce713b918b90982a9dc643e45a4a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 12:33:48</sys_created_on>
+        <sys_id>4b4382313b918b90982a9dc643e45a46</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 12:38:57</sys_updated_on>
+        <ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnWaAkP2Lf0gQuCjQN0AS5pIGwoiibKEWqJGXHNfzvXerhGI2DGEWOvZmzr5nVLLwjunZV7ey9vrRWLBWZPz4FRCiP4e8dETmZk4JCEc1YxJJ4ksSUxhejKJskWRTnCXBISEAUlBwzmVa5cEKrtAECsgZZ+8DVzfWnwWe95kaBYnywACF5jgm5sJWE7cN7eWwlZG54x7ACg/0dN2S++yvkthVPJWRcYrs7Z4RaYvm5OvrCq17I4GuDvK3Qz0Pc9pO0yT2tiAaEPzuucqQ/L0BaHpASVA5Om+0BMRzyWyVfgJVQDtsRn/xsxW/sHY/HPrHgqJHxNnh4pt0CW5ittGD8tvIEW8RBJrsapmVdqm+tDr96XkAtXb96RGqL/XjlSXsWHaXibqU33/uBC6EagV1Qagby8AKHa8hqx63/MFzyEhulJVQVLietjF6Lphi5lOFS4iMspN7gUO++EJgnHuKOIFwgft3AD2CEV3GDbbC4pZmBFSxtnIrtnEEJ+2Yt6a/aE2oFdlLSdhuYYJkRlbvEOWvesd4Hnc1nMC7GER2ftsdocsIERw7f7aZFQWeYOZzOZsVwRC9gOMum2TCK42k8mkAG8TRcHrydVmDtfv+jpjTJGyavz+Fjmn7E7ZyxnFe3c3phbxxM/M7B+E985r1QSv8fzPHBCJu2xu+0tcb413t58qZvJ9jWNzlnwiKRe4996f89fGCLBhDsGNpo89NLeMH2fwAa5bnKhwYAAA==</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
@@ -575,17 +649,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>5</order>
+        <order>8</order>
         <outputs_assigned/>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 00:35:29</sys_created_on>
         <sys_id>54fea9443b9dcf50982a9dc643e45a44</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 08:53:43</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:39:03</sys_updated_on>
         <ui_id>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1UXW/TMBT9K8jPbeQkben6NoEmIQGT2LQXmKIb+6a1cOxgO+tK1f/OdT62ai0CoT3yFh/fj3PuPc6e2TY0bfC39tJ7tTZs9fV+wpSJGH3vmYEa2YoJa6QKyho2YQ+g24jt93kOXGIK03RZpdMZL2dTEFJMl/lSlrN0gRm8TaBpnKWcwgcIeDh8aznPZY+ipHpS+UbD7u6Vy4qN0tLhIKkBR0oCOrbav7gKuwYLDSVq6n4TnDJrSleSThcwr+Ypn4s8W+QZ59lylpaLvEwzmQPOFhQ3Jr47mtCZocUmBPmxvHUycsn4hOFjQCOJ86oC7XHCajASgnU7tgquJcAhyGujd08RG2UCVWMx9tGrnxgrcR4jKyRhAvvbp2MxDLmHxcYqgddNx61DApR6yBFWt7X53EuI68EKWh3G9RDSeqqHTSQdaQycqpuN3X4ZG14p0wkcLrUVoJ9OEGgMZRvQx22gxpoKFTUtj4ZTxA2qLpm41Mla0yGptN1S0+jRBEQkntCMILki/H0H34FTUcUnKkPJtEFfeOFUM2rrmrNDN5XiRxv59PoGJUU/DAro0y6pzQMOpA+T07dQdMDzgzj18ivZsOJQpRciPW9DyM/Z8M3HDjk148j6N45M/+DIAfkrS87n/x157MhIswSvRNH9YalcfN//bMn7aL2+he89JFEoT0xuI/Zh/IvHix1tXYljaGvd96jhGTv8Aho8lyoPBgAA</values>
@@ -602,17 +676,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>2</order>
+        <order>5</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 09:57:04</sys_created_on>
         <sys_id>f58fb5663b4d8750982a9dc643e45a33</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 08:53:39</sys_updated_on>
+        <sys_updated_on>2026-06-06 12:39:00</sys_updated_on>
         <ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnWaAky459C1oEKNA2QBPk0gbCilrZRClSJSk7ruF/71IP20gctAh67E2c5e7ODAfaB7p1Tevsvb62VqxUsPz2GAZCeYy+94GCGoNlwLUqhRNa5R0QBhuQrS/QZylsI2H3cEL4WsjS4DCtAUM9Dk2w3D8ruV2DuYQCJTXeOSPUitpFSaeKQRUveMzTZJYmjCVX07iYpUWclCkgpHRvbHw/knv3qUPCV1n7fYTbcZM2pacVszDAJ4eqRFpdgbQYBjWoEpw2uyNiEMpbJU/AWijXK67hyYpfNDvJMn+xQtLIBzuOx3ywanRJC463jSfYIw4KOVqoZVurL70ObzJW0Ep3ZnJraR42nrRnMVCq7tZ6+3VceCNUJ3AoSs1BHk/gyIaidWj9w6DEmgblNTQNmZM3Rm9E10xc6mgl6RBVUm9pqU9KBNwTj8gjiG4I/9DBD2CEV/GZxlBzT7MAK3jepYrGOUMSDp0t+c/WE+oFDlLy3g26YLkRjbumPRscWB/Cl5E8S+N+P0v4Ip4vFhOezLLJFKaLCeD8agKMMyzmgFk6j1bg8HD43jKWlg1Y+zLEbx/0L7K/gKzKYpZdzv50din7F1L/euCTPwTeP9Ff5p0x9j/w54EXNu+DO2jrlr85748+3P0G2+emRC4sEbn32MfxT+0LOwqA4OfQVpsfXsIJO/wG2K7t3PMFAAA=</values>
