@@ -18,7 +18,7 @@
                 <element inactive_on_update="false" label="New Service" value="new_service"/>
             </choice>
         </element>
-        <element label="Policy" max_length="32" name="policy" reference="x_1858206_sentin_0_readiness_policy" type="reference"/>
+        <element label="Policy " mandatory="true" max_length="32" name="policy" reference="x_1858206_sentin_0_readiness_policy" type="reference"/>
         <element label="Criteria Total" max_length="40" name="criteria_total" type="integer"/>
         <element choice="1" label="Target Environment " max_length="40" name="target_environment" type="choice">
             <choice>

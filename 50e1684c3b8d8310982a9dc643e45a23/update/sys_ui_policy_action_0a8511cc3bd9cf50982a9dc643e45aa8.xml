@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>evidence</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-31 22:45:30</sys_created_on>
+        <sys_id>0a8511cc3bd9cf50982a9dc643e45aa8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>evidence</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_ui_policy_action_0a8511cc3bd9cf50982a9dc643e45aa8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-31 22:45:30</sys_updated_on>
+        <table>x_1858206_sentin_0_checklist_result</table>
+        <ui_policy display_value="Require Evidence For Pass">b805518c3bd9cf50982a9dc643e45ac0</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=0a8511cc3bd9cf50982a9dc643e45aa8"/>
+</record_update>
