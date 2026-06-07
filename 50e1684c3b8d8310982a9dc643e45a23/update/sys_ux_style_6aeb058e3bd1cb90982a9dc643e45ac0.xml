@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_style">
+    <sys_ux_style action="INSERT_OR_UPDATE">
+        <name>UI16 Dashboard Visualization Compatibility</name>
+        <style>{"properties":{"--now-par_chart-line--color-alpha":"1","--now-par_chart-line--color":"10,184,217","--now-par_chart--background-color":"255,255,255","--now-par_navigator_line--color-alpha":"1","--now-par_navigator_line--color":"10,184,217","--now-par_navigator_first-gradient--color-alpha":"0.25","--now-par_navigator_first-gradient--color":"10,184,217","--now-par_navigator_second-gradient--color-alpha":"0.5","--now-par_navigator_second-gradient--color":"10,184,217","--now-par_navigator_mask-fill--color-alpha":"0.25","--now-par_navigator_mask-fill--color":"10,184,217"}}</style>
+        <sys_class_name>sys_ux_style</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 03:10:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6aeb058e3bd1cb90982a9dc643e45ac0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>UI16 Dashboard Visualization Compatibility</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_ux_style_6aeb058e3bd1cb90982a9dc643e45ac0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 03:10:19</sys_updated_on>
+        <type>core</type>
+    </sys_ux_style>
+</record_update>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_visibility">
+    <par_dashboard_visibility action="DELETE">
+        <dashboard display_value="SentinelOps Command Center">d28ccf793b198b90982a9dc643e45a5c</dashboard>
+        <experience display_value="Platform Analytics">08c73d60537101100834ddeeff7b1287</experience>
+        <sys_class_name>par_dashboard_visibility</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 17:53:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c19cc3b93b198b90982a9dc643e45ae3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>par_dashboard_visibility_c19cc3b93b198b90982a9dc643e45ae3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 17:53:58</sys_updated_on>
+    </par_dashboard_visibility>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</application>
+        <file_path/>
+        <instance_id>2e4c2993fbbb261085daf3585eefdc17</instance_id>
+        <instance_name>dev357409</instance_name>
+        <name>par_dashboard_visibility_c19cc3b93b198b90982a9dc643e45ae3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_visibility"><par_dashboard_visibility action="INSERT_OR_UPDATE"><dashboard display_value="SentinelOps Command Center">d28ccf793b198b90982a9dc643e45a5c</dashboard><experience display_value="Platform Analytics">08c73d60537101100834ddeeff7b1287</experience><sys_class_name>par_dashboard_visibility</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-06-06 17:53:58</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c19cc3b93b198b90982a9dc643e45ae3</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package><sys_policy/><sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope><sys_update_name>par_dashboard_visibility_c19cc3b93b198b90982a9dc643e45ae3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-06 17:53:58</sys_updated_on></par_dashboard_visibility></record_update>]]></payload>
+        <payload_hash>-629453742</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>ef5df4ce3b8d8350982a9dc643e45a0b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 17:54:00</sys_created_on>
+        <sys_id>2d9cc3b93b198b90982a9dc643e45ae7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e9e11ffc10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 17:54:00</sys_updated_on>
+        <type>PAR Dashboard Visibility</type>
+        <update_guid>a99cc3b9ee198b90933831608c70a5e6</update_guid>
+        <update_guid_history>a99cc3b9ee198b90933831608c70a5e6:-629453742</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">631678ce3b51cb90982a9dc643e45a95</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 01:35:04</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_visibility">par_dashboard_visibility</sys_db_object>
+        <sys_id>3d5255905b2d436e88a6d3bd3fc6f4c4</sys_id>
+        <sys_metadata>c19cc3b93b198b90982a9dc643e45ae3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_scope_delete display_value="">0dcfe72dfe6f46e096259f6ee06cede4</sys_scope_delete>
+        <sys_update_name>par_dashboard_visibility_c19cc3b93b198b90982a9dc643e45ae3</sys_update_name>
+        <sys_update_version display_value="par_dashboard_visibility_c19cc3b93b198b90982a9dc643e45ae3">2d9cc3b93b198b90982a9dc643e45ae7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 01:35:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

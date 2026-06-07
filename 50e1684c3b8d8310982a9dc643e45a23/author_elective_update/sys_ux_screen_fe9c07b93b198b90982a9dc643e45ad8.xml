@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
+        <event_mappings/>
+        <macroponent/>
+        <macroponent_config>{}</macroponent_config>
+        <name>SentinelOps Command Center default</name>
+        <order>0</order>
+        <parent_macroponent display_value="UXR Base Experience Shell - Advanced">47bcb58553030110aab9ddeeff7b12c2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="SentinelOps Command Center">b19cc3b93b198b90982a9dc643e45ae9</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 17:54:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fe9c07b93b198b90982a9dc643e45ad8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SentinelOps Command Center default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_ux_screen_fe9c07b93b198b90982a9dc643e45ad8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 17:54:05</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=fe9c07b93b198b90982a9dc643e45ad8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</application>
+        <file_path/>
+        <instance_id>2e4c2993fbbb261085daf3585eefdc17</instance_id>
+        <instance_name>dev357409</instance_name>
+        <name>sys_ux_screen_fe9c07b93b198b90982a9dc643e45ad8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</app_config><description/><disable_auto_reflow>false</disable_auto_reflow><disable_interoperable>false</disable_interoperable><event_mappings/><macroponent/><macroponent_config>{}</macroponent_config><name>SentinelOps Command Center default</name><order>0</order><parent_macroponent display_value="UXR Base Experience Shell - Advanced">47bcb58553030110aab9ddeeff7b12c2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="SentinelOps Command Center">b19cc3b93b198b90982a9dc643e45ae9</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-06-06 17:54:05</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fe9c07b93b198b90982a9dc643e45ad8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>SentinelOps Command Center default</sys_name><sys_overrides/><sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package><sys_policy/><sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope><sys_update_name>sys_ux_screen_fe9c07b93b198b90982a9dc643e45ad8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-06 17:54:05</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=fe9c07b93b198b90982a9dc643e45ad8"/></record_update>]]></payload>
+        <payload_hash>1423809734</payload_hash>
+        <record_name>SentinelOps Command Center default</record_name>
+        <reverted_from/>
+        <source>ef5df4ce3b8d8350982a9dc643e45a0b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 01:35:31</sys_created_on>
+        <sys_id>0236f8ce3b51cb90982a9dc643e45ad1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e9fb886cc0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 01:35:31</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>f79c47b9e3198b9019947c2282ae6969</update_guid>
+        <update_guid_history>f79c47b9e3198b9019947c2282ae6969:-855284047,f79c47b9e3198b9019947c2282ae6969:-855284047</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 01:35:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>53ab1a74844d4c44b814994a4d95d284</sys_id>
+        <sys_metadata>fe9c07b93b198b90982a9dc643e45ad8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SentinelOps Command Center default</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_scope_delete display_value="">0dcfe72dfe6f46e096259f6ee06cede4</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_fe9c07b93b198b90982a9dc643e45ad8</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_fe9c07b93b198b90982a9dc643e45ad8">0236f8ce3b51cb90982a9dc643e45ad1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 01:35:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

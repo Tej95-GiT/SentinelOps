@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <interoperable>false</interoperable>
+        <name>SentinelOps Command Center</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="UXR Base Experience Shell - Advanced">47bcb58553030110aab9ddeeff7b12c2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>sentinelops_command_center-2021029795</route_type>
+        <screen_type display_value="SentinelOps Command Center">b19cc3b93b198b90982a9dc643e45ae9</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 17:54:19</sys_created_on>
+        <sys_id>52ac87b93b198b90982a9dc643e45a0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SentinelOps Command Center</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_ux_app_route_52ac87b93b198b90982a9dc643e45a0f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 17:54:19</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=52ac87b93b198b90982a9dc643e45a0f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</application>
+        <file_path/>
+        <instance_id>2e4c2993fbbb261085daf3585eefdc17</instance_id>
+        <instance_name>dev357409</instance_name>
+        <name>sys_ux_app_route_52ac87b93b198b90982a9dc643e45a0f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</app_config><description/><extension_point/><fields/><icon/><interoperable>false</interoperable><name>SentinelOps Command Center</name><optional_parameters/><order>0</order><parent_macroponent display_value="UXR Base Experience Shell - Advanced">47bcb58553030110aab9ddeeff7b12c2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>sentinelops_command_center-2021029795</route_type><screen_type display_value="SentinelOps Command Center">b19cc3b93b198b90982a9dc643e45ae9</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-06-06 17:54:19</sys_created_on><sys_id>52ac87b93b198b90982a9dc643e45a0f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>SentinelOps Command Center</sys_name><sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package><sys_policy/><sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope><sys_update_name>sys_ux_app_route_52ac87b93b198b90982a9dc643e45a0f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-06 17:54:19</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=52ac87b93b198b90982a9dc643e45a0f"/></record_update>]]></payload>
+        <payload_hash>2105879472</payload_hash>
+        <record_name>SentinelOps Command Center</record_name>
+        <reverted_from/>
+        <source>ef5df4ce3b8d8350982a9dc643e45a0b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 17:54:22</sys_created_on>
+        <sys_id>4fac87b93b198b90982a9dc643e45adb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e9e12552a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 17:54:22</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>faac87b97c198b9041e49e526422e8da</update_guid>
+        <update_guid_history>faac87b97c198b9041e49e526422e8da:2105879472</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 01:35:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>53c0586cf33c4818a74ccc40bf0fb0c4</sys_id>
+        <sys_metadata>52ac87b93b198b90982a9dc643e45a0f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SentinelOps Command Center</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_scope_delete display_value="">0dcfe72dfe6f46e096259f6ee06cede4</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_52ac87b93b198b90982a9dc643e45a0f</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_52ac87b93b198b90982a9dc643e45a0f">4fac87b93b198b90982a9dc643e45adb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 01:35:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
