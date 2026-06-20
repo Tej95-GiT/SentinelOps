@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-23 03:38:27</sys_created_on>
+        <sys_id>b88288513b090f10982a9dc643e45ab0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1858206_sentin_0_readiness_assessment.x_1858206_sentin_0.readiness_assessment_user</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_security_acl display_value="x_1858206_sentin_0_readiness_assessment">e48288513b090f10982a9dc643e45aaa</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b88288513b090f10982a9dc643e45ab0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-23 03:38:27</sys_updated_on>
+        <sys_user_role display_value="x_1858206_sentin_0.readiness_assessment_user" name="x_1858206_sentin_0.readiness_assessment_user">56720c113b090f10982a9dc643e45aa6</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</application>
+        <file_path/>
+        <instance_id>2e4c2993fbbb261085daf3585eefdc17</instance_id>
+        <instance_name>dev357409</instance_name>
+        <name>sys_security_acl_role_b88288513b090f10982a9dc643e45ab0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-23 03:38:27</sys_created_on><sys_id>b88288513b090f10982a9dc643e45ab0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1858206_sentin_0_readiness_assessment.x_1858206_sentin_0.readiness_assessment_user</sys_name><sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package><sys_policy/><sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope><sys_security_acl display_value="x_1858206_sentin_0_readiness_assessment">e48288513b090f10982a9dc643e45aaa</sys_security_acl><sys_update_name>sys_security_acl_role_b88288513b090f10982a9dc643e45ab0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-23 03:38:27</sys_updated_on><sys_user_role display_value="x_1858206_sentin_0.readiness_assessment_user" name="x_1858206_sentin_0.readiness_assessment_user">56720c113b090f10982a9dc643e45aa6</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-431152611</payload_hash>
+        <record_name>x_1858206_sentin_0_readiness_assessment.x_1858206_sentin_0.readiness_assessment_user</record_name>
+        <reverted_from/>
+        <source>0d8b644c3bcd8310982a9dc643e45a89</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-23 03:38:28</sys_created_on>
+        <sys_id>7c8288513b090f10982a9dc643e45ad2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e52e9b5b70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-23 03:38:28</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>3c8288513b090f101e17eb79db3068d1</update_guid>
+        <update_guid_history>3c8288513b090f101e17eb79db3068d1:-431152611</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1858206_sentin_0_readiness_assessment.x_1858206_sentin_0.readiness_assessment_">1927b8aa3bdd4f90982a9dc643e45aec</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-08 14:56:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>3c8ada0472d347b19cdc97dc884933a1</sys_id>
+        <sys_metadata>b88288513b090f10982a9dc643e45ab0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1858206_sentin_0_readiness_assessment.x_1858206_sentin_0.readiness_assessment_user</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_parent display_value="x_1858206_sentin_0_readiness_assessment">e48288513b090f10982a9dc643e45aaa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_scope_delete display_value="">0dcfe72dfe6f46e096259f6ee06cede4</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_b88288513b090f10982a9dc643e45ab0</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_b88288513b090f10982a9dc643e45ab0">7c8288513b090f10982a9dc643e45ad2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-08 14:56:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

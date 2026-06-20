@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1858206_sentin_0_readiness_assessment</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1858206_sentin_0_readiness_assessment">service_ciVALCHANGES^service_ciISNOTEMPTY<item endquery="false" field="service_ci" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="service_ci" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>SentinelOps: Trigger CSDM Evaluation</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    try {
+        // Defensive check: Ensure we actually have a sys_id
+        var ciId = current.getValue('service_ci'); 
+        if (!ciId) return;
+
+        // Instantiate our custom traversal engine
+        var engine = new x_1858206_sentin_0.CSDMTraversalEngine();
+        var result = engine.evaluateServiceReadiness(ciId);
+        
+        // 1. Stamp the raw JSON for future AI (Now Assist) ingestion
+        current.assessment_telemetry = JSON.stringify(result);
+        
+        // 2. Translate the JSON into human-readable text for the Analyst Persona
+        if (result.is_compliant === false) {
+            current.technical_quality_findings = "--- AUTOMATED CSDM FINDINGS ---\n" + result.findings.join('\n');
+        } else {
+            current.technical_quality_findings = "--- AUTOMATED CSDM FINDINGS ---\nCSDM Structure Verified. No structural gaps detected.";
+        }
+
+    } catch (ex) {
+        // Silent failure protection: Log to platform but don't break the user's transaction
+        gs.error('SentinelOps Engine Error [Trigger CSDM Evaluation]: ' + ex.message);
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-09 03:49:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8f0bf0de98b94269bb619957fd914b99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SentinelOps: Trigger CSDM Evaluation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_script_8f0bf0de98b94269bb619957fd914b99</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-09 03:49:16</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8f0bf0de98b94269bb619957fd914b99"/>
+</record_update>

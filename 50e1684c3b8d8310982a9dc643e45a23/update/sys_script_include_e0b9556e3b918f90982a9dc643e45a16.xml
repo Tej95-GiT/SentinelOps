@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1858206_sentin_0.CSDMTraversalEngine</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>CSDMTraversalEngine</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var CSDMTraversalEngine = Class.create();
+CSDMTraversalEngine.prototype = {
+    initialize: function() {
+        // cap it at 5 levels so we don't blow up the instance on circular CMDB loops
+        this.maxDepth = 5; 
+    },
+
+    evaluateServiceReadiness: function(ciSysId) {
+        var result = {
+            status: "success",
+            target_ci: "",
+            ci_class: "",
+            is_compliant: false, // defensive default so orphans don't auto-pass
+            findings: []
+        };
+
+        // 1. verify CI actually exists in db first
+        var grCI = new GlideRecord('cmdb_ci');
+        if (!grCI.get(ciSysId)) {
+            result.status = "error";
+            result.findings.push("CI not found.");
+            return result;
+        }
+
+        result.target_ci = grCI.getValue('name');
+        result.ci_class = grCI.getValue('sys_class_name');
+
+        // 2. Check for missing basic data (classic CMDB health stuff)
+        // gotta make sure we have owners otherwise governance routing breaks later
+        if (gs.nil(grCI.getValue('owned_by'))) {
+            result.findings.push("CRITICAL: CI is missing an Owner.");
+        }
+        if (gs.nil(grCI.getValue('support_group'))) {
+            result.findings.push("CRITICAL: CI is missing a Support Group.");
+        }
+
+        // 3. Start traversal to find the Business App
+        // kicking off the recursive walk upwards
+        var foundBusinessApp = this._traverseUpstreamForApp(ciSysId, 0);
+
+        if (!foundBusinessApp) {
+            result.findings.push("CRITICAL: CI does not roll up to a cmdb_ci_business_app. CSDM structure is broken.");
+        }
+
+        // if the findings array is empty, we survived the gauntlet
+        if (result.findings.length === 0) {
+            result.is_compliant = true;
+        }
+
+        return result;
+    },
+
+    // helper function to recursively walk up cmdb_rel_ci
+    // looking specifically for the business app layer
+    _traverseUpstreamForApp: function(currentCiId, depth) {
+        if (!depth) depth = 0;
+        if (depth > this.maxDepth) return false; // bail out if we go too deep
+
+        // check if the current CI we are standing on is a Business App
+        var grCheck = new GlideRecord('cmdb_ci');
+        if (grCheck.get(currentCiId) && grCheck.sys_class_name == 'cmdb_ci_business_app') {
+            return true; // found it!
+        }
+
+        // query relationships where this CI is the child to go up one level
+        var relGR = new GlideRecord('cmdb_rel_ci');
+        relGR.addQuery('child', currentCiId);
+        relGR.query();
+
+        while (relGR.next()) {
+            // go up one level recursively
+            if (this._traverseUpstreamForApp(relGR.getValue('parent'), depth + 1)) {
+                return true;
+            }
+        }
+        
+        // hit a dead end
+        return false;
+    },
+
+    type: 'CSDMTraversalEngine'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-08 17:29:46</sys_created_on>
+        <sys_id>e0b9556e3b918f90982a9dc643e45a16</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>CSDMTraversalEngine</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_script_include_e0b9556e3b918f90982a9dc643e45a16</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-20 10:27:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -4,12 +4,7 @@
         <array>false</array>
         <attributes/>
         <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
+        <calculation/>
         <choice>1</choice>
         <choice_field/>
         <choice_table/>

@@ -12,43 +12,53 @@
         <script><![CDATA[var ChecklistGenerator = Class.create();
 ChecklistGenerator.prototype = {
 
-    initialize: function() {},
+    initialize: function() {
+        // No setup required
+    },
 
     generateFromPolicy: function(assessmentGR) {
-
-        if (!assessmentGR.policy)
-            return;
-
-        var existing = new GlideRecord('x_1858206_sentin_0_checklist_result');
-
-        existing.addQuery('assessment', assessmentGR.getUniqueValue());
-        existing.setLimit(1);
-        existing.query();
-
-        if (existing.hasNext()) {
+        // Make sure we actually have a policy assigned before doing anything
+        var policyId = assessmentGR.getValue('policy');
+        if (gs.nil(policyId)) {
+            gs.warn('ChecklistGenerator: Cannot generate checklist, no policy assigned to assessment ' + assessmentGR.getValue('number'));
             return;
         }
 
-        var criteriaGR = new GlideRecord('x_1858206_sentin_0_policy_criteria');
+        // Quick sanity check: did we already generate a checklist for this?
+        // Don't want to spam the related list with duplicates if someone clicks a UI action twice
+        var existingGr = new GlideRecord('x_1858206_sentin_0_checklist_result');
+        existingGr.addQuery('assessment', assessmentGR.getUniqueValue());
+        existingGr.setLimit(1);
+        existingGr.query();
 
-        criteriaGR.addQuery('policy', assessmentGR.policy);
-        criteriaGR.addQuery('active', true);
-        criteriaGR.query();
-
-        while (criteriaGR.next()) {
-
-            var checklistGR = new GlideRecord('x_1858206_sentin_0_checklist_result');
-
-            checklistGR.initialize();
-
-            checklistGR.assessment = assessmentGR.sys_id;
-            checklistGR.criteria = criteriaGR.sys_id;
-            checklistGR.mandatory = criteriaGR.mandatory;
-            checklistGR.weight = criteriaGR.weight;
-            checklistGR.result = 'pending';
-
-            checklistGR.insert();
+        if (existingGr.hasNext()) {
+            gs.info('ChecklistGenerator: Checklist already exists for this assessment. Skipping generation.');
+            return;
         }
+
+        // Grab the active criteria for the linked policy
+        var criteriaGr = new GlideRecord('x_1858206_sentin_0_policy_criteria');
+        criteriaGr.addQuery('policy', policyId);
+        criteriaGr.addQuery('active', true);
+        criteriaGr.query();
+
+        var count = 0;
+        while (criteriaGr.next()) {
+            var checklistGr = new GlideRecord('x_1858206_sentin_0_checklist_result');
+            checklistGr.initialize();
+
+            // Map fields over using getValue to prevent reference pointer issues
+            checklistGr.setValue('assessment', assessmentGR.getUniqueValue());
+            checklistGr.setValue('criteria', criteriaGr.getUniqueValue());
+            checklistGr.setValue('mandatory', criteriaGr.getValue('mandatory'));
+            checklistGr.setValue('weight', criteriaGr.getValue('weight'));
+            checklistGr.setValue('result', 'pending'); // default state for the analyst
+
+            checklistGr.insert();
+            count++;
+        }
+        
+        gs.info('ChecklistGenerator: Successfully created ' + count + ' checklist items.');
     },
 
     type: 'ChecklistGenerator'
@@ -57,13 +67,13 @@ ChecklistGenerator.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-24 13:51:27</sys_created_on>
         <sys_id>34481b6d3b810350982a9dc643e45a0b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>ChecklistGenerator</sys_name>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_script_include_34481b6d3b810350982a9dc643e45a0b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-24 13:51:27</sys_updated_on>
+        <sys_updated_on>2026-06-20 13:27:45</sys_updated_on>
     </sys_script_include>
 </record_update>

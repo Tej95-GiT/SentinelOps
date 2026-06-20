@@ -11,7 +11,7 @@
         <element label="Readiness Score" max_length="40" name="readiness_score" type="integer"/>
         <element label="Criteria Passed" max_length="40" name="criteria_passed" type="integer"/>
         <element label="Assessment Telemetry" max_length="1000" name="assessment_telemetry" type="string"/>
-        <element label="Service CI" max_length="32" name="service_ci" reference="cmdb_ci_service" type="reference"/>
+        <element label="Service CI" max_length="32" name="service_ci" reference="cmdb_ci" reference_qual="sys_class_name=cmdb_ci_business_app^EQ" reference_qual_condition="sys_class_name=cmdb_ci_business_app^EQ" type="reference"/>
         <element choice="1" label="Assessment Type" max_length="40" name="assessment_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Major Change" value="major_change"/>

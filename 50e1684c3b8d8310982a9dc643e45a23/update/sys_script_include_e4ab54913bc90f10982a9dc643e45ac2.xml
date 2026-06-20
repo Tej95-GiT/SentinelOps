@@ -10,24 +10,21 @@
         <name>ReadinessScorer</name>
         <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var ReadinessScorer = Class.create();
-
 ReadinessScorer.prototype = {
 
-    initialize: function() {},
+    initialize: function() {
+        this.defaultThreshold = 70; // Fallback if policy doesn't define one
+    },
 
     calculateScore: function(assessmentSysId) {
+        if (!assessmentSysId) {
+            gs.error('ReadinessScorer: No assessment ID provided.');
+            return null;
+        }
 
-        gs.info('SCORER INPUT: ' + assessmentSysId);
-
-        var gr = new GlideRecord(
-            'x_1858206_sentin_0_checklist_result'
-        );
-
-        gr.addQuery(
-            'assessment',
-            assessmentSysId.toString()
-        );
-
+        // 1. Evaluate the checklist items
+        var gr = new GlideRecord('x_1858206_sentin_0_checklist_result');
+        gr.addQuery('assessment', assessmentSysId);
         gr.query();
 
         var total = 0;
@@ -35,174 +32,57 @@ ReadinessScorer.prototype = {
         var mandatoryFail = false;
 
         while (gr.next()) {
-
             total++;
-
             var result = gr.getValue('result');
+            
+            // Watch out for SN boolean field quirks (1/0 vs true/false)
+            var isMandatory = (gr.getValue('mandatory') == '1' || gr.getValue('mandatory') == 'true');
 
-            gs.info(
-                'FOUND RESULT: ' +
-                result
-            );
-
-            if (result == 'pass') {
+            if (result === 'pass') {
                 passed++;
             }
 
-            var mandatory =
-                gr.getValue('mandatory');
-
-            if (
-                mandatory == 'true' &&
-                result != 'pass'
-            ) {
-
+            // If a mandatory item fails or is pending, we block the gate
+            if (isMandatory && result !== 'pass') {
                 mandatoryFail = true;
-
-                gs.info(
-                    'MANDATORY FAILURE DETECTED'
-                );
+                // Note: We don't break the loop here because we still want the overall numerical score
             }
         }
 
-        var score = (total == 0)
-            ? 0
-            : Math.round(
-                (passed / total) * 100
-            );
+        // Protect against div by zero on empty checklists
+        var score = (total === 0) ? 0 : Math.round((passed / total) * 100);
 
-        gs.info(
-            'CALCULATED SCORE: ' +
-            score
-        );
-
-        //
-        // POLICY-DRIVEN THRESHOLD
-        //
-        var threshold = 70;
-
-        var assessmentGR =
-            new GlideRecord(
-                'x_1858206_sentin_0_readiness_assessment'
-            );
-
-        if (
-            assessmentGR.get(
-                assessmentSysId
-            )
-        ) {
-
-            gs.info(
-                'ASSESSMENT FOUND: ' +
-                assessmentGR.getDisplayValue()
-            );
-
-            var policyId =
-                assessmentGR.getValue(
-                    'policy'
-                );
-
-            gs.info(
-                'POLICY ID: ' +
-                policyId
-            );
-
+        // 2. Determine the threshold from the Policy
+        var threshold = this.defaultThreshold;
+        var assessmentGr = new GlideRecord('x_1858206_sentin_0_readiness_assessment');
+        
+        if (assessmentGr.get(assessmentSysId)) {
+            var policyId = assessmentGr.getValue('policy');
             if (policyId) {
-
-                var policyGR =
-                    new GlideRecord(
-                        'x_1858206_sentin_0_readiness_policy'
-                    );
-
-                if (
-                    policyGR.get(
-                        policyId
-                    )
-                ) {
-
-                    gs.info(
-                        'POLICY FOUND: ' +
-                        policyGR.getDisplayValue()
-                    );
-
-                    var configuredThreshold =
-                        parseInt(
-                            policyGR.getValue(
-                                'pass_threshold'
-                            ),
-                            10
-                        );
-
-                    gs.info(
-                        'CONFIGURED THRESHOLD: ' +
-                        configuredThreshold
-                    );
-
-                    if (
-                        !isNaN(
-                            configuredThreshold
-                        )
-                    ) {
-
-                        threshold =
-                            configuredThreshold;
+                var policyGr = new GlideRecord('x_1858206_sentin_0_readiness_policy');
+                if (policyGr.get(policyId)) {
+                    var configuredThreshold = parseInt(policyGr.getValue('pass_threshold'), 10);
+                    if (!isNaN(configuredThreshold)) {
+                        threshold = configuredThreshold;
                     }
                 }
-                else {
-
-                    gs.info(
-                        'POLICY RECORD NOT FOUND'
-                    );
-                }
-            }
-            else {
-
-                gs.info(
-                    'NO POLICY LINKED TO ASSESSMENT'
-                );
             }
         }
-        else {
 
-            gs.info(
-                'ASSESSMENT RECORD NOT FOUND'
-            );
-        }
-
-        gs.info(
-            'THRESHOLD USED: ' +
-            threshold
-        );
-
+        // 3. Final Gate Calculation
         var gate = 'fail';
-
-        if (
-            !mandatoryFail &&
-            score >= threshold
-        ) {
-
+        if (!mandatoryFail && score >= threshold) {
             gate = 'pass';
         }
 
-        gs.info(
-            'MANDATORY FAIL FLAG: ' +
-            mandatoryFail
-        );
-
-        gs.info(
-            'FINAL SCORE: ' +
-            score +
-            ' | THRESHOLD: ' +
-            threshold +
-            ' | GATE: ' +
-            gate
-        );
+        gs.info('ReadinessScorer completed | Score: ' + score + ' | Gate: ' + gate + ' | Mandatory Fail: ' + mandatoryFail);
 
         return {
             score: score,
             passed: passed,
             total: total,
-            gate: gate
+            gate: gate,
+            mandatory_fail: mandatoryFail
         };
     },
 
@@ -212,13 +92,13 @@ ReadinessScorer.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-23 05:29:54</sys_created_on>
         <sys_id>e4ab54913bc90f10982a9dc643e45ac2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>ReadinessScorer</sys_name>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_script_include_e4ab54913bc90f10982a9dc643e45ac2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-31 14:10:29</sys_updated_on>
+        <sys_updated_on>2026-06-20 13:27:25</sys_updated_on>
     </sys_script_include>
 </record_update>

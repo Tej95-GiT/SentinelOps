@@ -5,7 +5,7 @@
         <active>true</active>
         <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=961406000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2034501000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>29000</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -16,15 +16,15 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>fl001_assessment_orchestration</internal_name>
-        <label_cache>[{"name":"2a647daa-3b44-4a79-98a9-c81ce2bbb24e.csdm_compliant","label":"6 - SF002 CSDM Validation➛CSDM Compliant","reference_display":"CSDM Compliant","type":"boolean","base_type":"boolean","usedInstances":{"0be9e2b0-90b3-4a68-93da-166a94ae4db6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14f565ae-6814-42db-8e31-7d3c1666dc26"}},{"name":"Updated_1.current.service_ci","label":"Trigger - Record Updated➛Readiness Assessment Record➛Service CI","reference":"cmdb_ci_service","reference_display":"Service","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"service_ci","usedInstances":{"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"],"7ff093ae-799f-408a-9b7b-1227246aba27":["service_ci"],"2a647daa-3b44-4a79-98a9-c81ce2bbb24e":["service_ci"]}},{"name":"undefined","label":" - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record","usedInstances":{},"attributes":{}},{"name":"Updated_1.current.assignment_group","label":"Trigger - Record Updated➛Readiness Assessment Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"assignment_group","choices":[{"order":0.0}],"usedInstances":{"33a0de1a-18f1-40b4-acdc-838db416e2a7":["approval_conditions"]}},{"name":"62c91799-c265-4a49-ae78-a0c0eb7ae537.gate","label":"1 - Calculate Readiness Score➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"20af3d55-14cf-4929-a265-82eaa2ec6cbd":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6a9233b4-768c-4dae-9791-c0769566bbfe"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Readiness Assessment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"sys_id","usedInstances":{"f9803ad9-e12b-4ece-a108-40fe5c8c90d6":[null,"conditions"],"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"]}},{"name":"33a0de1a-18f1-40b4-acdc-838db416e2a7.approval_state","label":"12 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{"f50c220b-9640-4dbb-b9a5-eb41585fc89f":["record"],"33a0de1a-18f1-40b4-acdc-838db416e2a7":["record"],"5568b453-937b-4d5d-b702-d5694f3d81ae":["record"],"7b4d5890-14f0-4719-a86f-a19b24f8bb96":["record"],"482e4040-d574-4270-88ac-03bc5a3ac595":["record"],"fdd3fadc-e412-4475-9a93-588bc41f0375":["record"],"29d8c1f3-bb91-436a-bf6b-2f87b30b3b96":["record"],"97a8e67a-f446-4ba8-9ec7-cc401c176dc5":["record"]},"attributes":{}},{"name":"482e4040-d574-4270-88ac-03bc5a3ac595.record","label":"11 - Update Record➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.state","label":"Trigger - Record Updated➛Readiness Assessment Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"state","choices":[{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Draft"}},"sequence":100.0,"label":"Draft","selected":false,"used":false,"reference":false,"rawLabel":"Draft","missing":false,"image":"","value":"1"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Submitted"}},"sequence":200.0,"label":"Submitted","selected":false,"used":false,"reference":false,"rawLabel":"Submitted","missing":false,"image":"","value":"10"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"In Review"}},"sequence":300.0,"label":"In Review","selected":false,"used":false,"reference":false,"rawLabel":"In Review","missing":false,"image":"","value":"30"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Approved"}},"sequence":400.0,"label":"Approved","selected":false,"used":false,"reference":false,"rawLabel":"Approved","missing":false,"image":"","value":"40"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Blocked"}},"sequence":500.0,"label":"Blocked","selected":false,"used":false,"reference":false,"rawLabel":"Blocked","missing":false,"image":"","value":"50"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}},"sequence":600.0,"label":"Cancelled","selected":false,"used":false,"reference":false,"rawLabel":"Cancelled","missing":false,"image":"","value":"100"}],"usedInstances":{"a8ba209d-3efb-4e5d-9ef5-bb6590e65e0f":["condition"]}},{"name":"7ff093ae-799f-408a-9b7b-1227246aba27.governance_pass","label":"2 - SF001 CMDB Validation➛Governance Pass","reference_display":"Governance Pass","type":"boolean","base_type":"boolean","usedInstances":{"87014a9a-87fe-4aef-a2ff-8e1c3c3557d6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"acd58234-90ed-4f2f-8eef-d94a1aea915c"}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.current.group_list","label":"Trigger - Record Updated➛Readiness Assessment Record➛Group list","reference":"sys_user_group","reference_display":"Group","type":"glide_list","base_type":"glide_list","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"group_list","choices":[{"order":0.0}],"usedInstances":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{"f50c220b-9640-4dbb-b9a5-eb41585fc89f":["record"],"33a0de1a-18f1-40b4-acdc-838db416e2a7":["record"],"5568b453-937b-4d5d-b702-d5694f3d81ae":["record"],"97a8e67a-f446-4ba8-9ec7-cc401c176dc5":["record"],"7b4d5890-14f0-4719-a86f-a19b24f8bb96":["record"],"482e4040-d574-4270-88ac-03bc5a3ac595":["record"],"c9373557-b536-4a2d-ad6a-c43c49d1c2e1":["record"],"fdd3fadc-e412-4475-9a93-588bc41f0375":["record"],"29d8c1f3-bb91-436a-bf6b-2f87b30b3b96":["record"],"0bc125b1-d45b-42aa-811a-7b4966604a10":["record"],"9c729909-18f1-4d19-8f19-7bc803522ded":["assessment_record"]},"attributes":{}},{"name":"482e4040-d574-4270-88ac-03bc5a3ac595.record","label":"3 - Update Record➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"33a0de1a-18f1-40b4-acdc-838db416e2a7.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.assignment_group","label":"Trigger - Record Updated➛Readiness Assessment Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"assignment_group","choices":[{"order":0.0}],"usedInstances":{"33a0de1a-18f1-40b4-acdc-838db416e2a7":["approval_conditions"]}},{"name":"undefined","label":"13 - End Flow","type":"END","base_type":"END","usedInstances":{},"attributes":{}},{"name":"Updated_1.current.state","label":"Trigger - Record Updated➛Readiness Assessment Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"state","choices":[{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Draft"}},"sequence":100.0,"label":"Draft","selected":false,"used":false,"reference":false,"rawLabel":"Draft","missing":false,"image":"","value":"1"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Submitted"}},"sequence":200.0,"label":"Submitted","selected":false,"used":false,"reference":false,"rawLabel":"Submitted","missing":false,"image":"","value":"10"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Under Review"}},"sequence":300.0,"label":"Under Review","selected":false,"used":false,"reference":false,"rawLabel":"Under Review","missing":false,"image":"","value":"30"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Approved"}},"sequence":400.0,"label":"Approved","selected":false,"used":false,"reference":false,"rawLabel":"Approved","missing":false,"image":"","value":"40"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Blocked"}},"sequence":500.0,"label":"Blocked","selected":false,"used":false,"reference":false,"rawLabel":"Blocked","missing":false,"image":"","value":"50"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Rejected"}},"sequence":600.0,"label":"Rejected","selected":false,"used":false,"reference":false,"rawLabel":"Rejected","missing":false,"image":"","value":"60"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}},"sequence":700.0,"label":"Cancelled","selected":false,"used":false,"reference":false,"rawLabel":"Cancelled","missing":false,"image":"","value":"100"}],"usedInstances":{"a8ba209d-3efb-4e5d-9ef5-bb6590e65e0f":["condition"]}},{"name":"7ff093ae-799f-408a-9b7b-1227246aba27.governance_pass","label":"2 - SF001 CMDB Validation➛Governance Pass","reference_display":"Governance Pass","type":"boolean","base_type":"boolean","usedInstances":{"87014a9a-87fe-4aef-a2ff-8e1c3c3557d6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"acd58234-90ed-4f2f-8eef-d94a1aea915c"}},{"name":"2a647daa-3b44-4a79-98a9-c81ce2bbb24e.csdm_compliant","label":"6 - SF002 CSDM Validation➛CSDM Compliant","reference_display":"CSDM Compliant","type":"boolean","base_type":"boolean","usedInstances":{"0be9e2b0-90b3-4a68-93da-166a94ae4db6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14f565ae-6814-42db-8e31-7d3c1666dc26"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Readiness Assessment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"sys_id","usedInstances":{"f9803ad9-e12b-4ece-a108-40fe5c8c90d6":[null,"conditions"],"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"]}},{"name":"62c91799-c265-4a49-ae78-a0c0eb7ae537.gate","label":"1 - Calculate Readiness Score➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"20af3d55-14cf-4929-a265-82eaa2ec6cbd":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6a9233b4-768c-4dae-9791-c0769566bbfe"}},{"name":"Updated_1.current.service_ci","label":"Trigger - Record Updated➛Readiness Assessment Record➛Service CI","reference":"cmdb_ci_service","reference_display":"Service","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"service_ci","usedInstances":{"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"],"7ff093ae-799f-408a-9b7b-1227246aba27":["service_ci"],"2a647daa-3b44-4a79-98a9-c81ce2bbb24e":["service_ci"]}},{"name":"Updated_1.current.additional_assignee_list","label":"Trigger - Record Updated➛Readiness Assessment Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"additional_assignee_list","choices":[{"order":0.0}],"usedInstances":{}}]</label_cache>
         <master_snapshot>5c168a663b8d8750982a9dc643e45ad7</master_snapshot>
         <master_snapshot_digest/>
         <name>FL001 Assessment Orchestration</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id>9166c3313b198b90982a9dc643e45a68</remote_trigger_id>
-        <run_as>user</run_as>
+        <remote_trigger_id>53b3cbb93ba54314982a9dc643e45a15</remote_trigger_id>
+        <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2b127d9e3b014750982a9dc643e45a77</sys_id>
-        <sys_mod_count>72</sys_mod_count>
+        <sys_mod_count>112</sys_mod_count>
         <sys_name>FL001 Assessment Orchestration</sys_name>
         <sys_overrides/>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
@@ -45,11 +45,11 @@
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_hub_flow_2b127d9e3b014750982a9dc643e45a77</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:26:59</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:31:05</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>727507bd3bd58b90982a9dc643e45abf</version_record>
+        <version_record>d90483f93ba54314982a9dc643e45a71</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=2b127d9e3b014750982a9dc643e45a77"/>
     <sys_variable_value action="delete_multiple" query="document_key=2b127d9e3b014750982a9dc643e45a77"/>
@@ -69,15 +69,15 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 17:26:57</sys_created_on>
+        <sys_created_on>2026-06-19 03:31:03</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>9166c3313b198b90982a9dc643e45a68</sys_id>
+        <sys_id>53b3cbb93ba54314982a9dc643e45a15</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:26:57</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:31:03</sys_updated_on>
         <table>x_1858206_sentin_0_readiness_assessment</table>
         <trigger_definition/>
     </sys_flow_record_trigger>
@@ -88,14 +88,14 @@
         <identifier_type>flow</identifier_type>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 17:26:57</sys_created_on>
-        <sys_id>1d66c3313b198b90982a9dc643e45a68</sys_id>
+        <sys_created_on>2026-06-19 03:31:03</sys_created_on>
+        <sys_id>ebb3cbb93ba54314982a9dc643e45a15</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:26:57</sys_updated_on>
-        <trigger display_value="">9166c3313b198b90982a9dc643e45a68</trigger>
+        <sys_updated_on>2026-06-19 03:31:03</sys_updated_on>
+        <trigger display_value="">53b3cbb93ba54314982a9dc643e45a15</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN1d66c3313b198b90982a9dc643e45a68"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=2b127d9e3b014750982a9dc643e45a77^sys_idNOT INebb3cbb93ba54314982a9dc643e45a15"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=2b127d9e3b014750982a9dc643e45a77^sys_idNOT INf7123d123b814750982a9dc643e45a20"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -390,7 +390,7 @@
         <trigger_type>record_update</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN03ea65403b9dcf50982a9dc643e45ab7,1ba3ca313b918b90982a9dc643e45ac1,1bee79663b4d8750982a9dc643e45a17,2ddf39663b4d8750982a9dc643e45adf,374fa1083b9dcf50982a9dc643e45ad7,a4458ee23b8d8750982a9dc643e45ae3,e60efab13bd58b90982a9dc643e45a11,e93079483b9dcf50982a9dc643e45add"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN03ea65403b9dcf50982a9dc643e45ab7,1bee79663b4d8750982a9dc643e45a17,2ddf39663b4d8750982a9dc643e45adf,374fa1083b9dcf50982a9dc643e45ad7,6d5814313be50314982a9dc643e45a02,a4458ee23b8d8750982a9dc643e45ae3"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
         <action_type_parent/>
@@ -400,45 +400,21 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>12</order>
+        <order>4</order>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 00:17:56</sys_created_on>
         <sys_id>03ea65403b9dcf50982a9dc643e45ab7</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:14:21</sys_updated_on>
+        <sys_updated_on>2026-06-09 06:59:54</sys_updated_on>
         <ui_id>33a0de1a-18f1-40b4-acdc-838db416e2a7</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1YTW/bOBD9K4bOjpeyLEX2LUCQoovdLeCkvcSBQJOjmIVMKaLUxmv4v+9QpD5iJ443dtEWyCUBhxzOm5n3pLFu147gzsSBUeD5+Oc89og7dEkIQRiyMaEsDAJ/5Dl9R9Il4EmaZXn6jSZRDlSlEjdwUeqdKVAuJCjVu1AK/y1BFr0Le7w3hYdS5MDRgQuVJXT15f/6sYVIeA7Smdze9Z2M5oiogNyZrLe2ilUGUULnkOD110Uu5D26H5po7diBYDN9sQQ6IG6oOlSac41r2HfgsQDJEf4kpomCvrOkktMizVeNBW/hn2TSGhZCFnibow8/KvEvXu0GRB+MAXNkYDabZWQLasxskQoGn7JCILTKUtB5Yn1YmpRL+Y/JQ7cCYlomRd0KtJQK74NMg9YoLKT4epF+n9YBr4Ss8rObScpo0qxogVWYlwUo3ZhS3GzVxlj+2u4OJKAbHy2xumiJdIlFFQVBLwf3CS4GcZJ+R3RK3MsBZTrDARaTDq7QflmZv9Bc6HT/xmvQWYf7LMVDCR9194PhPBiTkJ/xmMzPRqHnn1EG5AwC1wefB8x3PWdTlTZ6KHVSpki2HJGpKB5QLBdZcYEQvoHNfNO3WiJuPITxeEjmLiEeIaHPSOjB3DsPzj3Kw2eIFAtIeEdK9cauWDo7b5PDlQ7VqxjQPxjvjiSuLOCXErGCqJaRNMFOLoqQkJ+kiiIvjxHFj+H6a7w1Cb9CXraXDNB5EXxNy1zu4W60EKpq6Ysc7pw4FZcPgF87/2nwb1N5O609TPbemfwLM/k83EcFRtqW58Cwox0Kr9efM0QIPHIHrMyxKMVms8vjN/P2MmVlNeV8vKyJewDa2ntaw92Gb6nK7e2R4C1XyX6uGhocQlVv+E7UEz9y/X2tj8dtp3mJJUFedqk6cwzSmTOZOTKVMHP6M0efijQfKjOeQITNRmVbb8y6zKl1dzvL1pfTlapOKrYAXibG+sRieG3tp9TJtQ3Qu0TUf9yIznP+9Zo1YiuN/7NlrAf3OhNTN9F9yvsne8qPftMZ/seN5lEzzqJWUOBHz96jvbyADgmaIYSlkguNV3VkZQZdUFP4CqxQF3L14faZt8KAKp1ZVZ37PC2zzeZul//HXfY26bQ/XpHWqpbNAeVp3jLWb2+5rHzaH8TWyUpndKqXzs+bj35N7RwrkznbO22wtu+mdq0wHiM39MMhCSKF0YSMiP4KYr7fRLT5fnPYV543s/tGo3oy+B+Q0RPn3Qwtl6vl1qDvnnDQf6fx8TS++w+41WxrtxQAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=03ea65403b9dcf50982a9dc643e45ab7"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
-        <generation_source/>
-        <order>4</order>
-        <parent_ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 12:35:27</sys_created_on>
-        <sys_id>1ba3ca313b918b90982a9dc643e45ac1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 12:38:57</sys_updated_on>
-        <ui_id>29d8c1f3-bb91-436a-bf6b-2f87b30b3b96</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1VXWvbMBT9K8bPwdj5Is1b15DSh7aQbX3pWiFb14moLHmSnI+F/Pdd2XKatlsXSmAMlpegq/txztGRdb8NOQvHYR9YnJwlw6yX9HrdOO6O+kk67KVJl/UoQBJ2QkkLwEwNmdIM10sqKhfYbr+WjFpgJImySmuQdrfDfcZNKejmzqdhJFtwwXA/HN8/dMKSauxoQYfj7astuymBCJqCwMKJyqoCmwZXE+xxLNq2etbCfQ3fzcA1890Jd0HccniSuBPC2oJkgONyKgx0woJKpKn0JhxbXWFAA2W3Umz2GQsubcO0oGvDf2D/fuzyckBqmVdhvyReoVYcxTO4LS1XsolYmopWOSWqQt40FJy2kNNK2ANtK4P9oHSQHYgGYf55oVazdt6Uy5qdRytURsV+Ra3VPK0sGHccIKAWpaBlyeWclFoteV2MUIpoLnAR5UKtcKbhcxnRzOGOUCAaTTE+qcN3VHNH4hrbYPGuJk++V25uQ8MDJjXnmjCpDwpTTaZ5ac+x8RI8zF3H2zUdvGeA7Oz5vA96Plt2TZLRYNSNh8TgcC5JTNxhcgnGEGoM/jn6b008a7OC88Osjxn7i4MW3DTQjqX1ovg3NL21X8S8swcnc/boLznbI/rHrP0nQ8fdd79oBydde9gcmNlY/Ph+q+K4xwbx40rpJyIVkm1Cl2oJWlLUKLjEvCCnXAAbBxfXk0/BxVUgaPZkAioDtZKgo7eWP3X7D94VKBAUDmhgdY5WrW0w5SCY+YWM7WXxA8jSD9g/BSe7Mckwrn//X4QTvggPPwH0aa+ZwggAAA==</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1ba3ca313b918b90982a9dc643e45ac1"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Calculate Readiness Score">0a37b5ea3b0d8750982a9dc643e45a06</action_type>
         <action_type_parent display_value="Calculate Readiness Score">02a1f16a3bc98750982a9dc643e45aee</action_type_parent>
@@ -454,13 +430,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 09:54:26</sys_created_on>
         <sys_id>1bee79663b4d8750982a9dc643e45a17</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 08:53:15</sys_updated_on>
+        <sys_updated_on>2026-06-18 12:15:19</sys_updated_on>
         <ui_id>62c91799-c265-4a49-ae78-a0c0eb7ae537</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/41STWvjMBD9K0Vnxzhx7MS5FUqhsLuFzbaXUsxYGicCWVb1kdYb8t93FDs55LD0qDdvZt57o7cjk4JtWFnmq6ZAyJtMrFdFVq0XUAleLnNcFrDiLGEaOiQmOIfOdah97QZXU3fCDqBCrB2PL0aAR1HPUx6sJVLq0B4kx5rL04moQjqjYHj9fgffSyWowDZv7wkzYEmHR8s2x5uSHwzWChpUNHjrrdQ7av+uvUvj/dXf3XZwd08P/7cel1LJXdb1VkRt84Thl0ctkNa3oBwmrANNVns7sI23gQCLIJ61Gq6MvdSehrHI/XLyL01eZ1kWmS2ST45j9fqspzhHmO97yu3ZeNnrEfHQqKmH9yp0+tfoJB4CWwjKXw5BSHA0D00UHWVMmtrtvv/8fVn4KPXZ31RUPQd1fYGnFJrg0cXjBPnnJpsR+XF7IVR4zrQDYwipje0P8ryFRHfpTtEjbVX/Seqc3OkUeHSYUpiQPhL+cIZfwcpo9yeNoea47kXLj4BP8QfMeV4WWJWzRQbFbFkKPltXWM2EwCVWq3leLZCdztHWHyGaGkOa4qjHRInguJXG35OEA07OT+//AOYH+thHAwAA</values>
+        <values>H4sIAAAAAAAA/41STWvjMBD9K0Vnxzhx7MS5FUqhsLuFzbaXUsxYGicCWVb1kdYb8t93FDs55LD0qDdvZt57o7cjk4JtWFnmq6ZAyJtMrFdFVq0XUAleLnNcFrDiLGEaOiQmOIfOdah97QZXU3fCDqBCrB2PL0aAR1HPUx6sJVI6kk4nognpjILh9XtsvpdKEMg2b+8JM2Bpv0fLNsebkh8M1goaVDR0663UO2r/rq1L4/3V1912cHdPD/+3HJdSyV3W9VZEbfOE4ZdHLZDWt6AcJqwDTTZ7O7CNt4EAiyCetRqujL3UnoaxyP1y8i9NXmdZFpktkk+OY/X6rKcoR5jve8nx2XjZ6xHx0Kiph/cqdPrX6CQeAVsIyl+OQEhwNA9NFB1lTJra7b7//H1Z+Cj12d9UVD0HdX2BpxSa4NHF4wT55yabEflxeyFUeM60A2MIqY3tD/K8hUR36U7RI21V/0nqnNzpFHh0mFKYkD4S/nCGX8HKaPcnjaHmuO5Fy4+AT/EHzHleFliVs0UGxWxZCj5bV1jNhMAlVqt5Xi2Qnc7R1h8hmhpDmuKox0SJ4LiVxt+ThANOzk/v/wBBUhorPwMAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=1bee79663b4d8750982a9dc643e45a17"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
@@ -472,16 +448,16 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>11</order>
+        <order>3</order>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 09:58:25</sys_created_on>
         <sys_id>2ddf39663b4d8750982a9dc643e45adf</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:14:21</sys_updated_on>
+        <sys_updated_on>2026-06-09 06:59:53</sys_updated_on>
         <ui_id>482e4040-d574-4270-88ac-03bc5a3ac595</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1UUWvbMBD+K8HPxshxEtK8FUKgD2sh2/rSFSFLl0Qgy54kp8lC/vtOtpymadeFEiiD+cXodPfd99196GEXSRFNogEIkl6lI56lWdYnpD8epPkoy9O+yBhAGsWRZgVgpgFeGoHnNVO1D+x23yvBHAiaJrw2BrTb7/FeSFsptr0PaRjhK6kE3keTh8c4qphBRAcmmuxOrty2AqpYDgoLpyWvCwTt3UwR41y2XfW8o3tK3/fAswjoVPogXnk+KYkj2DjQArDdgikLcVQwjTJLs40mztQYMMDEnVbbQ8ZKatcqLdjGyl+IPyA+bwEojYcpHI40TKgbTik53FVOlrqNOJarbnKlqgt920rws4UFq5U7mm1tEQ8qT9mTaBkuvq7Kp3nXbyZ1oy6wVSVn6nBizhmZ1w6sXwcoaIZSsKqSekkrU65lU4xUimSp8JAsVPmEPa1c6oRxzzvBAbFkhvFpE75nRnoRXxAGi/eNePqz9n1bGYEwbTQ3gmmzKEy13MjKXSPwGgLNfRzsmg/fMwC/et73EeazZTc0HQ/HfTKiFptLTQn1y5QarKXMWvx5+a9NPO+yetfHWR8z9jdPrXfbUjtX1oviP8gM1n4RC84eXszZ409ydmD0j1n7b4Ym/XdftKNNNx62R2a2Dh/fHzUhmcjIa8ueXn/Qq1AgqINeCxufzboDmElQwr4hozNraEDXocHhKb6YY9MRab7/L/IFX+TH3zX5YHFCCAAA</values>
@@ -496,69 +472,21 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>14</order>
+        <order>6</order>
         <parent_ui_id>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 00:37:06</sys_created_on>
         <sys_id>374fa1083b9dcf50982a9dc643e45ad7</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:14:22</sys_updated_on>
+        <sys_updated_on>2026-06-09 06:59:55</sys_updated_on>
         <ui_id>e58c1ab4-56d7-4e2c-97cf-5f7763d3e632</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1S32vbMBD+V4KfEyP/Sp28FUphD2uhG33pipClSyuQZU+S02Qh//tOtpxm7VpK6RiD+cXc6e6777v7bnaRFNEyykGQZJHMeZZkWUpIWuZJNc+qJBUZA0iiaaRZDVhpgDdGYLxmqvOJ3S4vU8hJTmaiOMlneXpCZmXJ+IxkFS9YxnixKOKhb7/HTiFtq9j2OgBght9LJQzoaHlzO41aZnCWAxMtd0+e3LYFqlgFChvPGt7VoN3k0xlivFXH2H01CnkqzM/AWAR0Kn0SnzyfhEwj2DjQAnDciikL06hmWjDXmG20dKbDhAEmLrXaHirupXaD0pptrPyB+DnxdStAaTxs4RDSsKFxOY3kcNk62egh41ilxs01qqv1xSDB7xZWrFPuaLedRTxoPWVPYmC4+nLfPFyN886l7tUFtqrhTB0i5pyRVefA+nOAgn4pNWtbqe9oa5q17JuRSh3fKQzilWoecKaVdzpm3POOcUEsPsf8WZ++ZkZ6EZ8RBpv3vXj6vfNzBxmBMO0194JpfygstdzI1p0i8BoCzf00GJmkrxoAHu/d+9ceGdk65uBbR0gmcvLcpk+f3+fZr1AjqIPJADt9M+sR4FyCEvY3MoJtXRhA12HAwbkfZt1kTvrvv4H/gIGr4jUr8MXj5Y8wH028oUlZlCmZU4vDpaaE+pNKDdZSZi3+vPzn9r4aqyanx1XvdLmnNrkYqL1V1i/NL8gcTX6cCwYvPszf5V9ydmD0j1n7JUPf/gToC03dXAgAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=374fa1083b9dcf50982a9dc643e45ad7"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
-        <generation_source/>
-        <order>17</order>
-        <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-05-27 10:22:06</sys_created_on>
-        <sys_id>a4458ee23b8d8750982a9dc643e45ae3</sys_id>
-        <sys_mod_count>22</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:14:22</sys_updated_on>
-        <ui_id>5568b453-937b-4d5d-b702-d5694f3d81ae</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1VXWvbMBT9K8bPxthxEtK8BULKHtZCtvWl64Rs3STaZMmT5Hws5L/vypbTtN26UAJjML8YXV2de87VkXS/DzkLx2EfWJJepcMiS7OslyS9UT/Nh1me9lhGAdIwCiUtATM1FEozHK+pqF1gv/9UMWqBkTQuaq1B2sMB5xk3laC7O5+GkWLFBcP5cHz/EIUV1YhoQYfj/bMpu6uACJqDwIVTVdQlggbvpohxLttu9byj+5y+q4Fj5tEJd0GccnzSJApha0EywHILKgxEYUklylR6F46trjGggbJbKXbHjBWXtlVa0q3hPxC/n7i8BaC0wnfhOCS+Q11zFC/gtrJcyTZiaS66zilRl/KmleB6CwtaC3vS29ogHlSOsiPRMlx8WKnNvKs347JR59kKVVBxHFFrNc9rC8ZtBwhomlLSquJySSqt1rxZjFTKeClwEC+E2mBNw5cypoXjHWODaDzD+LQJ31HNnYj3CIOLD4148r12dVsZnjBpNDeCSbNRmGoKzSs7QeA1eJqHyNs1H7xmgOLqcb9PMB8tuyXpaDDqJUNisDiXJCFuM7kEYwg1Bn9O/ksTz7usYHKa9TZjf3TUgpuW2rmyniz+jUxv7Scx7+zBxZw9+kvO9oz+MWv/ydBJ79Ub7WSnGw+bEzMbi5fv5zpJMjZIvmyU/kakQrFt6FqtQUuKPQquMS9YUC6AjYNJ5YRTEWj4CgXe3vFLt18Q+Y0nBErkg9gto+jsXnUAMw6CmV80rzsivgBZ+wLHB+Bi5yQdJs33/x244Dvw8BM3yTh7uAgAAA==</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a4458ee23b8d8750982a9dc643e45ae3"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
-        <generation_source/>
-        <order>8</order>
-        <parent_ui_id>0be9e2b0-90b3-4a68-93da-166a94ae4db6</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:50:26</sys_created_on>
-        <sys_id>e60efab13bd58b90982a9dc643e45a11</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:13:38</sys_updated_on>
-        <ui_id>97a8e67a-f446-4ba8-9ec7-cc401c176dc5</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1VTU8bMRD9K9aeo9VuvhRyo0QgDoAELRdKLWc9Sax6bdf2BtIo/73jXW8I0NIIRUKVmks0H555b+Z5fbdOBE/GSR94lh/lw6KX93rdLOuO+vl02JvmXd5jAHnSSRQrATMtFNpytJdMVsGxXn8xnHngNE+LylpQfrPBOBfOSLa6jWnoKRZCcown47v7TmKYxYoebDJevwj5lQEq2RQkHpzooiqxKDmfYI190banr1u4L+GHHmjzWJ2K4MRQwJNnnQQePSgO2G7GpINOUjKFNLVdJWNvK3RYYPxKydU2YyGUb5iW7NGJn1i/n4W8GSC1Ik5ha9I4oXY4WhRwZbzQqvF4NpXt5LSsSnXZUAizhRmrpN+ZbeWwHpgAOYBoEM5uFvrhuu13KlTNLqKVumByazHvrZhWHlxYB0ioh1IyY4SaU2P1UtSHEUqZziUa6UzqB+zpxFylrAi4UxwQS0/RP6ndt8yKQOICy+DhTU2e/qhC34ZGBExrzjVhWi8KU11hhfHHWHgJEeamE+U6HbwlgOLoad87NZ8k+0jz0WDUzYbUYXOhaEbDMoUC5yhzDv8C/dcivm6zyPFu1vuE/TlAI5cNtH1pPTv8B5pR2s98UdmDgyl79EHKjoj+MWn/TdBZ980v2s6maw27HTE7jx/fr1WW9fgg+/ag7XeqNJJtXGd6CVYxnBE5wzwyY0ICH5OTcyIc0dYsmAKekgvhHI6DnNxMLogFyQJptxCGeE0Y+VS5qHtjpCjqaPr6fnwolnfeQiiRAaJpOHT23kdb4FSA5O43C2qvYWxAl7HB9pE52F3Mh1n9+//WHPCtuf8FaMHpTxwJAAA=</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e60efab13bd58b90982a9dc643e45a11"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent/>
@@ -568,69 +496,70 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>15</order>
-        <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
+        <order>8</order>
+        <parent_ui_id>9bb18e98-6ded-4a86-89ad-d90142443d2c</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-01 00:41:02</sys_created_on>
-        <sys_id>e93079483b9dcf50982a9dc643e45add</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_created_on>2026-06-18 15:02:10</sys_created_on>
+        <sys_id>6d5814313be50314982a9dc643e45a02</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:14:22</sys_updated_on>
-        <ui_id>fdd3fadc-e412-4475-9a93-588bc41f0375</ui_id>
+        <sys_updated_on>2026-06-19 01:26:39</sys_updated_on>
+        <ui_id>c9373557-b536-4a2d-ad6a-c43c49d1c2e1</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1SXWvbMBT9K8HPxshxEtK8FUJgD2sh2/rSFSFLN4lAlj1JTpOF/Pdd2XKSpmsJpaUM5hej+3HuOfee+10kRTSJBiBIepWOeJZmWZ+Q/niQ5qMsT/siYwBpFEeaFYCVBnhpBL7XTNU+sNv9qARzIGia8NoY0G6/x7yQtlJsexfKMMJXUgnMR5P7hziqmEFEByaa7M5SblsBVSwHhY3TktcFgva+TBHjUrZd97yje07fz8C3COhU+iCmPJ+UxBFsHGgBOG7BlIU4KphGmaXZRhNnagwYYOJWq+2hYiW1a5UWbGPlb8QfEF+3AJTGwxYOTxo21C2nlBxuKydL3UYcy1W3uVLVhb5pJfjdwoLVyp3straIB5Wn7Em0DBffVuXjvJs3k7pRF9iqkjN1eDHnjMxrB9afAxQ0SylYVUm9pJUp17JpRipFslT4SBaqfMSZVi51wrjnneCCWDLD+LQJ3zEjvYivCIPN+0Y8/VX7ua2MQJg2mhvBtDkUllpuZOWuEXgNgeY+DnYl/VcNAMd7Ny61J3a1Dr36syYkE0Py3Kbn6bd59jsUCOqg18LGF7PuAGYSlLB/kRFs68IAug4DDs59N+umI9J8/w38AQbOh69ZgV8dL3+CeTTxhqbj4bhPRtTicKkpof6kUoO1lFmLPy//ub3nXVXv+rTqjS731Ho3LbVLZT1pfkFmZ/LTWDD48N38Pf4kZwdG/5i1XzL0wx/eSvV7QggAAA==</values>
+        <values>H4sIAAAAAAAA/+1TXW/aMBT9K1GeoyghgChvnRDTHtZKbOtL11pOfAFrjp3ZDh9D/PddJw6wdq1QxTRNWt58c33uOcfn3u9CzsJx2AeWpFfpsMjSLOslSW/UT/Nhlqc9llGANIxCSUvATg2F0gzPKypqV9jtvlSMWmAkjYtaa5B2v8f/jJtK0O2db8NKseSC4f9wfP8QhRXViGhBh+Pdk192WwERNAeBFyeqqEsEDT5MEONctt3tWUf3KX03A8/MoxPuivjL8UmTKISNBckAx82pMBCFJZUoU+ltOLa6xoIGym6l2B46llzaVmlJN4b/QPx+4vrmgNIK78LhSLxDnTmKF3BbWa5kW7E0F51zStSlvGklOG9hTmthT7ytDeJB5Sg7Ei3D+aelWs+6eVMuG3WerVAFFYcTtVbzvLZg3HOAgMaUklYVlwtSabXizWWkUsYLgYd4LtQaZxq+kDEtHO8YDaLxFOuTpnxHNXciPiIMXt434sn32s1tZXjCpNHcCCbNQ2GrKTSv7DUCr8DT3Ec+rknv1QDA8b2blJqTuBqLWf1aJ0nGhsnjWulvRCqU3ZbeqxVoSdGt4J2imgXIjgML7BICagwY43yJn8f7UrBv25HPUCIZC0FLJzrbpQ5gykEw8xvb/JpYP4Cs/IDDplxsVdJh0nz/F+YPLEw+eC0KxdXx5U8wj0uzIeloMOolQ2JwOJckIe5JucTkkmOAn6/FrOsKrk+73phyRy24aamdK+uXyy/I7EJ+WvMBH1ws36O/lGzP6B+L9kuBfvgJJSQLHLIIAAA=</values>
     </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e93079483b9dcf50982a9dc643e45add"/>
-    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN5161467d3b518b90982a9dc643e45a52,743df2713bd58b90982a9dc643e45ad9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6d5814313be50314982a9dc643e45a02"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-27 10:22:06</sys_created_on>
+        <sys_id>a4458ee23b8d8750982a9dc643e45ae3</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 03:23:27</sys_updated_on>
+        <ui_id>5568b453-937b-4d5d-b702-d5694f3d81ae</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K8bPxthxEtK8BULKHtZCtvWl64Rs3STaZMmT5Hws5L/vypbTtN26UAJjML8YXV2de87VkXS/DzkLx2EfWJJepcMiS7OslyS9UT/Nh1me9lhGAdIwCiUtATM1FEozHK+pqF1gv/9UMWqBkTQuaq1B2sMB5xk3laC7O5+GkWLFBcP5cHz/EIUV1YhoQYfj/bMpu6uACJqDwIVTVdQlggbvpohxLttu9byj+5y+q4Fj5tEJd0GccnzSJApha0EywHILKgxEYUklylR6F46trjGggbJbKXbHjBWXtlVa0q3hPxC/n7i8BaC0wnfhOCS+Q11zFC/gtrJcyTZiaS66zilRl/KmleB6CwtaC3vS29ogHlSOsiPRMlx8WKnNvKs347JR59kKVVBxHFFrNc9rC8ZtBwhomlLSquJySSqt1rxZjFTKeClwEC+E2mBNw5cypoXjHWODaDzD+LQJ31HNnYj3CIOLD4148r12dVsZnjBpNDeCSbNRmGoKzSs7QeA1eJqHyNs1H7xmgOLqcb9PMB8tuyXpaDDqJUNisDiXJCFuM7kEYwg1Bn9O/ksTz7usYHKa9TZjf3TUgpuW2rmyniz+jUxv7Scx7+zBxZw9+kvO9oz+MWv/ydBJ79Ub7WSnGw+bEzMbi5fv5zpJMjZIvmyU/kakQrFt6FqtQUuKPQquMS9YUC6AjYNJ5YRTEWj4CgXe3vFLt18Q+Y0nBErkg9gto+jsXnUAMw6CmV80rzsivgBZ+wLHB+Bi5yQdJs33/x244Dvw8BM3yTh7uAgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a4458ee23b8d8750982a9dc643e45ae3"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT INf8e6aa313b254314982a9dc643e45a33"/>
     <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <generation_source/>
-        <order>2</order>
-        <parent_ui_id/>
+        <order>12</order>
+        <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
         <show_stages>false</show_stages>
-        <subflow display_value="SF001 CMDB Validation">715275393b118b90982a9dc643e45a87</subflow>
-        <subflow_inputs>H4sIAAAAAAAA/41SW2vbMBT+K0PPjrFj5+K8jY1CYVthXftSijiSjhOBLKuynDYL+e87sr0kbB3szfrO5bscPx2ZVmzDKljMV4uiKkSer0WVVes5VEouywLLBayBJcxCg9TZod9riVxqwvZg+ggejw9OQUDF81T23qMN6aXxdKJWpTtn4PA4TRAid9ooamWbp+eEOfBEENCzzfGPUjg45AYEGhr8jjVSRSJt+F/pv2fvR0kfPt3+w09kIsxfcbReRU15wvAtoFVInDWYDhPWgCXTrT+cEY+g7qy5ADttw+i2gbdO/6TtxTy5Itgw2ShB7HwSwq6qfArtIn2IraWPOxd0a8fVAYR5f5NsTd/Yb6PTeASsoTfh6gh9RyzoorGodJJd3+/a13PSN9oOGUxF00ow5xeE4LXoA3bxcL3+8XeEI/jlnQOiwYZ4eQPOabvlzrd7PXCR9CbdGnqktWlfSWOntzYFGW2nFDukN4R/HuBH8Dpm8JXW0HBkfLD6pcfb+IOsMlFKkVWzbCmzWVnMYVblq3qmxLKGxRJFVQp2GmLnL320NkY1hcLHmKmhk1678JEk7HHyf3r+Baay92hCAwAA</subflow_inputs>
+        <subflow display_value="SF003 - Generate Remediation Task">6aba92fd3ba14314982a9dc643e45ae4</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/8VT207bQBD9FcvPceRbEjtvFIRaqSkSFF4Qssa742Sl9drsroE0yr93NnFCgIIordrHnTOXM2f2XK98wf2pn0AJeVzxpIQoTaI0z2LIORunCaYjwMwf+ApqpEwwBo2pUdlCI2s0J+gOZOew1eqy5WCRF9GQdVpT0npNOBemlbC86tMowhZCcsL96fXNwG9BU3OL2p+unkF22WIhoURJhedYISEMqcN7ae9qj/a8vfMd7zdWcnMJ0gcTCXAMo4GPDxYVR2JQgTQ48GtQtHejl/7U6o4CGoGfKbncZyyEstvVa3gw4gc1T+LBQf+p/1BE2SiLw3FhiIpQRVi4NkIRueKRo39QVfTKbrTpU72jw1S2aATDs9aKRm3nWyjl741jjexq9W0rljsnVtBJe3DOzhAVbJ0obs1+5+pi0dzvb3Yq1Ea/HpQNA7l/gbValJ1F475AJ76/lH8b/PqLr4ASN8eroW2Fmhetbu7EZhZRr4dzSY9hJZt74mjEXA2BOTmGdDIYnlL8ZBO+Ai2cNjNqQ8Vu4qUStx1+cV9tkkAU52UYJGVUBinPyyDDKA0iCo+q8WSch5m/3tymuO3calupelGKrfyUYJgWrT0iCnfY778e9DZMIwb81f/MRo9/tgIhO43uZIZaP3pwJowhEbzji5MZ/XQJblWzEK3xGu25MuTe8ezkk/cZQdqFR8bTgpmXNv2DTh+z9wWVq/nO2+/QYld4uhWDSPZivCZS72qzG9RbOv5blh6PwjB86upX7PqmNf+r5/biPDXc/jj/xG0RjLIyyfKAxzkjt7EkyCfVJMh5ChFmGTIoP+y2m5+e21og9gYAAA==</subflow_inputs>
         <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 12:25:29</sys_created_on>
-        <sys_id>5161467d3b518b90982a9dc643e45a52</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_created_on>2026-06-19 01:24:59</sys_created_on>
+        <sys_id>f8e6aa313b254314982a9dc643e45a33</sys_id>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 12:38:55</sys_updated_on>
-        <ui_id>7ff093ae-799f-408a-9b7b-1227246aba27</ui_id>
+        <sys_updated_on>2026-06-19 03:23:34</sys_updated_on>
+        <ui_id>9c729909-18f1-4d19-8f19-7bc803522ded</ui_id>
         <updation_source/>
         <wait_for_completion>true</wait_for_completion>
     </sys_hub_sub_flow_instance_v2>
-    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
-        <attributes/>
-        <comment/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
-        <generation_source/>
-        <order>6</order>
-        <parent_ui_id/>
-        <show_stages>false</show_stages>
-        <subflow display_value="SF002 CSDM Validation">0b11fefd3b558b90982a9dc643e45a88</subflow>
-        <subflow_inputs>H4sIAAAAAAAA/41SXWvbMBT9K0XPiYkTp3H8NjoKgW2Fde1LKeZKuk4EsqTKUtos5L/vynaz7Av26HPPvedDfjoyJVnFgOd5g41c8OWy5OvZupzDWorrYoHFEkrOJsxAi8Ts0O+VwFoowvagYwKPxwcnIaCs80xE79GE7CfxdCKqVJ3TcHgcNwgRO6UlUVn19DxhDjwJBPSsOv42CgeHtQaOmha/YoM0EUgX/tf6++79YOnqZvOPPEmJMH+hYb1MnvIJw7eARiJpNqA7nLAWDIW2/sCq4CMBHkHeGX04M3bKhCFsC2+d+k7HF/PJxf2KiVbyQfyM1mNXNL2xplHb6CEoa642Adu+OEuO71zChusBuP71mLA6tubLkDHVjw1EHS7qjx0JoUuRksnRcXO/s6/njm+V6dOPQ20F6PMXhOAVjwG79GRRffuzvAH89JenQ40t6dYtOKfMtnbe7lWvRdbbbKvpI2u0fSWPndqaDESKm1HhkN0S/rGHH8GrlP0znaHlpPhg1EvETfo18nkp5qsCpiWum2lRlrMp57PVVJRlIRcrWF5zzk598/VLTNGGqsZS6qFeInTCKxc+kIU9jvlPzz8AuYqWOjwDAAA=</subflow_inputs>
-        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:46:46</sys_created_on>
-        <sys_id>743df2713bd58b90982a9dc643e45ad9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:13:56</sys_updated_on>
-        <ui_id>2a647daa-3b44-4a79-98a9-c81ce2bbb24e</ui_id>
-        <updation_source/>
-        <wait_for_completion>true</wait_for_completion>
-    </sys_hub_sub_flow_instance_v2>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN2a2542623b8d8750982a9dc643e45a94,4b4382313b918b90982a9dc643e45a46,54fea9443b9dcf50982a9dc643e45a44,6b8d36713bd58b90982a9dc643e45a77,d583cbb93bd58b90982a9dc643e45a41,f353c7b93bd58b90982a9dc643e45a36,f58fb5663b4d8750982a9dc643e45a33"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2b127d9e3b014750982a9dc643e45a77^sys_idNOT IN2a2542623b8d8750982a9dc643e45a94,2f1754fd3ba50314982a9dc643e45a01,54fea9443b9dcf50982a9dc643e45a44,6d2722713b254314982a9dc643e45a79,f58fb5663b4d8750982a9dc643e45a33,fa130f793ba54314982a9dc643e45a2a"/>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">b8b58e263b8d8750982a9dc643e45a8f</block>
@@ -642,17 +571,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>16</order>
+        <order>10</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:21:41</sys_created_on>
         <sys_id>2a2542623b8d8750982a9dc643e45a94</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:23:25</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:28:17</sys_updated_on>
         <ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
@@ -660,29 +589,29 @@
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
-        <block display_value="">5e74ce713b918b90982a9dc643e45a4a</block>
+        <block display_value="">931754fd3ba50314982a9dc643e45a01</block>
         <comment/>
-        <connected_to/>
+        <connected_to>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</connected_to>
         <decision_table/>
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
         <flow_variables_assigned/>
         <generation_source/>
-        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>3</order>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
         <outputs_assigned/>
-        <parent_ui_id/>
+        <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 12:33:48</sys_created_on>
-        <sys_id>4b4382313b918b90982a9dc643e45a46</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_created_on>2026-06-18 14:56:50</sys_created_on>
+        <sys_id>2f1754fd3ba50314982a9dc643e45a01</sys_id>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:23:13</sys_updated_on>
-        <ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</ui_id>
+        <sys_updated_on>2026-06-19 03:28:16</sys_updated_on>
+        <ui_id>9bb18e98-6ded-4a86-89ad-d90142443d2c</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1Uy27bMBD8FUNnWaAkPyLf0gQuCjQN0AS5tIGwIimbKEWqJGXHNfzvXerhGI2DFEWOvZmzr5nVrPeBblzdOHuvL60VKxUsvj2GgVAew9/7QEHFg0VAtWLCCa3yFgiDDcjGB65urj+MPuoNNwoU5aMlCMkZJjBhawm7h7fy6FpIZng/uQaD/R03wWL/R8jtap5LKLjEdnfOCLXCcsHwVRIo44zGNE1maUJIcjGJi1laxAlLgUOKeUPh1SBk9LlFwlcV+nmI22GSNszTikkY8CfHFUP6ixKk5WFQgWLgtNkdEcOB3Sr5DKyFctgu8MlPVvzC3sl06hNLjhop74LHZ94vsIPpWgvKb2tPsEMcFLKvoVo2lfrS6fCr5yU00g2rR6Sx2I/XnrRn0VMq79Z6+3UYuBSqFdgHpaYgjy9wuIaicdz6D8Mlr7BRXkFd43Ly2uiNaIuRSxWtJD6iUuotDvWuioB64hHuCKIl4tct/ABGeBU32AaLO5oFWEHz1oHYzhmUcGjXkv9sPKFOYC8l77aBCZYaUbtLnLPhPetD+NK+J87d7+dlSTI0yHieZeV4Qi5gnBXzYhwnyTyZzKCAZB6tjp7Na7D2cPjeEJKydsJLm79P0/e4iQym5TQm0/M3MZmdu4kz1/D6ISRvHIL/dH95B4SQ/4dwegjC5p2he22dMf71Dh696bsJtvMN41RYJHLvsU/Dv70P7NAAgp5CW21+eAnP2OE3sM6sxzcGAAA=</values>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
@@ -696,17 +625,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>13</order>
+        <order>5</order>
         <outputs_assigned/>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 00:35:29</sys_created_on>
         <sys_id>54fea9443b9dcf50982a9dc643e45a44</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:23:23</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:28:16</sys_updated_on>
         <ui_id>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1UXW/TMBT9K8jPbeQkben6NoEmIQGT2LQXmKIb+6a1cOxgO+tK1f/OdT62ai0CoT3yFh/fj3PuPc6e2TY0bfC39tJ7tTZs9fV+wpSJGH3vmYEa2YoJa6QKyho2YQ+g24jt93kOXGIK03RZpdMZL2dTEFJMl/lSlrN0gRm8TaBpnKWcwgcIeDh8aznPZY+ipHpS+UbD7u6Vy4qN0tLhIKkBR0oCOrbav7gKuwYLDSVq6n4TnDJrSleSThcwr+Ypn4s8W+QZ59lylpaLvEwzmQPOFhQ3Jr47mtCZocUmBPmxvHUycsn4hOFjQCOJ86oC7XHCajASgnU7tgquJcAhyGujd08RG2UCVWMx9tGrnxgrcR4jKyRhAvvbp2MxDLmHxcYqgddNx61DApR6yBFWt7X53EuI68EKWh3G9RDSeqqHTSQdaQycqpuN3X4ZG14p0wkcLrUVoJ9OEGgMZRvQx22gxpoKFTUtj4ZTxA2qLpm41Mla0yGptN1S0+jRBEQkntCMILki/H0H34FTUcUnKkPJtEFfeOFUM2rrmrNDN5XiRxv59PoGJUU/DAro0y6pzQMOpA+T07dQdMDzgzj18ivZsOJQpRciPW9DyM/Z8M3HDjk148j6N45M/+DIAfkrS87n/x157MhIswSvRNH9YalcfN//bMn7aL2+he89JFEoT0xuI/Zh/IvHix1tXYljaGvd96jhGTv8Aho8lyoPBgAA</values>
@@ -714,34 +643,7 @@
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
-        <block display_value="">5b05c77d3bd58b90982a9dc643e45af4</block>
-        <comment/>
-        <connected_to/>
-        <decision_table/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
-        <flow_variables_assigned/>
-        <generation_source/>
-        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>7</order>
-        <outputs_assigned/>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:48:20</sys_created_on>
-        <sys_id>6b8d36713bd58b90982a9dc643e45a77</sys_id>
-        <sys_mod_count>21</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:23:17</sys_updated_on>
-        <ui_id>0be9e2b0-90b3-4a68-93da-166a94ae4db6</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1U224aMRD9lWifAe0NArxFiagqNY1Uorw00WrWngWrXntreyEU8e8d74WghihVlce+4TO3c2bPsA907ara2Xt9Za1YqWD+/WkQCOUx+r0PFJQYzAOmFRdOaJU1wCDYgKx94Hp5c3vxSW/QKFAMLxYgJHJK4MJWEnYP7+WxtZDcYDe5AkP9HZpgvv8j5HYVZhJylNRu6YxQKyoXnF5FCEU0YxFL4kkSh2E8TaN8kuRRzBNASCivL7zuhVx8aZDBmwr9PMJtP0kb7mlF4SDAZ4eKE/15AdLiIChBcXDa7I6IQeB3Sr4Aa6EctQt88rMVv6h3PB77xAJJI8M2eHxm3QJbmK21YHhXeYIt4iCXXQ3Tsi7V11aHXz0WUEvXr56Q2lI/rDxpz6KjVCzXevutH7gQqhHYBaVmII8vcLSGvHZo/YdBiSU1ykqoKlpOVhm9EU0xcSlHK0mPUSH1loZ6V42AeeIj2hGMFoTfNPADGOFV3FIbKm5p5mAFyxoHUjtnSMKhWUv2s/aEWoGdlKzdBiVYZkTlrmjOBjvWh8Fr+544d7+PYZJecoBhkqfpMIXL2XA2hdmQTSOGcZ7ncYojZnmZkapKClDucHiswzDhzYDXLv+Qnh9xETMYF+MoHJ+/iHRy7iLO3MLbZxC/cwb+w/3lFYRh+P8MTs9A2Ky1c6etNca/XsGTt3w7wba+4ciEJSL3Hvvc/9f7wI4MINgptNXmh5fwgh1+A0N0JCg1BgAA</values>
-        <workflow_reference/>
-    </sys_hub_flow_logic_instance_v2>
-    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
-        <attributes/>
-        <block display_value="">f705c77d3bd58b90982a9dc643e45af7</block>
+        <block display_value="">bd47e2713b254314982a9dc643e45a8f</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -750,45 +652,18 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>9</order>
+        <order>13</order>
         <outputs_assigned/>
-        <parent_ui_id>0be9e2b0-90b3-4a68-93da-166a94ae4db6</parent_ui_id>
+        <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 17:14:23</sys_created_on>
-        <sys_id>d583cbb93bd58b90982a9dc643e45a41</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_created_on>2026-06-19 01:26:08</sys_created_on>
+        <sys_id>6d2722713b254314982a9dc643e45a79</sys_id>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:23:18</sys_updated_on>
-        <ui_id>436023e1-fd59-4a5c-9f50-2ef9c22b29e4</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
-        <workflow_reference/>
-    </sys_hub_flow_logic_instance_v2>
-    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
-        <attributes/>
-        <block display_value="">7605c77d3bd58b90982a9dc643e45af0</block>
-        <comment/>
-        <connected_to/>
-        <decision_table/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
-        <flow_variables_assigned/>
-        <generation_source/>
-        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>5</order>
-        <outputs_assigned/>
-        <parent_ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</parent_ui_id>
-        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 17:13:44</sys_created_on>
-        <sys_id>f353c7b93bd58b90982a9dc643e45a36</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:23:15</sys_updated_on>
-        <ui_id>23e47766-d474-414e-8658-80171ee261be</ui_id>
+        <sys_updated_on>2026-06-19 03:28:19</sys_updated_on>
+        <ui_id>774d7028-e980-4689-90ac-9cfd79e28946</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
@@ -804,20 +679,47 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>10</order>
+        <order>2</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 09:57:04</sys_created_on>
         <sys_id>f58fb5663b4d8750982a9dc643e45a33</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:23:20</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:28:13</sys_updated_on>
         <ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnWaAky459C1oEKNA2QBPk0gbCilrZRClSJSk7ruF/71IP20gctAh67E2c5e7ODAfaB7p1Tevsvb62VqxUsPz2GAZCeYy+94GCGoNlwLUqhRNa5R0QBhuQrS/QZylsI2H3cEL4WsjS4DCtAUM9Dk2w3D8ruV2DuYQCJTXeOSPUitpFSaeKQRUveMzTZJYmjCVX07iYpUWclCkgpHRvbHw/knv3qUPCV1n7fYTbcZM2pacVszDAJ4eqRFpdgbQYBjWoEpw2uyNiEMpbJU/AWijXK67hyYpfNDvJMn+xQtLIBzuOx3ywanRJC463jSfYIw4KOVqoZVurL70ObzJW0Ep3ZnJraR42nrRnMVCq7tZ6+3VceCNUJ3AoSs1BHk/gyIaidWj9w6DEmgblNTQNmZM3Rm9E10xc6mgl6RBVUm9pqU9KBNwTj8gjiG4I/9DBD2CEV/GZxlBzT7MAK3jepYrGOUMSDp0t+c/WE+oFDlLy3g26YLkRjbumPRscWB/Cl5E8S+N+P0v4Ip4vFhOezLLJFKaLCeD8agKMMyzmgFk6j1bg8HD43jKWlg1Y+zLEbx/0L7K/gKzKYpZdzv50din7F1L/euCTPwTeP9Ff5p0x9j/w54EXNu+DO2jrlr85748+3P0G2+emRC4sEbn32MfxT+0LOwqA4OfQVpsfXsIJO/wG2K7t3PMFAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">76130f793ba54314982a9dc643e45a2a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 03:28:16</sys_created_on>
+        <sys_id>fa130f793ba54314982a9dc643e45a2a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 03:28:16</sys_updated_on>
+        <ui_id>814b75b9-059a-44aa-8685-20fb6fe0e2be</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=2b127d9e3b014750982a9dc643e45a77"/>
@@ -908,14 +810,14 @@
         <description>Orchestrates readiness assessment lifecycle and governance evaluation.</description>
         <flow_priority>MEDIUM</flow_priority>
         <internal_name>fl001_assessment_orchestration</internal_name>
-        <label_cache>[{"name":"2a647daa-3b44-4a79-98a9-c81ce2bbb24e.csdm_compliant","label":"6 - SF002 CSDM Validation➛CSDM Compliant","reference_display":"CSDM Compliant","type":"boolean","base_type":"boolean","usedInstances":{"0be9e2b0-90b3-4a68-93da-166a94ae4db6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14f565ae-6814-42db-8e31-7d3c1666dc26"}},{"name":"Updated_1.current.service_ci","label":"Trigger - Record Updated➛Readiness Assessment Record➛Service CI","reference":"cmdb_ci_service","reference_display":"Service","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"service_ci","usedInstances":{"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"],"7ff093ae-799f-408a-9b7b-1227246aba27":["service_ci"],"2a647daa-3b44-4a79-98a9-c81ce2bbb24e":["service_ci"]}},{"name":"undefined","label":" - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record - Update Record","usedInstances":{},"attributes":{}},{"name":"Updated_1.current.assignment_group","label":"Trigger - Record Updated➛Readiness Assessment Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"assignment_group","choices":[{"order":0.0}],"usedInstances":{"33a0de1a-18f1-40b4-acdc-838db416e2a7":["approval_conditions"]}},{"name":"62c91799-c265-4a49-ae78-a0c0eb7ae537.gate","label":"1 - Calculate Readiness Score➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"20af3d55-14cf-4929-a265-82eaa2ec6cbd":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6a9233b4-768c-4dae-9791-c0769566bbfe"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Readiness Assessment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"sys_id","usedInstances":{"f9803ad9-e12b-4ece-a108-40fe5c8c90d6":[null,"conditions"],"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"]}},{"name":"33a0de1a-18f1-40b4-acdc-838db416e2a7.approval_state","label":"12 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{"f50c220b-9640-4dbb-b9a5-eb41585fc89f":["record"],"33a0de1a-18f1-40b4-acdc-838db416e2a7":["record"],"5568b453-937b-4d5d-b702-d5694f3d81ae":["record"],"7b4d5890-14f0-4719-a86f-a19b24f8bb96":["record"],"482e4040-d574-4270-88ac-03bc5a3ac595":["record"],"fdd3fadc-e412-4475-9a93-588bc41f0375":["record"],"29d8c1f3-bb91-436a-bf6b-2f87b30b3b96":["record"],"97a8e67a-f446-4ba8-9ec7-cc401c176dc5":["record"]},"attributes":{}},{"name":"482e4040-d574-4270-88ac-03bc5a3ac595.record","label":"11 - Update Record➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.state","label":"Trigger - Record Updated➛Readiness Assessment Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"state","choices":[{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Draft"}},"sequence":100.0,"label":"Draft","selected":false,"used":false,"reference":false,"rawLabel":"Draft","missing":false,"image":"","value":"1"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Submitted"}},"sequence":200.0,"label":"Submitted","selected":false,"used":false,"reference":false,"rawLabel":"Submitted","missing":false,"image":"","value":"10"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"In Review"}},"sequence":300.0,"label":"In Review","selected":false,"used":false,"reference":false,"rawLabel":"In Review","missing":false,"image":"","value":"30"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Approved"}},"sequence":400.0,"label":"Approved","selected":false,"used":false,"reference":false,"rawLabel":"Approved","missing":false,"image":"","value":"40"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Blocked"}},"sequence":500.0,"label":"Blocked","selected":false,"used":false,"reference":false,"rawLabel":"Blocked","missing":false,"image":"","value":"50"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}},"sequence":600.0,"label":"Cancelled","selected":false,"used":false,"reference":false,"rawLabel":"Cancelled","missing":false,"image":"","value":"100"}],"usedInstances":{"a8ba209d-3efb-4e5d-9ef5-bb6590e65e0f":["condition"]}},{"name":"7ff093ae-799f-408a-9b7b-1227246aba27.governance_pass","label":"2 - SF001 CMDB Validation➛Governance Pass","reference_display":"Governance Pass","type":"boolean","base_type":"boolean","usedInstances":{"87014a9a-87fe-4aef-a2ff-8e1c3c3557d6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"acd58234-90ed-4f2f-8eef-d94a1aea915c"}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.current.group_list","label":"Trigger - Record Updated➛Readiness Assessment Record➛Group list","reference":"sys_user_group","reference_display":"Group","type":"glide_list","base_type":"glide_list","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"group_list","choices":[{"order":0.0}],"usedInstances":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{"f50c220b-9640-4dbb-b9a5-eb41585fc89f":["record"],"33a0de1a-18f1-40b4-acdc-838db416e2a7":["record"],"5568b453-937b-4d5d-b702-d5694f3d81ae":["record"],"97a8e67a-f446-4ba8-9ec7-cc401c176dc5":["record"],"7b4d5890-14f0-4719-a86f-a19b24f8bb96":["record"],"482e4040-d574-4270-88ac-03bc5a3ac595":["record"],"c9373557-b536-4a2d-ad6a-c43c49d1c2e1":["record"],"fdd3fadc-e412-4475-9a93-588bc41f0375":["record"],"29d8c1f3-bb91-436a-bf6b-2f87b30b3b96":["record"],"0bc125b1-d45b-42aa-811a-7b4966604a10":["record"],"9c729909-18f1-4d19-8f19-7bc803522ded":["assessment_record"]},"attributes":{}},{"name":"482e4040-d574-4270-88ac-03bc5a3ac595.record","label":"3 - Update Record➛Readiness Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"33a0de1a-18f1-40b4-acdc-838db416e2a7.approval_state","label":"4 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.assignment_group","label":"Trigger - Record Updated➛Readiness Assessment Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"assignment_group","choices":[{"order":0.0}],"usedInstances":{"33a0de1a-18f1-40b4-acdc-838db416e2a7":["approval_conditions"]}},{"name":"undefined","label":"13 - End Flow","type":"END","base_type":"END","usedInstances":{},"attributes":{}},{"name":"Updated_1.current.state","label":"Trigger - Record Updated➛Readiness Assessment Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"state","choices":[{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Draft"}},"sequence":100.0,"label":"Draft","selected":false,"used":false,"reference":false,"rawLabel":"Draft","missing":false,"image":"","value":"1"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Submitted"}},"sequence":200.0,"label":"Submitted","selected":false,"used":false,"reference":false,"rawLabel":"Submitted","missing":false,"image":"","value":"10"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Under Review"}},"sequence":300.0,"label":"Under Review","selected":false,"used":false,"reference":false,"rawLabel":"Under Review","missing":false,"image":"","value":"30"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Approved"}},"sequence":400.0,"label":"Approved","selected":false,"used":false,"reference":false,"rawLabel":"Approved","missing":false,"image":"","value":"40"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Blocked"}},"sequence":500.0,"label":"Blocked","selected":false,"used":false,"reference":false,"rawLabel":"Blocked","missing":false,"image":"","value":"50"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Rejected"}},"sequence":600.0,"label":"Rejected","selected":false,"used":false,"reference":false,"rawLabel":"Rejected","missing":false,"image":"","value":"60"},{"parameters":{"name":"x_1858206_sentin_0_readiness_assessment","dependent_values":[""],"dependent_values_map":{"":"Cancelled"}},"sequence":700.0,"label":"Cancelled","selected":false,"used":false,"reference":false,"rawLabel":"Cancelled","missing":false,"image":"","value":"100"}],"usedInstances":{"a8ba209d-3efb-4e5d-9ef5-bb6590e65e0f":["condition"]}},{"name":"7ff093ae-799f-408a-9b7b-1227246aba27.governance_pass","label":"2 - SF001 CMDB Validation➛Governance Pass","reference_display":"Governance Pass","type":"boolean","base_type":"boolean","usedInstances":{"87014a9a-87fe-4aef-a2ff-8e1c3c3557d6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"acd58234-90ed-4f2f-8eef-d94a1aea915c"}},{"name":"2a647daa-3b44-4a79-98a9-c81ce2bbb24e.csdm_compliant","label":"6 - SF002 CSDM Validation➛CSDM Compliant","reference_display":"CSDM Compliant","type":"boolean","base_type":"boolean","usedInstances":{"0be9e2b0-90b3-4a68-93da-166a94ae4db6":["condition"]},"attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14f565ae-6814-42db-8e31-7d3c1666dc26"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Readiness Assessment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"sys_id","usedInstances":{"f9803ad9-e12b-4ece-a108-40fe5c8c90d6":[null,"conditions"],"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"]}},{"name":"62c91799-c265-4a49-ae78-a0c0eb7ae537.gate","label":"1 - Calculate Readiness Score➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"20af3d55-14cf-4929-a265-82eaa2ec6cbd":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6a9233b4-768c-4dae-9791-c0769566bbfe"}},{"name":"Updated_1.current.service_ci","label":"Trigger - Record Updated➛Readiness Assessment Record➛Service CI","reference":"cmdb_ci_service","reference_display":"Service","type":"reference","base_type":"reference","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"service_ci","usedInstances":{"62c91799-c265-4a49-ae78-a0c0eb7ae537":["assessment_sys_id"],"7ff093ae-799f-408a-9b7b-1227246aba27":["service_ci"],"2a647daa-3b44-4a79-98a9-c81ce2bbb24e":["service_ci"]}},{"name":"Updated_1.current.additional_assignee_list","label":"Trigger - Record Updated➛Readiness Assessment Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"additional_assignee_list","choices":[{"order":0.0}],"usedInstances":{}}]</label_cache>
         <master>true</master>
         <name>FL001 Assessment Orchestration</name>
         <natlang/>
         <outputs/>
         <parent_flow display_value="FL001 Assessment Orchestration">2b127d9e3b014750982a9dc643e45a77</parent_flow>
         <remote_trigger_id/>
-        <run_as>user</run_as>
+        <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <status>published</status>
@@ -925,7 +827,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5c168a663b8d8750982a9dc643e45ad7</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -933,7 +835,7 @@
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:59</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:30:19</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow_snapshot>
@@ -1018,14 +920,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:25:40</sys_created_on>
         <sys_id>30168a663b8d8750982a9dc643e45adc</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:29</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:29:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1103,14 +1005,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:25:46</sys_created_on>
         <sys_id>de160e663b8d8750982a9dc643e45a01</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:24</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:29:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1233,7 +1135,7 @@
         <trigger_type>record_update</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5c168a663b8d8750982a9dc643e45ad7^sys_idNOT IN0c260e663b8d8750982a9dc643e45aae,1c260e663b8d8750982a9dc643e45ab0,1d108f753bd58b90982a9dc643e45a5e,64d6b1043bddcf50982a9dc643e45a6a,81108f753bd58b90982a9dc643e45a5e,90260e663b8d8750982a9dc643e45ab0,ccd6b1043bddcf50982a9dc643e45a68,ecd6b1043bddcf50982a9dc643e45a6a"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5c168a663b8d8750982a9dc643e45ad7^sys_idNOT IN0c260e663b8d8750982a9dc643e45aae,1c260e663b8d8750982a9dc643e45ab0,2b97ea713b254314982a9dc643e45ac8,64d6b1043bddcf50982a9dc643e45a6a,90260e663b8d8750982a9dc643e45ab0,ccd6b1043bddcf50982a9dc643e45a68"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Calculate Readiness Score">0a37b5ea3b0d8750982a9dc643e45a06</action_type>
         <action_type_parent display_value="Calculate Readiness Score">02a1f16a3bc98750982a9dc643e45aee</action_type_parent>
@@ -1249,13 +1151,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:25:54</sys_created_on>
         <sys_id>0c260e663b8d8750982a9dc643e45aae</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 08:55:25</sys_updated_on>
+        <sys_updated_on>2026-06-19 01:28:34</sys_updated_on>
         <ui_id>62c91799-c265-4a49-ae78-a0c0eb7ae537</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/41SXWvjMBD8K0XPjnE+7MR5Kw2FwrWFy7UvpZi1tE4EsuzqI60v5L/fKnbcowdHH3d2djUzq5cjk4KtWZbNl2WKMC8TsVqmSb6aQS54tpjjIoUlZxHTUCMxwVq0tkbtCtvZgqYjdgDlQ+94fGoFOBTFNObeGCLFFs1Bciy4PJ2IKqRtFXTP35/ge6kENdj65TViLRjS4dCw9fFL67tGFJSoiHo9OrnadvbqbvN/k65rQ8s6I/VuqH8Mq7YXsDEiSJtGDD8caoGkqQJlMWI1aHLamI6tnfEEGATxqFU3MvZSO1rGAvfDyt/03CpJksCskGxy7LtjWQxp9nC1AQekxHPnzUDl+4aitH1AAivwyt38jfWEx9bJRvcjDkp1mW6Ur/VDnwkbF1yOR4i3JALb4DRoH4xU233z/vOi8lbqcyhDUzUc1FiBo+hK74KeI/Py15eUe+SfnFHh+To1tC0hRWuagzy/QqLreKeoiCvVvJM6K3c6Bh4cxnQBiG8J35zhZzAy2L2nNTQcnnvS8s3jXfhLUz7PUsyzySyBdLLIBJ+scswnQuAC8+V0ns+QnSJGX+RG0Zf5DIouVLz5YLOPbQio6DMOI9zI1l2TqAMOWZxe/wCJo0YijQMAAA==</values>
+        <values>H4sIAAAAAAAA/41SXWvjMBD8K0XPjnHixInzVhoKhWsLl2tfSjEbaZ0IZNnVR1qfyX+/Vey4Rw+OPmp2dndmVi8dk4KtWZaly90CId0lYrVcJPlqBrng2TzF+QKWnEVMQ4XEBGvR2gq1K2xrC+qO2BGUD7Wue2oEOBTFNObeGCLFPel0IpqQtlHQPn+PzQ9SCQLZ+uU1Yg0Y2u/QsHX3pfRdAwp2qIh6PTq42rb26m7zf3OubULJOiP1fnj/GEZtL2BtRJA2jRh+ONQCSVMJymLEKtDksjYtWzvjCTAI4lGrdmQcpHY0jAXuh5W/ad0qSZLALJFscuyr47MYkuzhcgMOSInnzpuByg+15Gj7gASW4JW7+RvrCY+Nk7XuWxzs1KW7Vr7SD30mbBxwORwh3pIIbILToH0wUm4P9fvPi8pbqc+hDEVVc1DjCxxFt/Mu6OmYl7++pNwj/+SMCs/XqaBpCCkaUx/leQuJruK9okdcqvqd1Fm51zHw4DCmC0B8S/jmDD+DkcHuPY2h5rDuScs3j3fhL015mi0wzyazBBaTeSb4ZJVjPhEC55gvp2k+Q3aKGH2RG0Vf5jMoulDx5oPNPrYhoKLPOLRwIxt3TaKOOGRxev0Dct0KfIUDAAA=</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=0c260e663b8d8750982a9dc643e45aae"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
@@ -1267,16 +1169,16 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
         <generation_source/>
-        <order>17</order>
+        <order>11</order>
         <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:25:54</sys_created_on>
         <sys_id>1c260e663b8d8750982a9dc643e45ab0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:18:21</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:30:14</sys_updated_on>
         <ui_id>5568b453-937b-4d5d-b702-d5694f3d81ae</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+VVXU/bMBT9K5Gfqyjpl0rfEFXRJAYSbLwwsFz7Brw5dmY7ha7qf9914pQIEAOJF7S+VL5fPuf0nvpqS6QgczIGkeUH+ZSP8tFomGXD2ThfTUerfChGDCAnA6JZCVhpgRsr8Lxmqg6B7fZ7JZgHQfOU19aC9rsd5oV0lWKby1iGEX4nlcA8mV9dD0jFLE70YMl8+yT1VkiKrUBh6XmH6SlGv6nCWRhel4iLyi54EjsXMZN8WWAGmwKcPBsQePCgBSCQgikHA1IyjSyN3ZC5tzUGLDBxptVmX3EntW+JluzByT948zgLdQUgMx5F2B9pFKgNFwvm2QVO5r62e72M5OBaTQQUrFb+qB9rC84qL41uWzxbqa7bqLrUp60iZD+g93vUDkFAFXgG5C2t4uLO3J93IJdSN5JEispwpvYn5r2Vq9oHOFsCChqNS1ZVUt/Sypq1bJoRSpneKjykhTL3eKeTtzplPOBOUVWWLjG+aMKXzMpA4iuOwebdgLiNO1LMuUcqqCH9XQckLbFIgTYqNBLQZhNCM7ey8od41Roi8N0gLv1q8tqG8YPHherNfFz8B5rPJrNhNqUOL5eaZjTshNTgHEW8+BUEeW6F864qOexXvc8ebwDf2eNbsxQvk4kOeRY76fcmp20i+mPyYf6YfSZ/RBqf3iD/skU2fPWPt7dJjRNczxLO40Pwo86ykZhkN/fG/qLaIP02dGzWYDVD1ZJjrEsKJhWIeXJYBSmYSiz8BI4vSfrcMx84+X0+e4Manc+WEpRwL8jTmQxKpOSBtnI9MVpMJpcxuX+MPsxt+TRrPp/Ic//Nm3T9F/0x7TeKCQAA</values>
@@ -1292,20 +1194,20 @@
         <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
         <generation_source/>
         <order>8</order>
-        <parent_ui_id>0be9e2b0-90b3-4a68-93da-166a94ae4db6</parent_ui_id>
+        <parent_ui_id>9bb18e98-6ded-4a86-89ad-d90142443d2c</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:59:22</sys_created_on>
-        <sys_id>1d108f753bd58b90982a9dc643e45a5e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2026-06-19 01:28:11</sys_created_on>
+        <sys_id>2b97ea713b254314982a9dc643e45ac8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:18:13</sys_updated_on>
-        <ui_id>97a8e67a-f446-4ba8-9ec7-cc401c176dc5</ui_id>
+        <sys_updated_on>2026-06-19 01:28:11</sys_updated_on>
+        <ui_id>c9373557-b536-4a2d-ad6a-c43c49d1c2e1</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5afqyhpaVX6xlqBkPiQYOOFsciNb6g1x/Zsp9BV/e+7Tpy2AsRAQprQ+lL5ftjnHN8T366p4HRCD4Cn2WE2KgbZYNBP0/74IJuPBvOszwcMIKM9qlgFWGmh0JbjeslkHQLr9TfDmQeeZ0lRWwvKbzaY58IZyVY3sQwjxUJIjnk6ub3rUcMs7ujB0sn6SeqtkCSbg8TSqw7TU4x+ZcKa66KuEFcuuuBZ7JzFDDmdYQabApws7VF49KA4IJCSSQc9WjGFLLVd0Ym3NQYsMH6p5GpbsRDKt0Qr9ujEbzz5IA11JSCzIoqwXeZRoDZczphn17hz4Wu71UuLAlyrCYeS1dJP92NtwaXxQqu2xbO57Lq1rCt10SpCtxvs3UftEASYwDMgb2mV1wv9cNWBPBaqkSRSlLpgcrti3lsxr32As6YgodG4YsYIdZ8bq5eiaUYoVXIvcZGUUj/gmU7cq4QVAXeCqrLkGOOzJnzDrAgkznEbbN70qFu5qWTO7aighvmvOiBpiUUKeaNCI0HeTEJoLqww/giPWkIEvunFoZ8PX5uw4nA3UHt77gb/Mc/Gw3E/HeUODxcqT/MwE0KBcznixb8gyHMrXHVV5Gi/6n32eAP4zh5fm6F4mUx0yLPY2X4vuWgT0R/DD/PH+DP5I9L49Ab5my3S/qsf3r1Japzg9izhPD4E3+s0HfBh+uNB25+50ki/DZ3oJVjFUDVygnWkZEICn5DpKRGOaGsWTAFPyLlwDgUi0+vZObEgWZDBLYQhXhNGvtQuuscYKYommzx32T/F8j4vv0HxzsvHAiR3L1xBZ2SoUAQPeXslT8wck+QmJrcP3oc5Ohulze8T+fq/effu/gBA5Kxd7gkAAA==</values>
+        <values>H4sIAAAAAAAA/+1TXU/bMBT9K5Gfqyjpl0rfGFWnSQwkYLwAs5z4hlpz7Mx2Cl3V/77rxGk7YAikPgxpefP9sM85OedmTQQnUzIEnqRH6TgfpINBP0n6k2GajQdZ2ucDBpCSHlGsBJw0kGvD8bxksvaF9fpbxZkDTtM4r40B5TYb7HNhK8lW12EMK/lCSI59Mr2565GKGbzRgSHT9ZPWWyFJloHE0YsO01OMblX5M9d5XSIuKrriadichU70ZYYdXPJw0qRH4NGB4oBACiYt9EjJFLLUZkWmztRYMMD4uZKr7cRCKNcSLdmjFb/w5WHi5wpAZnkQYXukQaC2XMyYY5d4c+5qs9VLixxsqwmHgtXSnezX2oHzygmt2hXHMtlta1mX6qxVhGwv2PsftUUQUHmeHnlLq7hc6IeLDuRcqEaSQFHqnMntiTlnRFY7D2dNQEKjccmqSqh7Whm9FM0yQinje4mHuJD6Ad+04l7FLPe4Y1SVxXOsz5ryNTPCk/iK1+Dypkfsyp5IZu2OCmpIf9YeSUssUKCNCo0EtHGCX86NqNwxPrWEAHzTC6ZP+q86DHaGarxu90xvHTr+tk6SAR8n3x+0+UGVRiHa0me9BKMY6hd90szwCNEJ4JFbQIREwFqvVPw8JIe69n1Je4MOXdLmAiS3LwgTkuagRD4OaCvUn2G7Cs3oOjS3eTtY4NJx0nz/Y/fvxi4bvWa3/Gjnrr07d9F7pOlkNOknY2rxcaFoQr0zhEL/010MnofropuKjven3peVN4DvsnLVmOJlMl1cntZO93ejs7YRYjI6WEomHykfgcaHD8jfYnH3G442IbKECQAA</values>
     </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1d108f753bd58b90982a9dc643e45a5e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2b97ea713b254314982a9dc643e45ac8"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
@@ -1315,16 +1217,16 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
         <generation_source/>
-        <order>14</order>
+        <order>6</order>
         <parent_ui_id>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 01:09:54</sys_created_on>
         <sys_id>64d6b1043bddcf50982a9dc643e45a6a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:18:19</sys_updated_on>
+        <sys_updated_on>2026-06-19 01:28:40</sys_updated_on>
         <ui_id>e58c1ab4-56d7-4e2c-97cf-5f7763d3e632</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1TTU/jMBT8K5XPbeV8ldAbokJaiQWpIC4sihz7tVhynKztAN2q/31fEqftFhYVicMibS+R34c9M525XxMpyJTEIGhwGkx4FERRSGmYxkE+ifIgFBEDCMiQaFYAThrgpRF4fmKqbgrrdZyGENOYjkRyEo/i8ISO0pTxEY1ynrCI8eQ0GXd7mw1uCmkrxVZ3/gKs8EephAFNpvcPQ1Ixg285MGS6PmgdC1axHBSOznu0h+jdqmrOouR1Adplsi9e+s2Z7wy+zbCDSw2cgA4JvDjQAhDIgikLQ1IwLZgrzYpMnamxYICJa61W24lHqV1HtGAvVv7Cl2PazC0AmXEvwvaYeYG68mLGHLvBm7mrzVavUnKwnSYCFqxW7ny/1g1cV06WultxLFf9dqnqQl91ipDtBXv/R20RBFQNzwZ5R2tx81g+z3uQF1K3kniKquRMbU/MOSPz2jVw1gQUtBoXrKqkXmaVKZ9ku4xQivFS4WG8UOUzvmnlUo8Zb3CPUVU2vsD6rC3fMSMbEt/xGlzeDIld2XPFrN1RQQ2zn3WDpCPmKWStCq0EWeuEZpkbWbkzfOoJPPDN0MeBhu86DHaGalNg9+JgHXPwo6Y0EjF9bfbD9secfwSu3vkXEpSwbwD1zndQIC4HWQf8T/Pf+ubgzje3/v+0AAQT2v7+x+DfjUGevGc3frpz196duyi8ZEGapCGdZBYflzqjWeMMqcHaDPHipxHkdUjm/dTgbH/qY1k5AnyfldvWFG+T6eNyWLvc3x1cdQ0fk+TTUpJ+pXx4Gl8+IH+LxcNvdsa1Xi4JAAA=</values>
@@ -1339,40 +1241,16 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
         <generation_source/>
-        <order>4</order>
-        <parent_ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:59:21</sys_created_on>
-        <sys_id>81108f753bd58b90982a9dc643e45a5e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 16:59:21</sys_updated_on>
-        <ui_id>29d8c1f3-bb91-436a-bf6b-2f87b30b3b96</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+VVXW/aMBT9K5GfUZRAQZS3DkRVqR9Su/Wl6ywT37RWHTuzHShD/PddJw6NStW1Ei/VeEG+Xz7ncA++2xDByYQcAU/S43SUDdLBoJ8k/fFRuhgNFmmfDxhASnpEsQKw0kCmDcfzksnKBzabHyVnDjhN46wyBpTbbjHPhS0lW9+GMoxkj0JyzJPJ3X2PlMzgRAeGTDavUh+FJNkCJJZet5heY3Tr0p+5zqoCcVHRBs9D5yxkorMZZrDJw0mTHoFnB4oDAsmZtNAjBVPIUps1mThTYcAA41dKrncVj0K5hmjBnq34gzcfJb4uB2SWBRF2RxoEasL5jDl2g5MzV5mdXlpkYBtNOOSskm7ajTUFV6UTWjUtji1k261lVajLRhGyG9D5PSqLIKD0PD3yhlZ+86hX1y3IuVC1JIGi1BmTuxNzzohF5TycDQEJtcYFK0uhHmhp9FLUzQiliB8kHuJc6hXeacWDilnmcceoKovnGJ/V4VtmhCdxgWOwedsjdm2nkln7QgU1pL8rj6QhFijQWoVaAlpvgm/OjCjdCV61hAB82wtLvxi+t2HZ8ctCdWa+LP4zTcfDcT8ZUYuXC0UT6ndCKLCWIl788oLsW+G6rYpOulWfs8cHwLf2+F4vxdtkgkP2Yufd3uiySQR/DA/mj/FX8keg8eUN8i9bJP13/3g7m1Q7wXYsYR0+BD+rJBnwYfJrpc0TVRrpN6FTvQSjGKoWnWJdlDMhgU+i6cXsWzQ9iyTLnmzEVKRXCky8b5xDj/+c4z6gS+u4uQDJ7RtCtXaDAnk5oI1wrywXktFtSO6epYP5Lh0l9ecLue+/eZ3u/wL8iF8IlAkAAA==</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=81108f753bd58b90982a9dc643e45a5e"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
-        <generation_source/>
-        <order>11</order>
+        <order>3</order>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:25:54</sys_created_on>
         <sys_id>90260e663b8d8750982a9dc643e45ab0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:18:16</sys_updated_on>
+        <sys_updated_on>2026-06-19 01:28:37</sys_updated_on>
         <ui_id>482e4040-d574-4270-88ac-03bc5a3ac595</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPUZQQQJS3qghpUtdKdOOlqywTX4olx8lsh8IQ/33XiRMiqDoq9QWNF+T75XMO5+LnPRGcTMgAeBTfxKM0iZOkH0X98SBejpJl3OcJA4hJQBTLACs1pLnmeN4wWbrAfv+z4MwCp3GYllqDsocD5rkwhWS7hS/DSLoWkmOeTJ5fAlIwjRMtaDLZn6QuhSTZEiSWzhtMpxjtrnBnnqdlhrioaIL3vnPqM71vU8xgk4MTRwGBrQXFAYGsmDQQkIwpZJnrHZlYXWJAA+OPSu7airVQtiaasa0Rf/DmQeTqVoDMUi9Ce6ReoDq8mjLLnnByakvd6pWLFEytCYcVK6W968bqgsfCilzVLZYtZdOdyzJTD7UipB3Q+T1KgyCgcDwd8prW6mmdv80bkDOhKkk8RZmnTLYnZq0Wy9I6OHsCEiqNM1YUQr3SQucbUTUjlCx8lXgIVzJ/wzuNeFUhSx3uEFVl4Qzj0yq8YFo4Et9xDDYfAmJ25k4yY45UUEP6u3RIamKeAq1UqCSglRNcc6pFYW/xqg144IfAm345/Mhh6c3RUJ2ZR+NvaTwejvvRiBq8XCgaUecJocAYinjxywlyvgrzpqp326363HpcAL5Zjx+VKd4n4zfkLHbf7e091Am/H8Mv24/xNe2Hp3H1C/KvtYj6H/7xdpxUbYLprISx+BD8KqMo4Ul0bvzT9OccfwGuxvEzAZKbd4A2docMcVmgNfATy/tkb+GT7bPwZb6PR1H1uSL3/zevw8tfvlFdNhQJAAA=</values>
@@ -1387,120 +1265,46 @@
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
         <generation_source/>
-        <order>12</order>
+        <order>4</order>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 01:09:53</sys_created_on>
         <sys_id>ccd6b1043bddcf50982a9dc643e45a68</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:18:17</sys_updated_on>
+        <sys_updated_on>2026-06-19 01:28:38</sys_updated_on>
         <ui_id>33a0de1a-18f1-40b4-acdc-838db416e2a7</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1YXW/iOBT9K8jPlHUISQNv1aCuZrU7I9HOvJQqMvZN8SgkaZzMlEX897mOHZKBloEtldpVX1r5ftjnXp+DY9+siBRkRGDgux7+OY9c6vQdGoAfBHxIGQ983xu4pEsStgCMZFmWp99ZHObAVJqgAwel9kyACZmAUp0LpfDfApKic2HDOxO4L2UOAhOEVFnMll+PzeNzGYscEjK6ue2SjOWIqICcjFZbrkNLitkMYgxtLWZrerLYYplphypymdzZ8d92mqvamOZCw+p3CTwUkAhEP4pYrKBLFiwRrEjz5caCU4vPSdwY5jIpcDaigx+U/BfXc3yqAyPAEjkY52YY2n4aczRmBUMkJS/K3IbyeSo5KNMcAREr4+JD22YCPmeFxCKrlILN4jo7jctF8sl0hGwmqLcPLaVCEJDpSjV0W0d0NU9/TGqUlzKpmmKdccpZvBmxAls3KwuNZ0VKeb3VZWPZ6TPEoMkSLnCf0BLqzZLVKgh60buLcdCL4vQHolPyLukxrivs4Q6w3iXax5X5K8ulLvcfnAaT9XJfEnlfwkfNI78/84c0EGciorOzQeB6Z4wDPQPf8cATPvccl6y7RC3Vh5gp1TQKdyi8L3WZpm22QaHpsU7hucyKCwT1HWwv1l2rSOpEfRgO+3TmUOpSGnicBi7M3HP/3GUieISkkYRYtARZO3Yl1/IcJ6oDUO2I6tLCegqulVQ1DKugX2VV5Xc+GcfJpRVQ+pa0hYs/R1ovo5jj2W9a8BsJ8L1kg9ah9C0t82SPAsK5VBUznlRCK+I4RRwAslbEXwbltiC2wf8XPbjvevj/6+E82Ec1ThtK5cCRGC0hrFZfMsQMInR6vMyxTcV6vauGo9l/AKSa/ZMa0zZGy3eR8rLaCym2CD+2ns7HccN4up/xhheHEN7tv9P9VdKde/u4FQ0bKokSm4TsbhN+Sgz2KRlNSZImMCXdKdFRoeZWZcYIRLhxVLbV2ozLnNl0pzVscgVbqipS8TmIMjbWXyxhRX1rP4XaDuhIrbZxCZ2xacluk+pLTI3TdEXunDRXNqCa6Y9r2T5xvJOdOIO3dN48927zcleWcPNRj/rCn4kXuJMM9vIPWmTbfFbxNBFSV6Ba4jRXA1AT+Aa8UBfJ8s+bR06oHiLHWqt+3eVpma3Xt7sqet5kxwnwgAZsjjvUjfpdQ6wQm2cGm9QWYfM4YZ1WgINTHYBv7IvvdSrw9GKb8b2fVrzhlulmI6+H0Am8oE/9UOFqMgmpfr8yb2wh27yxHfYSd7RGDsBda+TaAt+qw6qiGj52AarSti5AzpHHkZHHo2p418Kr0cLtTxx/zXygFgAA</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=ccd6b1043bddcf50982a9dc643e45a68"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
-        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
-        <generation_source/>
-        <order>15</order>
-        <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-01 01:09:55</sys_created_on>
-        <sys_id>ecd6b1043bddcf50982a9dc643e45a6a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:18:19</sys_updated_on>
-        <ui_id>fdd3fadc-e412-4475-9a93-588bc41f0375</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1TTWvjMBT8K0FnY+x8keZWGgIL3RbSbi7dIhTpJRHIsleS02RD/vs+2XLipt3SQg9b2FyM3oc0M5l52BMpyJj0QSTpRTrkvbTX6yZJd9RPF8PeIu2KHgNISUQ0ywAnDfDcCDxvmCp9Yb//UQjmQNA05qUxoN3hgH0hbaHYbh7GsMLXUgnsk/HDY0QKZvBGB4aM92et90JSbAEKR2cNpnOMblf4s8h5mSEuKpviddichE7n2wQ7uOThpElEYOtAC0AgS6YsRCRjGlnmZkfGzpRYMMDErVa748RaalcTzdjWyt/4cj/xc0tAZjyIcDzSIFBdXk6YY3d4M3elOeqVSw621kTAkpXKXbVr9cBt4WSu6xXHFqrZzlWZ6ZtaEXK8oPV/lBZBQOF5euQ1reXdOn+aNSCnUleSBIoq50wdT8w5Ixel83D2BBRUGmesKKRe0cLkG1ktI5QsXik8xEuVP+GbVq50zLjHHaOqLJ5ifVKV58xIT+I7XoPLh4jYnb1SzNoTFdSQ/io9kppYoEArFSoJaOUEv8yNLNwlPrWBAPwQBdMn3TcdBidDVV63LdNbh47/WSZJTwySl2Y/b3/M+e/A1Th/KkEJ+wrQ4HwHGeJyQGvgz81/H5qdeWge/f9pAUiHSfX7H4N/NwaLwVt24xcnd7XuPEVhS9PRYNRNhtTi41LThHpnSA3WUsSLHy/Iy5DMmqnOZXvqY1l5B/gmK/eVKV4n08TlvHbd3u3c1I0Qk8GnpWT0lfIRaHz5gPwtFo9/AGLYuYQUCQAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ecd6b1043bddcf50982a9dc643e45a6a"/>
-    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5c168a663b8d8750982a9dc643e45ad7^sys_idNOT IN3610cf753bd58b90982a9dc643e45a8c,ba10cf753bd58b90982a9dc643e45a8d"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5c168a663b8d8750982a9dc643e45ad7^sys_idNOT IN71a72e713b254314982a9dc643e45ae7"/>
     <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
         <generation_source/>
-        <order>2</order>
-        <parent_ui_id/>
+        <order>12</order>
+        <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
         <show_stages>false</show_stages>
-        <subflow display_value="SF001 CMDB Validation">715275393b118b90982a9dc643e45a87</subflow>
-        <subflow_inputs>H4sIAAAAAAAA/41RXWvbQBD8K+WeZWFb/pLfioMh0DZQN3kJQezdreyD00m5Dyeu8H/vniVskabQx5udvZmdeW6ZkmzNcphPl/Msz/hksuL5OF9NIZdiMctwNocVsIQZqJCYDu1RCSyEIuwIOkSwbR8bCR5lMUlFsBaNT2/E85moUrlGw+mp3yBEHJSWRGXr55eENWBJwKNl6/bD6H8dauCoibrrlL9s7v9h25+aiFkskUQE9tC3fv/nAK+tjJYmCcN3j0YieSlBO0xYBYZuru3pilgE+WD0DTgo47tjK3h36jepZtNkILxmopKcXBW9QTaYFn1mt5NoWt6Bh523Qfhgr0nWNHRdWhJLCNpvhlhHeGi8qk234oHrz+VFrUNlfnSxset/g+KCI2vYxDTief2t5e5Qv12j2ypzCa4f6lqAHlARrDhsFepY7aWihIH3VvHgo+mWBfXr75Y68LOeUGNFbooKmkaZfdHY+qguDuigKt1reqSlrt/IuVN7k4KIYaTUIKRbwu8u8BNYFZP5Tt/QclR8NOo14H00uhzzmeDjfDReiPFolk1hlE+W5UjyRQnzBfJ8xtk5Ye7kNhqcu4VIRxSvIUbQRdqHV3R1xBVhVeO/kqkj9jmdX/4Aph3vZJ4DAAA=</subflow_inputs>
+        <subflow display_value="SF003 - Generate Remediation Task">6aba92fd3ba14314982a9dc643e45ae4</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/72UUW/aMBDHv0rk5wQREiDhrQOhTRqrVLa+VFV0sR2w5Dip7bRliO++M0mBtmNqtaqPuTtf/vez/3ezJYKRCYkgh3RQsCiHMI7COE0GkDI6iiMeD4EnxCcKSo6VYAw3puTKZprTSjNM3YNsXG67/VUzsJxlYY82WmPRbod5JkwtYXPdlWGEroVkmCeTm1uf1KCxueWaTLYvUm9VJyHnEksvDvK8qyd5/1BuN7VLaV5w/CXlXeh71+3qJI4HnMDQJ/zRcsU4KitAGu6TEhSOXekNmVjdYEBzYJdKbg4Va6FsO3kJj0b8xp9GA//kvxPymIXJMBn0R5lBiUJl/cy1EQpFZ0ft5ORU1oHdK+1KvYvT0mIGFpYoitpGH9hXgnLT8mW8gEba6WmsLbisrahUe8RCLt+nkVayKdWPljw5/OfkCTQG9fPakXRsOlDFcl09HLDPhdpD75KyoiBPSjloup4LLt0jUU2ZY61PwFot8sa6cbakET9f33Eb/Nstc8n3L6SEuhZqldW6uhd7DThS2VtJ/OgVsnpA7UasVA+ow9TD+4feHOOzffgatHDMFthmL6oRv5S4a/g3J3UcQThI834Q5WEexCzNg4SHcRBieFiMxqO0n5CdT8zGTCViPWLEIbK7xkFooXb4svai3BGqRW0vUNQ970jt/M7kcUiBnbURHR6tUoCQ+F7c5RpsfXT4QhiDWLzpcrZAg0lww5u1qI1Xac8d48ybLmZfvK8cpF17aGstqHm9BP6j0/uWxxumfloe83ZslNONfQ5HtzYMKlKrFztj+RTsFsbgoxbGaNjv95/vjDPL4OON/zmOPuPcA+bntj2A/hTPhjBM8ihJAzZIKXqWRkE6LsZBymIIeZJwCvkHevb2DzjDPamaBwAA</subflow_inputs>
         <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:59:28</sys_created_on>
-        <sys_id>3610cf753bd58b90982a9dc643e45a8c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 16:59:28</sys_updated_on>
-        <ui_id>7ff093ae-799f-408a-9b7b-1227246aba27</ui_id>
-        <updation_source/>
-        <wait_for_completion>true</wait_for_completion>
-    </sys_hub_sub_flow_instance_v2>
-    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
-        <attributes/>
-        <comment/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
-        <generation_source/>
-        <order>6</order>
-        <parent_ui_id/>
-        <show_stages>false</show_stages>
-        <subflow display_value="SF002 CSDM Validation">0b11fefd3b558b90982a9dc643e45a88</subflow>
-        <subflow_inputs>H4sIAAAAAAAA/41R22rjMBD9laJnx+TiNI7flpRAoLuFzbYvpZiRNE4EsuzqkjZr8u87ik2avUEfdXRm5lyeO6YkKxjwyaTCSs74fJ7z5XiZT2EpxW02w2wOOWcJM1AjMR3agxJYCkXYAXSIYNc9thI8ynKSimAtGp9+EE8nokrlWg3Hp2GCELFXWhKVFc8vCWvB0gGPlhXdH1+fVaiBoybqtr98s9r8R7Y/thGzWCEdEThA98P89yu8sTJKmiQM3z0aiaSlAu0wYTUY8tzYIyu8DQRYBPlg9PHC2Cvje681vDv1k47OpsnV3YKJWvJe1AUth6jod9WYSu2CBa8ac7PxWBOxugMPWzopfLCXLBty5/q8JFYQtF9dYz3hoY2L+hEPXP+uQDQ61OZbHxi77LmqLDhSh23MITobbFbbffN2CW2tzDmy4VM3AvQVFcGK/VqhjqWey0kYeG8VDz6K7VhQP/7upwf/1RBqrElNWUPbKrMrW9sc1FkBGarTnaZHWunmjZQ7tTMpiBhCSt1Buib87gw/gVUxka+0hobjxUejXgNuotDJNBfTRQajHJfVKMvz8Yjz8WIk8jyTswXMbzlnp4S5o1tpcO4jRDJRvoYYQR/pEF7Z1xBHhFWt/0KiDjjkdHr5BUl2tAOYAwAA</subflow_inputs>
-        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:59:28</sys_created_on>
-        <sys_id>ba10cf753bd58b90982a9dc643e45a8d</sys_id>
+        <sys_created_on>2026-06-19 01:28:19</sys_created_on>
+        <sys_id>71a72e713b254314982a9dc643e45ae7</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:17:50</sys_updated_on>
-        <ui_id>2a647daa-3b44-4a79-98a9-c81ce2bbb24e</ui_id>
+        <sys_updated_on>2026-06-19 03:29:51</sys_updated_on>
+        <ui_id>9c729909-18f1-4d19-8f19-7bc803522ded</ui_id>
         <updation_source/>
         <wait_for_completion>true</wait_for_completion>
     </sys_hub_sub_flow_instance_v2>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5c168a663b8d8750982a9dc643e45ad7^sys_idNOT IN3244833d3bd58b90982a9dc643e45a64,44260e663b8d8750982a9dc643e45aad,9910cf753bd58b90982a9dc643e45a0f,c644833d3bd58b90982a9dc643e45a5f,ddd6f1043bddcf50982a9dc643e45a11,e110cf753bd58b90982a9dc643e45a12,ff160e663b8d8750982a9dc643e45aaa"/>
-    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
-        <attributes/>
-        <block display_value="">f705c77d3bd58b90982a9dc643e45af7</block>
-        <comment/>
-        <connected_to/>
-        <decision_table/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
-        <flow_variables_assigned/>
-        <generation_source/>
-        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>9</order>
-        <outputs_assigned/>
-        <parent_ui_id>0be9e2b0-90b3-4a68-93da-166a94ae4db6</parent_ui_id>
-        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 17:17:46</sys_created_on>
-        <sys_id>3244833d3bd58b90982a9dc643e45a64</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:50</sys_updated_on>
-        <ui_id>436023e1-fd59-4a5c-9f50-2ef9c22b29e4</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
-        <workflow_reference/>
-    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5c168a663b8d8750982a9dc643e45ad7^sys_idNOT IN44260e663b8d8750982a9dc643e45aad,957307b93ba54314982a9dc643e45a2d,d5a72e713b254314982a9dc643e45ae1,ddd6f1043bddcf50982a9dc643e45a11,e5a72e713b254314982a9dc643e45ae5,ff160e663b8d8750982a9dc643e45aaa"/>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">b8b58e263b8d8750982a9dc643e45a8f</block>
@@ -1512,17 +1316,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>16</order>
+        <order>10</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:25:53</sys_created_on>
         <sys_id>44260e663b8d8750982a9dc643e45aad</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:57</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:30:14</sys_updated_on>
         <ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
@@ -1530,34 +1334,7 @@
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
-        <block display_value="">5e74ce713b918b90982a9dc643e45a4a</block>
-        <comment/>
-        <connected_to/>
-        <decision_table/>
-        <display_text/>
-        <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
-        <flow_variables_assigned/>
-        <generation_source/>
-        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>3</order>
-        <outputs_assigned/>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:59:22</sys_created_on>
-        <sys_id>9910cf753bd58b90982a9dc643e45a0f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:43</sys_updated_on>
-        <ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1VXW/aMBT9K8jPASXhq+GtAzFNaldprfqyVdGNY4M1Y2e2A2UR/33X+QC0MnXV+rg3fHx97zkn94iK6NIVpbMP+tpasVJk9vUpIEJ5DH9XRMGGkRmhWuXCCa3SGgjIFmTpL+a3iw+9j3rLjAJFWW8JQrIcC3JhCwn7x9fq6FrI3LB2cgEG+ztmyKz67Urk2IaHwKOERnQYT4ZxGMZXoyibDLMozofAYIgNJWRM+okd5d5NjQR/1OL2hcetM0Kt2vNN2+W+A7XJPasoDAh7dkzlyH7GQVoWkA2oHJw2+yNiGOR3Sp6AtVAO2xFf/GzFTxwYj8e+kDOUSFlzeTymrX8NzBfgAKmU1JWmLaVrLSizjTk541BKNz/HmoK7wkttnjjIZPday3KjPjeOkGOD7nMhUlokwQqv1FNvdfD7td596VguhapdaS+lpiCPJ3DoXVY6z6ciTLINNko3UBToaFoYvRX1Y+SyGawkHgZc6h0O9Zs4AOqJD9BYGCwRX9TwIxjhVdxiG3zc0MzACprWW4vt0CZGDgGxezuXYO1JJLqb/ig9xUZyKy5t/PFPqBGFu8bJW9bqOAQvQ3C2/1U15TxMcPn60yTh/VF4Bf0km2b9KI6n8WgCGcTTweq4+WmBlA6Hb2UYDvN6wsuwvE/TtyUrgTEfR+H4crJGk0vJupCpN8YpfiVO/lv+ZZrCMPwfp3+Ok7BpE4JWW7NM75emJx+dZubRayosUnvw2Kfun8df7HG5BD2Hdtp896JO2OEX25PhvMMGAAA=</values>
-        <workflow_reference/>
-    </sys_hub_flow_logic_instance_v2>
-    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
-        <attributes/>
-        <block display_value="">7605c77d3bd58b90982a9dc643e45af0</block>
+        <block display_value="">76130f793ba54314982a9dc643e45a2a</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -1566,18 +1343,45 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>5</order>
+        <order>9</order>
         <outputs_assigned/>
-        <parent_ui_id>87014a9a-87fe-4aef-a2ff-8e1c3c3557d6</parent_ui_id>
+        <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 17:17:43</sys_created_on>
-        <sys_id>c644833d3bd58b90982a9dc643e45a5f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_created_on>2026-06-19 03:29:48</sys_created_on>
+        <sys_id>957307b93ba54314982a9dc643e45a2d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:46</sys_updated_on>
-        <ui_id>23e47766-d474-414e-8658-80171ee261be</ui_id>
+        <sys_updated_on>2026-06-19 03:30:14</sys_updated_on>
+        <ui_id>814b75b9-059a-44aa-8685-20fb6fe0e2be</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">931754fd3ba50314982a9dc643e45a01</block>
+        <comment/>
+        <connected_to>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 01:28:17</sys_created_on>
+        <sys_id>d5a72e713b254314982a9dc643e45ae1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 03:30:12</sys_updated_on>
+        <ui_id>9bb18e98-6ded-4a86-89ad-d90142443d2c</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
@@ -1593,17 +1397,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>13</order>
+        <order>5</order>
         <outputs_assigned/>
         <parent_ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-01 01:09:57</sys_created_on>
         <sys_id>ddd6f1043bddcf50982a9dc643e45a11</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:55</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:30:11</sys_updated_on>
         <ui_id>4f14c38f-c173-4935-9dd6-b63d4e42c3ae</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWdDDdh3fAgcBCrQN0AS5tIGwIimbKEWqfMRRDf97l3rYRm2gDZpjb+ZwdzkzHMo7or1rvLMP+tpasVZk+fUpIkIFDH/viIKakyWhWjHhhFYkIs8gfcB2uzyHhPEUJumiSifTpJxOgDI6WeQLVk7TOc/gfQxNYzT2FNaB4/v9N58kOetRznAeE7aR0D6+8Vi6EZIZPkhqwKASxw1Z7n7bEgxPvYJZNUuTGc2zeZ4lSbaYpuU8L9OM5cCncxwooeQSS1cnXlywx7VNgKwzQq2H9ceh9X4EtWGBSpZEhL84rhhSXlYgLY9IDYqB06YlS2c8AoYDu1OyPVRshHI4jYTaFyt+8jApSUJlxVEX5f3uYVkMHvdwdQMOkIqnzpuhlG60oNz2jjBegZdudYr1BXdNp7JrcVDKsVtLX6vPvRnkMGC8UkS8RRK8CUoD90FIdb/R2y8jy1uhOleGTakpyMMKHHpXehf47AiXvMZBRY0Xjo4W4dZF14xc6ngtcRFXUm/x0JDrGGggHqOxEN8iftPBj2BEUPEJx2AzZsEWlhrRjNq6w8k+Ira1KwnWHjWiucUPHxj2igdtRW9PaOkGXePBz3yQsY/OX1TRAcdndf4iXh3mKoEqvaLp5TBDfinM7/qMnkd65PeaXKd/yPWA/FWwZ7P/uf7nXAeaJVhBi+7bjuPCp+UNg/0UAtwfejCbCovcHgL2YfxHCRstJkrQU2irzfeg6ojtfwHxQZdPmwYAAA==</values>
@@ -1611,7 +1415,7 @@
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
-        <block display_value="">5b05c77d3bd58b90982a9dc643e45af4</block>
+        <block display_value="">bd47e2713b254314982a9dc643e45a8f</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -1619,21 +1423,21 @@
         <flow display_value="FL001 Assessment Orchestration">5c168a663b8d8750982a9dc643e45ad7</flow>
         <flow_variables_assigned/>
         <generation_source/>
-        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>7</order>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>13</order>
         <outputs_assigned/>
-        <parent_ui_id/>
+        <parent_ui_id>1e5f80c7-f335-4b9c-b658-8a8cf25e03f2</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-06-06 16:59:23</sys_created_on>
-        <sys_id>e110cf753bd58b90982a9dc643e45a12</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_created_on>2026-06-19 01:28:18</sys_created_on>
+        <sys_id>e5a72e713b254314982a9dc643e45ae5</sys_id>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:48</sys_updated_on>
-        <ui_id>0be9e2b0-90b3-4a68-93da-166a94ae4db6</ui_id>
+        <sys_updated_on>2026-06-19 03:30:17</sys_updated_on>
+        <ui_id>774d7028-e980-4689-90ac-9cfd79e28946</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1VXW/aMBT9K8jPAeULCrxVIKZJ7SqNqi9rFd3YDlhz7Mx2oAzx33edhA+tnbpqfdwbPvf63nNOfMSe6NpVtbP3+tpasVJk+u0pIEJ5DH/viYKSkymhWjHhhFZZAwRkA7L2hdlyftv7pDfcKFCU9xYgJGfYwIStJOwe3uqjayGZ4d3mCgzOd9yQ6f63kmA4pgihiCY0okk8SuIwjMdplI+SPIpZAhwSHCgh59JvPFLu3TRI8Ectbld53Doj1Ko733RTlkdQG+ZZRWFA+LPjiiH7aQHS8oCUoBg4bXYnxHBgd0qegbVQDscR3/xsxU9cGA+HvrHgKJHytng6Zp1/LVzMwQFSqamrTddK11pQbltzGC+glm52ibUNd5WX2l5xkMvjbS3rUn1pHSGnAcfPhUhtkQSvvFJPvdNRLNd6+/XIciFU40pXlJqCPJ3AoXd57TyfPeGSlzgoK6Gq0NGsMnojmsvIpRysJB4GhdRbXOpf4gCoJz5AY2GwQHzewA9ghFdxi2PwckszByto1rxaHIc2cXIIiN3ZmQRrzyLR3exH7Sm2kjtxWeuPv0KNqNw1bt7wTscheBmCi/e/38cwSq8YQD/J07SfwtWkPxnDpE/HEeVxnudxygfUsjJDnZUUoNzh8FiHYcKaBS+z8iEz35erCQyLYRQOX89VOnotV68k6p1hit8Ik/+Sf5mlMAz/h+mfwyRs1kag09Y+po/L0pMPTrvz5DUVFqnde+zz8X/HF3b4uAS9hLbafPeiztjhF32Vzv3BBgAA</values>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
@@ -1647,17 +1451,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>10</order>
+        <order>2</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-27 10:25:53</sys_created_on>
         <sys_id>ff160e663b8d8750982a9dc643e45aaa</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:25:52</sys_updated_on>
+        <sys_updated_on>2026-06-19 03:30:07</sys_updated_on>
         <ui_id>20af3d55-14cf-4929-a265-82eaa2ec6cbd</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1V0W6bMBT9lcnPBBkISZO3KlWlSd0qrVVftgpdjEmsGZvZJm2G8u+7BkKiNtPWbY97w8e+1+cc3yNaohtXN87e60trxVqR5efHgAjlMfxuiYKKkyVhWhXCCa2yDgjIFmTjN/CzELaWsHs4ImwjZGH40K0GgzWOG7JsX2yJAgtKCmW0YBFL4lkSUxpfTKN8luRRXCTAIcGGEnIu8ejqQOPdTYcEP+XndrXHrTNCrYf1zdDl7gBqU3hWEQ0If3ZcFRz5lCAtD0gFqgCnzW5EDIfiVskjsBHK9YIreLbiO14Yp6k/WHKUyAY3xmU2ONXD5RU4QCoNc40ZjdOCcdubU/ASGulWp1h/4Lb2UvsSB7k8VGvZVOpj7wgZG5w8TGORBK+9Uk990FHebfTTpwPLa6E6V4ZNqRnIcQUOvcsb5/m0hEteYaOsgrpGR7Pa6K3oipFLFa4lLsJS6ie81E9XCMwTD9FYCK8Rv+rgBzDCq/iAbbC4p5mDFSzrJhHboU2c7ANid3YlwdqjSHQ3+9Z4ir3kQVzW++NLmBG1u8Sbt3zQsQ9eD/bJTLftLGaLaL5YTFg8SydTmC4mwOcXE6CM8nwOPE3m4Roc3++/NJQmRY2cXkfhzxu9LUELSMs0oun5BE1n5xJ0JjtvjE38i9j4N/vN1FBK/8fmr2MjbNYP+6Ctu/wfpubRR6S/c/SaCYvU7j32/vDX8Bs7HC7BTqEnbb56UUds/wOHRu18fwYAAA==</values>
@@ -1753,12 +1557,12 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d136ce663b8d8750982a9dc643e45a39</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-06 17:26:57</sys_updated_on>
-        <trigger display_value="">9166c3313b198b90982a9dc643e45a68</trigger>
+        <sys_updated_on>2026-06-19 03:31:03</sys_updated_on>
+        <trigger display_value="">53b3cbb93ba54314982a9dc643e45a15</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=2b127d9e3b014750982a9dc643e45a77"/>
 </record_update>

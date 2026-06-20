@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=32430000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>sf003__generate_remediation_task</internal_name>
+        <label_cache>[{"name":"subflow.assessment_record","label":"Input➛Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","column_name":"","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["parent"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"73a129b0-3b1b-4d9b-8e14-1a125f676908","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.failure_reason","label":"Input➛Failure Reason","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["description"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"1a58b389-d29c-4dc3-97f7-9d4a1e88ecab","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.assessment_record.number","label":"Input➛Assessment Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"number","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["short_description"]}},{"name":"subflow.assessment_record.service_ci.support_group","label":"Input➛Assessment Record➛Service CI➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"support_group","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["assignment_group"]}},{"name":"subflow.assessment_record.service_ci.owned_by","label":"Input➛Assessment Record➛Service CI➛Owned by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"owned_by","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["assigned_to"]}}]</label_cache>
+        <master_snapshot>6aba92fd3ba14314982a9dc643e45ae4</master_snapshot>
+        <master_snapshot_digest/>
+        <name>SF003 - Generate Remediation Task</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 15:31:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>09fe10b93be50314982a9dc643e45a58</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>SF003 - Generate Remediation Task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_hub_flow_09fe10b93be50314982a9dc643e45a58</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:32:16</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>ec12c3393ba54314982a9dc643e45ac0</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_variable_value action="delete_multiple" query="document_key=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=09fe10b93be50314982a9dc643e45a58^sys_idNOT INd9fe10b93be50314982a9dc643e45a5a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>09fe10b93be50314982a9dc643e45a58</id>
+        <name>SF003 - Generate Remediation Task</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 15:31:06</sys_created_on>
+        <sys_id>d9fe10b93be50314982a9dc643e45a5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 15:31:06</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=d9fe10b93be50314982a9dc643e45a5a"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=09fe10b93be50314982a9dc643e45a58^sys_idNOT IN226f143d3be50314982a9dc643e45a19,346f98f93be50314982a9dc643e45a72"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1a58b389-d29c-4dc3-97f7-9d4a1e88ecab</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>failure_reason</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Failure Reason</label>
+        <mandatory>true</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="SF003 - Generate Remediation Task">09fe10b93be50314982a9dc643e45a58</model>
+        <model_id>09fe10b93be50314982a9dc643e45a58</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_09fe10b93be50314982a9dc643e45a58</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 15:33:05</sys_created_on>
+        <sys_id>226f143d3be50314982a9dc643e45a19</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:29:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=226f143d3be50314982a9dc643e45a19"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=73a129b0-3b1b-4d9b-8e14-1a125f676908</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_1858206_sentin_0_readiness_assessment</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>assessment_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Assessment Record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="SF003 - Generate Remediation Task">09fe10b93be50314982a9dc643e45a58</model>
+        <model_id>09fe10b93be50314982a9dc643e45a58</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_09fe10b93be50314982a9dc643e45a58</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_1858206_sentin_0_readiness_assessment">x_1858206_sentin_0_readiness_assessment</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 15:32:58</sys_created_on>
+        <sys_id>346f98f93be50314982a9dc643e45a72</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 15:33:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=346f98f93be50314982a9dc643e45a72"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=09fe10b93be50314982a9dc643e45a58^sys_idNOT INed669a753ba14314982a9dc643e45a6c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="SF003 - Generate Remediation Task">09fe10b93be50314982a9dc643e45a58</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:12:57</sys_created_on>
+        <sys_id>ed669a753ba14314982a9dc643e45a6c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:29:39</sys_updated_on>
+        <ui_id>d853a429-fdba-4af1-87b9-d8be28845a9a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTU/cMBD9K5HPUZQQuoK9tUUr9QBUgLhQiJx4dmPh2MYfC9tV/nvHcZal0G1pValCak6ZGc97b2acydWacEamZFJA/u6wmDRlUZZ7eb53sF/Uk7Iu9lhJAfZJSiTtAE86WguoBiMlSyp8dNpbNBm3WtDV5ei9iN6m5YIZkGR6dZ0STQ3mOjBkun4WcisNlaA1iCEZeZKTyPNajd8l79AcWJ77lGFBUJ4SeHAgGSDfnAoLKemoZNQpsyJTZzw6DFB2KsXq8UTLpUNAEs4+WP4V0Q/ycG4OWFoDMfZoVmOXortpFW/gVDuuZPQMwsagEr6TJ7GI0F+YUy/cpr/o8RbxQAfJQcSoaH7eqvuzDeGMy6G6MShUQ8WjRZ0zvPYObJgHCOgQqOqo1lwuKm3Ukg/JqKXLFgKNbC7UPZJavpAZbYLwDDtEsxn6jwb3JTU8VHGMMJjcD9VXdz7wxjpGxVUsGg/YxnDt3iPcEkZxfbq5nAzyw52DL+rtoIf7aJ9cTGqDHmCVU198npdsvba+DhVkGAJrh3INNHgDMgtmicOoGp6p+5BUr/r+JkIM5xZGef1bONZrrcyYiWC2DRY2bygXWxfRzjGbSxCn2iZnOALGaQji+53nBtj0Z3TSdzUYBH8Be9FCQr1THXXAknBxkcTaZIF2UuNFuEW3a7lNtqgZklKr5DTZcs4pF94AEoZI3yefBb5B4jULSA5pPn5KuIxvx0cfEvxokA/zO+6yG/zmEfmXjev7lzvk/wDf2gD/cN1Dh2NHLXHw6au//A3AjINg9gerYLPvR4JqORKMO7/4Wzu/mOTD8282f9T5xhb/k3/wjl/A9TdnKhLUoQgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ed669a753ba14314982a9dc643e45a6c"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>failure_reason</element>
+        <help/>
+        <hint/>
+        <label>Failure Reason</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_09fe10b93be50314982a9dc643e45a58</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 15:33:07</sys_created_on>
+        <sys_id>be6f143d3be50314982a9dc643e45a1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 15:33:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>assessment_record</element>
+        <help/>
+        <hint/>
+        <label>Assessment Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_09fe10b93be50314982a9dc643e45a58</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 15:33:05</sys_created_on>
+        <sys_id>d26f143d3be50314982a9dc643e45a16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 15:33:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_09fe10b93be50314982a9dc643e45a58"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_09fe10b93be50314982a9dc643e45a58"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>sf003__generate_remediation_task</internal_name>
+        <label_cache>[{"name":"subflow.assessment_record","label":"Input➛Assessment Record","reference":"x_1858206_sentin_0_readiness_assessment","reference_display":"Readiness Assessment","type":"reference","base_type":"reference","column_name":"","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["parent"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"73a129b0-3b1b-4d9b-8e14-1a125f676908","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.failure_reason","label":"Input➛Failure Reason","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["description"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"1a58b389-d29c-4dc3-97f7-9d4a1e88ecab","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.assessment_record.number","label":"Input➛Assessment Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1858206_sentin_0_readiness_assessment","column_name":"number","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["short_description"]}},{"name":"subflow.assessment_record.service_ci.support_group","label":"Input➛Assessment Record➛Service CI➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"support_group","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["assignment_group"]}},{"name":"subflow.assessment_record.service_ci.owned_by","label":"Input➛Assessment Record➛Service CI➛Owned by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"owned_by","usedInstances":{"d853a429-fdba-4af1-87b9-d8be28845a9a":["assigned_to"]}}]</label_cache>
+        <master>true</master>
+        <name>SF003 - Generate Remediation Task</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="SF003 - Generate Remediation Task">09fe10b93be50314982a9dc643e45a58</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:31:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6aba92fd3ba14314982a9dc643e45ae4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:31:51</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6aba92fd3ba14314982a9dc643e45ae4^sys_idNOT IN2aba92fd3ba14314982a9dc643e45ae6"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6aba92fd3ba14314982a9dc643e45ae4</id>
+        <name>SF003 - Generate Remediation Task</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:31:52</sys_created_on>
+        <sys_id>2aba92fd3ba14314982a9dc643e45ae6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:31:52</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2aba92fd3ba14314982a9dc643e45ae6"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=6aba92fd3ba14314982a9dc643e45ae4^sys_idNOT IN3aba92fd3ba14314982a9dc643e45ae8,41cad2fd3ba14314982a9dc643e45ac5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=73a129b0-3b1b-4d9b-8e14-1a125f676908</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_1858206_sentin_0_readiness_assessment</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>assessment_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Assessment Record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="SF003 - Generate Remediation Task">6aba92fd3ba14314982a9dc643e45ae4</model>
+        <model_id>6aba92fd3ba14314982a9dc643e45ae4</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6aba92fd3ba14314982a9dc643e45ae4</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_1858206_sentin_0_readiness_assessment">x_1858206_sentin_0_readiness_assessment</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:31:52</sys_created_on>
+        <sys_id>3aba92fd3ba14314982a9dc643e45ae8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:31:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3aba92fd3ba14314982a9dc643e45ae8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1a58b389-d29c-4dc3-97f7-9d4a1e88ecab</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>failure_reason</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Failure Reason</label>
+        <mandatory>true</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="SF003 - Generate Remediation Task">6aba92fd3ba14314982a9dc643e45ae4</model>
+        <model_id>6aba92fd3ba14314982a9dc643e45ae4</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6aba92fd3ba14314982a9dc643e45ae4</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:32:01</sys_created_on>
+        <sys_id>41cad2fd3ba14314982a9dc643e45ac5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:32:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=41cad2fd3ba14314982a9dc643e45ac5"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=6aba92fd3ba14314982a9dc643e45ae4^sys_idNOT INcbca16fd3ba14314982a9dc643e45a22"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="SF003 - Generate Remediation Task">6aba92fd3ba14314982a9dc643e45ae4</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:32:10</sys_created_on>
+        <sys_id>cbca16fd3ba14314982a9dc643e45a22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:32:10</sys_updated_on>
+        <ui_id>d853a429-fdba-4af1-87b9-d8be28845a9a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WS0/cMBD+K5HPUZSwdAV7a0FIlQpUgLi0EDnxZGPh2MaPhe0q/73jOPsQj1KkXpC6J8/rm2/G48z+WBHOyIxMC8g/HRbTelJMJnt5vnewX1TTSVXssQkF2CcpkbQD9HS0ElAOQkoWVPiotHcoMm61oMvrUXsVtXXLBTMgyezHTUo0NRjrwJDZ6onpb5kIWoEY8JHKK8zcUr+o+7Ybm5xFgzIs8MlTAo8OJAMk0lBhISUdlYw6ZZZk5oxHhQHKzqVYbjxaLh0CkuD7aPkvTHuQB78GsLIaom0jlmOToro5po5eInLtvBld61bxGmzsCYOGeuGOdnXR4Vw7rmQMGcoco5XwnTyLLSEbgPWdoMZbJAE61BmYj2U0l616uFizPOFyaMloFKqmYiNR5wyvvAt8VgQEdAhUdlRrLuelNmrBh2Dk0mVzgULWCPWASS2fy4zWgXiGbaXZCeqPB/U1NTxUcYowGNynxC7tkaDWbmvBJpb3PjCJlY01lLENIaQ2XLvPmGABI90+XY84g/zw1cEqqu0gDVNtd8YbSSBDYKVTP32eT9hqZX0VasrQBNYODTBQ4yBlFswCr6eseaYeQlC17PvbCDH4zY3y+l041mutzBiJYLYNErZzKBebGdEuMZpLEOfaJhd4KYzTYMTzvecG2OxP6aTvKjAI/gz2qoWEeqc66oAlYf4xibXJHOWkwtG4Q7VruU22qBkmpVbJWbLN2VAucMgxYbD0ffJd4AkSr1lAcpjm6GvCZTydHn9J8O1hPozvuMtu8cuByG82ru+ff4n+X+BHu8B3Lo233/Z6aZxwEMy+8NjXGwM6nBwHZXz8T7bGaEyuR+O4OYp/tTmKaT78PtD+iMV9+PWx80/hlUVy8xvPdxp8LQkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cbca16fd3ba14314982a9dc643e45a22"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>failure_reason</element>
+        <help/>
+        <hint/>
+        <label>Failure Reason</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6aba92fd3ba14314982a9dc643e45ae4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:32:04</sys_created_on>
+        <sys_id>21cad2fd3ba14314982a9dc643e45acc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:32:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>assessment_record</element>
+        <help/>
+        <hint/>
+        <label>Assessment Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6aba92fd3ba14314982a9dc643e45ae4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:31:59</sys_created_on>
+        <sys_id>e4cad2fd3ba14314982a9dc643e45a2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:31:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6aba92fd3ba14314982a9dc643e45ae4"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>09fe10b93be50314982a9dc643e45a58</sys_id>
+        <latest_snapshot>6aba92fd3ba14314982a9dc643e45ae4</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=09fe10b93be50314982a9dc643e45a58"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=09fe10b93be50314982a9dc643e45a58^sys_idNOT INd8da56fd3ba14314982a9dc643e45a4a"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@141b311d</plan>
+        <plan_id display_value="SF003 - Generate Remediation Task">09fe10b93be50314982a9dc643e45a58</plan_id>
+        <snapshot>6aba92fd3ba14314982a9dc643e45ae4</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-19 00:32:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d8da56fd3ba14314982a9dc643e45a4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-19 00:32:15</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>
