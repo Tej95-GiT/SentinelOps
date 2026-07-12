@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_style">
+    <sys_ux_style action="INSERT_OR_UPDATE">
+        <name>SentinelOps Light Base</name>
+        <style>{&#13;
+  "properties": {&#13;
+    "--now-color--background-primary": "#FFFFFF",&#13;
+    "--now-color--background-secondary": "#F5F5F7",&#13;
+    "--now-color--background-tertiary": "#EEEEF0",&#13;
+    "--now-color_brand--primary": "#CC1B31",&#13;
+    "--now-color_brand--secondary": "#AB1121",&#13;
+    "--now-color--text-primary": "#1B1F23",&#13;
+    "--now-color--text-secondary": "#585E67",&#13;
+    "--now-color--border-primary": "#E0E0E4",&#13;
+    "--now-color_alert--success-0": "#1A7A3A",&#13;
+    "--now-color_alert--critical-0": "#CC1B31",&#13;
+    "--now-color_alert--warning-0": "#B8860B",&#13;
+    "--now-unified-nav_header--background-color": "#1B1F23",&#13;
+    "--now-unified-nav_header--color": "#FFFFFF",&#13;
+    "--now-unified-nav_header--logo": "url(x_1858206_sentin_0.SentinelOps0.png)"&#13;
+  }&#13;
+}</style>
+        <sys_class_name>sys_ux_style</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-25 12:01:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f86173733b618f14982a9dc643e45a08</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SentinelOps Light Base</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_ux_style_f86173733b618f14982a9dc643e45a08</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-25 14:24:21</sys_updated_on>
+        <type>core</type>
+    </sys_ux_style>
+</record_update>

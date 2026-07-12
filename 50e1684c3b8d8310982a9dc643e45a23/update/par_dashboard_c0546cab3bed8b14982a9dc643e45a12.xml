@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard">
+    <par_dashboard action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_dashboard/>
+        <certified>false</certified>
+        <description/>
+        <experience display_value="Advanced Dashboards">8adc36706f01011089060168e25b3693</experience>
+        <grid>48</grid>
+        <name>SentinelOps: Governance Workspace</name>
+        <ready_to_migrate>Not Applicable</ready_to_migrate>
+        <sys_class_name>par_dashboard</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-24 02:23:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c0546cab3bed8b14982a9dc643e45a12</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>SentinelOps: Governance Workspace</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>par_dashboard_c0546cab3bed8b14982a9dc643e45a12</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-25 02:02:36</sys_updated_on>
+        <sys_ux_app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</sys_ux_app_config>
+        <sys_ux_app_route display_value="SentinelOps: Governance Workspace">a564e0eb3bed8b14982a9dc643e45a63</sys_ux_app_route>
+        <sys_ux_macroponent display_value="Governance Workspace default">a65460eb3bed8b14982a9dc643e45aa4</sys_ux_macroponent>
+        <sys_ux_screen display_value="Governance Workspace default">6b54a0eb3bed8b14982a9dc643e45a2a</sys_ux_screen>
+        <sys_ux_screen_type display_value="SentinelOps: Governance Workspace">0e5460eb3bed8b14982a9dc643e45a9e</sys_ux_screen_type>
+    </par_dashboard>
+</record_update>

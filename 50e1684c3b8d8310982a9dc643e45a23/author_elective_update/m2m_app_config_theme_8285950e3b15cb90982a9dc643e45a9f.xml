@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="DELETE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 03:52:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8285950e3b15cb90982a9dc643e45a9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>m2m_app_config_theme_8285950e3b15cb90982a9dc643e45a9f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 03:52:20</sys_updated_on>
+        <theme/>
+        <ux_app_configuration display_value="SentinelOps Workspace">37a8810a3bd1cb90982a9dc643e45afb</ux_app_configuration>
+    </m2m_app_config_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</application>
+        <file_path/>
+        <instance_id>2e4c2993fbbb261085daf3585eefdc17</instance_id>
+        <instance_name>dev357409</instance_name>
+        <name>m2m_app_config_theme_8285950e3b15cb90982a9dc643e45a9f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme"><m2m_app_config_theme action="INSERT_OR_UPDATE"><applicability/><order>0</order><sys_class_name>m2m_app_config_theme</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-06-07 03:52:20</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8285950e3b15cb90982a9dc643e45a9f</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package><sys_policy/><sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope><sys_update_name>m2m_app_config_theme_8285950e3b15cb90982a9dc643e45a9f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-07 03:52:20</sys_updated_on><theme/><ux_app_configuration display_value="SentinelOps Workspace">37a8810a3bd1cb90982a9dc643e45afb</ux_app_configuration></m2m_app_config_theme></record_update>]]></payload>
+        <payload_hash>-1259920971</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>ef5df4ce3b8d8350982a9dc643e45a0b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 03:52:21</sys_created_on>
+        <sys_id>ee85190e3b15cb90982a9dc643e45a25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ea035cff30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 03:52:21</sys_updated_on>
+        <type>UX App Theme</type>
+        <update_guid>6e85190e2215cb9098eb2450c89f8224</update_guid>
+        <update_guid_history>6e85190e2215cb9098eb2450c89f8224:-1259920971</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">a9960e993b8e8f50982a9dc643e45a79</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-12 06:18:17</sys_created_on>
+        <sys_db_object display_value="" name="m2m_app_config_theme">m2m_app_config_theme</sys_db_object>
+        <sys_id>0088b600552b4e8e800ab896e4c49a59</sys_id>
+        <sys_metadata>8285950e3b15cb90982a9dc643e45a9f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_scope_delete display_value="">0dcfe72dfe6f46e096259f6ee06cede4</sys_scope_delete>
+        <sys_update_name>m2m_app_config_theme_8285950e3b15cb90982a9dc643e45a9f</sys_update_name>
+        <sys_update_version display_value="m2m_app_config_theme_8285950e3b15cb90982a9dc643e45a9f">ee85190e3b15cb90982a9dc643e45a25</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-12 06:18:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
+        <event_mappings>[]</event_mappings>
+        <macroponent display_value="Governance Workspace default">a65460eb3bed8b14982a9dc643e45aa4</macroponent>
+        <macroponent_config>{
+    "__hasChatOnPage": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "encodedQueries": {
+        "type": "JSON_LITERAL",
+        "value": null
+    },
+    "insightsMetadata": {
+        "type": "JSON_LITERAL",
+        "value": null
+    },
+    "parFilters": {
+        "type": "JSON_LITERAL",
+        "value": null
+    }
+}</macroponent_config>
+        <name>Governance Workspace default</name>
+        <order>0</order>
+        <parent_macroponent display_value="UXR Base Experience Shell - Advanced">47bcb58553030110aab9ddeeff7b12c2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="SentinelOps: Governance Workspace">0e5460eb3bed8b14982a9dc643e45a9e</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-24 02:24:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6b54a0eb3bed8b14982a9dc643e45a2a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Governance Workspace default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_ux_screen_6b54a0eb3bed8b14982a9dc643e45a2a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-25 05:15:54</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=6b54a0eb3bed8b14982a9dc643e45a2a"/>
+</record_update>

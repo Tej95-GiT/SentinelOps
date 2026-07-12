@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description>Validate there is at least one record in 'x_1858206_sentin_0_checklist_result' matching query:
+Assessment = {{Step 1: Record Insert.Record}}
+With a failure timeout of 30 Seconds</description>
+        <display_name>Record Query</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <step_config display_value="Record Query">2d82e3c7531400109e02ddeeff7b12a7</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-20 17:49:36</sys_created_on>
+        <sys_id>19e0171a3b650714982a9dc643e45af6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Record Query</sys_name>
+        <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
+        <sys_update_name>sys_atf_step_19e0171a3b650714982a9dc643e45af6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-21 10:19:52</sys_updated_on>
+        <table>x_1858206_sentin_0_checklist_result</table>
+        <test display_value="SentinelOps: End-to-End Governance Engine Validation">f108cb1a3b650714982a9dc643e45a0a</test>
+        <timeout>1970-01-01 00:00:30</timeout>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=19e0171a3b650714982a9dc643e45af6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>19e0171a3b650714982a9dc643e45af6</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-20 17:49:37</sys_created_on>
+        <sys_id>0ed15b963ba50714982a9dc643e45a86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-20 17:49:37</sys_updated_on>
+        <value>x_1858206_sentin_0_checklist_result</value>
+        <variable display_value="Table">78b8d86b531000109e02ddeeff7b12f3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>19e0171a3b650714982a9dc643e45af6</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-20 17:49:37</sys_created_on>
+        <sys_id>42d15b963ba50714982a9dc643e45a87</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-21 09:42:23</sys_updated_on>
+        <value>assessment={{step['4f3dc7123ba50714982a9dc643e45a9d'].record_id}}^EQ</value>
+        <variable display_value="Conditions">915990ab531000109e02ddeeff7b12f8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>19e0171a3b650714982a9dc643e45af6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-20 17:49:37</sys_created_on>
+        <sys_id>b1d15b963ba50714982a9dc643e45a86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-20 17:49:37</sys_updated_on>
+        <value>records_match_query</value>
+        <variable display_value="Assert type">b86c0427531000109e02ddeeff7b1227</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>19e0171a3b650714982a9dc643e45af6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-20 17:49:37</sys_created_on>
+        <sys_id>f5d15b963ba50714982a9dc643e45a86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-20 17:49:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Enforce security">02fb0027531000109e02ddeeff7b120b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=19e0171a3b650714982a9dc643e45af6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>19e0171a3b650714982a9dc643e45af6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-20 17:49:37</sys_created_on>
+        <sys_id>b9d15b963ba50714982a9dc643e45a85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-20 17:49:37</sys_updated_on>
+        <table>var__m_atf_input_variable_2d82e3c7531400109e02ddeeff7b12a7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>19e0171a3b650714982a9dc643e45af6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-20 17:49:37</sys_created_on>
+        <sys_id>fdd15b963ba50714982a9dc643e45a85</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-21 09:42:23</sys_updated_on>
+        <table>var__m_atf_input_variable_2d82e3c7531400109e02ddeeff7b12a7</table>
+        <value>assessment={{step['4f3dc7123ba50714982a9dc643e45a9d'].record_id}}^EQ</value>
+    </sys_element_mapping>
+</record_update>
