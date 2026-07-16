@@ -640,8 +640,23 @@
                                                 "fields": {
                                                     "container": {
                                                         "sysId": {
-                                                            "type": "JSON_LITERAL",
-                                                            "value": "-1"
+                                                            "binding": {
+                                                                "address": [
+                                                                    "sysId"
+                                                                ],
+                                                                "category": "props"
+                                                            },
+                                                            "type": "CONTEXT_BINDING"
+                                                        },
+                                                        "table": {
+                                                            "binding": {
+                                                                "address": [
+                                                                    "user",
+                                                                    "sys_id"
+                                                                ],
+                                                                "category": "session"
+                                                            },
+                                                            "type": "CONTEXT_BINDING"
                                                         }
                                                     },
                                                     "type": "MAP_CONTAINER"
@@ -8606,14 +8621,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-25 12:25:44</sys_created_on>
         <sys_id>52a7bf3f3b618f14982a9dc643e45ac2</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name>Governance Workspace</sys_name>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
         <sys_policy/>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_ux_macroponent_52a7bf3f3b618f14982a9dc643e45ac2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-07-03 14:03:30</sys_updated_on>
+        <sys_updated_on>2026-07-15 14:15:56</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=52a7bf3f3b618f14982a9dc643e45ac2"/>
 </record_update>
