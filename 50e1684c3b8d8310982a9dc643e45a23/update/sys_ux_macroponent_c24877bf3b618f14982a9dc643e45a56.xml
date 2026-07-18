@@ -449,7 +449,7 @@
                     "elementLabel": "Button 1",
                     "eventMappings": [
                         {
-                            "eventMappingId": "ofpIJgCeBEeeddDjjyUFceehhIiikggnV",
+                            "eventMappingId": "toHiiLfwvAEzPjjtkKteehhIVffzS",
                             "isConfiguration": false,
                             "offRowStorageId": null,
                             "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
@@ -488,7 +488,7 @@
                                                         },
                                                         "table": {
                                                             "type": "JSON_LITERAL",
-                                                            "value": null
+                                                            "value": "x_1858206_sentin_0_readiness_assessment"
                                                         }
                                                     },
                                                     "type": "MAP_CONTAINER"
@@ -531,7 +531,7 @@
                                         "sysId": "2eed3a573bb1cf10982a9dc643e45a0b"
                                     },
                                     "operation": null,
-                                    "targetId": "sUeeddQUPggeeAkmqeeddOMGkJtAmQtP",
+                                    "targetId": "AAoAGfrDAUtOjjlwCSAvJbbHMu",
                                     "type": "EVENT"
                                 }
                             ]
@@ -1343,6 +1343,29 @@
                                                             "scrollableHost": {
                                                                 "type": "JSON_LITERAL",
                                                                 "value": null
+                                                            },
+                                                            "sections": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "record",
+                                                                        "form",
+                                                                        "sections"
+                                                                    ]
+                                                                },
+                                                                "type": "DATA_OUTPUT_BINDING"
+                                                            },
+                                                            "sysId": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "sysId"
+                                                                    ],
+                                                                    "category": "props"
+                                                                },
+                                                                "type": "CONTEXT_BINDING"
+                                                            },
+                                                            "table": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "x_1858206_sentin_0_readiness_assessment"
                                                             }
                                                         },
                                                         "slot": null,
@@ -3069,6 +3092,19 @@
                                                                 "type": "JSON_LITERAL",
                                                                 "value": false
                                                             },
+                                                            "sysId": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "sysId"
+                                                                    ],
+                                                                    "category": "props"
+                                                                },
+                                                                "type": "CONTEXT_BINDING"
+                                                            },
+                                                            "table": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "x_1858206_sentin_0_readiness_assessment"
+                                                            },
                                                             "tagEditorIsVisible": {
                                                                 "type": "JSON_LITERAL",
                                                                 "value": false
@@ -3409,95 +3445,33 @@
                         "composition": [
                             {
                                 "definition": {
-                                    "id": "553e398f150099fe18ece6938b5bea46",
+                                    "id": "cf203eb517e037bf0a780f0de3ae544e",
                                     "type": "MACROPONENT"
                                 },
-                                "elementId": "alert_1",
-                                "elementLabel": "Alert 1",
+                                "elementId": "agent_assist_1",
+                                "elementLabel": "Agent assist 1",
                                 "eventMappings": [],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
                                 },
-                                "preset": null,
+                                "preset": {
+                                    "controllerElementId": "record",
+                                    "disabledEventTargetIds": [],
+                                    "id": "87d83e39b38eae90b654532b737b2dc9"
+                                },
                                 "propertyValues": {
-                                    "action": {
-                                        "container": {
-                                            "label": {
-                                                "type": "TRANSLATION_LITERAL",
-                                                "value": {
-                                                    "code": null,
-                                                    "comment": "",
-                                                    "message": "Custom ok"
-                                                }
-                                            },
-                                            "type": {
-                                                "type": "JSON_LITERAL",
-                                                "value": "acknowledge"
-                                            }
-                                        },
-                                        "type": "MAP_CONTAINER"
-                                    },
-                                    "configAria": {
+                                    "isFetching": {
                                         "type": "JSON_LITERAL",
                                         "value": null
                                     },
-                                    "content": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Mandatory criterion failed: CI Owner field is empty"
-                                        }
-                                    },
-                                    "enableFocus": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "expanded": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "header": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Heads up"
-                                        }
-                                    },
-                                    "icon": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "circle-info-outline"
-                                    },
-                                    "manageExpanded": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "maxHeight": {
+                                    "prefetchData": {
                                         "type": "JSON_LITERAL",
                                         "value": null
                                     },
-                                    "status": {
+                                    "usePreferredResourceOnLoad": {
                                         "type": "JSON_LITERAL",
-                                        "value": "warning"
-                                    },
-                                    "textLinkProps": {
-                                        "container": {
-                                            "href": {
-                                                "type": "JSON_LITERAL",
-                                                "value": "dummyHref"
-                                            },
-                                            "label": {
-                                                "type": "TRANSLATION_LITERAL",
-                                                "value": {
-                                                    "code": null,
-                                                    "comment": "",
-                                                    "message": "Link label"
-                                                }
-                                            }
-                                        },
-                                        "type": "MAP_CONTAINER"
+                                        "value": false
                                     }
                                 },
                                 "slot": null,
@@ -3714,40 +3688,6 @@
                                 },
                                 "slot": null,
                                 "styles": null
-                            },
-                            {
-                                "definition": {
-                                    "id": "cf203eb517e037bf0a780f0de3ae544e",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "agent_assist_1",
-                                "elementLabel": "Agent assist 1",
-                                "eventMappings": [],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": null
-                                },
-                                "preset": {
-                                    "controllerElementId": "record",
-                                    "disabledEventTargetIds": [],
-                                    "id": "87d83e39b38eae90b654532b737b2dc9"
-                                },
-                                "propertyValues": {
-                                    "isFetching": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "prefetchData": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "usePreferredResourceOnLoad": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
                             }
                         ],
                         "layout": {
@@ -3755,16 +3695,13 @@
                                 "children": null,
                                 "items": [
                                     {
-                                        "element_id": "alert_1"
+                                        "element_id": "agent_assist_1"
                                     },
                                     {
                                         "element_id": "label_value_2"
                                     },
                                     {
                                         "element_id": "feedback_1"
-                                    },
-                                    {
-                                        "element_id": "agent_assist_1"
                                     }
                                 ],
                                 "root": null,
@@ -4667,7 +4604,7 @@
             "fields": {
                 "binding": {
                     "address": [
-                        "fields"
+                        "sysId"
                     ],
                     "category": "props"
                 },
@@ -4792,6 +4729,10 @@
                     "category": "props"
                 },
                 "type": "CONTEXT_BINDING"
+            },
+            "view": {
+                "type": "JSON_LITERAL",
+                "value": "Workspace"
             },
             "viewRuleConfigId": {
                 "binding": {
@@ -5660,6 +5601,21 @@
                                     ]
                                 },
                                 "type": "DATA_OUTPUT_BINDING"
+                            },
+                            {
+                                "type": "JSON_LITERAL",
+                                "value": "^NQchild="
+                            },
+                            {
+                                "binding": {
+                                    "address": [
+                                        "look_up_a_single_record_1",
+                                        "result",
+                                        "service_ci",
+                                        "value"
+                                    ]
+                                },
+                                "type": "DATA_OUTPUT_BINDING"
                             }
                         ],
                         "type": "LIST_CONTAINER"
@@ -6276,10 +6232,6 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Custom ok",
-  "code" : "",
-  "comment" : ""
-}, {
   "message" : "Details",
   "code" : "",
   "comment" : ""
@@ -6297,10 +6249,6 @@
   "comment" : ""
 }, {
   "message" : "Governance Workspace",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "Heads up",
   "code" : "",
   "comment" : ""
 }, {
@@ -6328,15 +6276,7 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Link label",
-  "code" : "",
-  "comment" : ""
-}, {
   "message" : "Made up things that didn't happen",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "Mandatory criterion failed: CI Owner field is empty",
   "code" : "",
   "comment" : ""
 }, {
@@ -6403,14 +6343,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-25 12:28:27</sys_created_on>
         <sys_id>c24877bf3b618f14982a9dc643e45a56</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Assessment Intelligence</sys_name>
         <sys_package display_value="SentinelOps" source="x_1858206_sentin_0">50e1684c3b8d8310982a9dc643e45a23</sys_package>
         <sys_policy/>
         <sys_scope display_value="SentinelOps">50e1684c3b8d8310982a9dc643e45a23</sys_scope>
         <sys_update_name>sys_ux_macroponent_c24877bf3b618f14982a9dc643e45a56</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-07-14 16:15:37</sys_updated_on>
+        <sys_updated_on>2026-07-17 08:11:38</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c24877bf3b618f14982a9dc643e45a56"/>
 </record_update>
