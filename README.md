@@ -81,11 +81,13 @@ Roles: `admin`, `analyst`, `assessor`, `governor`, `requester`, `user`, `viewer`
 
 ### ⚙️ Flow Designer Orchestration (FL001 + 3 Subflows)
 
+`FL001 Assessment Orchestration` is the traffic cop of the entire pipeline. The moment an assessment's state transitions to `Submitted`, FL001 fires and coordinates three specialized subflows in sequence — each one a hard gate that can cancel the pipeline or create remediation work items before the next stage begins.
+
 ```
 FL001 Assessment Orchestration
-  ├── SF001 CMDB Validation         → validates CI relationship graph
-  ├── SF002 CSDM Validation         → traverses CSDM hierarchy compliance
-  └── SF003 Generate Remediation Task → creates remediation work items on failure
+  ├── SF001 CMDB Validation         → validates CI relationship graph in cmdb_rel_ci
+  ├── SF002 CSDM Validation         → invokes CSDMTraversalEngine; blocks on structural gaps
+  └── SF003 Generate Remediation Task → creates actionable work items when SF002 fails
 ```
 
 All flows trigger natively on `readiness_assessment.state` change with zero external dependencies.
@@ -335,21 +337,59 @@ See [`docs/implementation-roadmap.md`](./docs/implementation-roadmap.md) for the
 
 ---
 
-## Getting Started
+## ⚙️ Flow Designer Orchestration
 
-### Prerequisites
+`FL001 Assessment Orchestration` acts as the **traffic cop** of the governance pipeline. The instant an assessment's `state` field changes to `10` (Submitted), FL001 fires and routes execution through three purpose-built subflows in sequence. Each subflow is a hard gate — a failed CMDB validation cancels the pipeline immediately; a failed CSDM traversal blocks the assessment and auto-generates a remediation task; only a fully validated, scored assessment ever reaches the approval stage.
 
-- ServiceNow instance on **Australia release** or later
-- `admin` role on the target instance
+<p align="center">
+  <img src="img/fl001.png" alt="FL001 Assessment Orchestration Flow" width="780" />
+</p>
+<p align="center"><em>FL001 Assessment Orchestration — end-to-end flow from submission trigger to approval routing</em></p>
+
+### SF002: CSDM Validation Subflow
+
+SF002 is where structural CSDM compliance is enforced. It invokes the `CSDMTraversalEngine` Script Include to walk the `cmdb_rel_ci` graph from the submitted `service_ci` — discovering every upstream and downstream CI relationship and validating that the hierarchy conforms to CSDM structural requirements. Field-level checks are insufficient; SF002 validates the **organisational truth** of the service model.
+
+<p align="center">
+  <img src="img/sf002.png" alt="SF002 CSDM Validation Subflow" width="780" />
+</p>
+<p align="center"><em>SF002 CSDM Validation — CSDMTraversalEngine graph walk, gap detection, and SF003 handoff</em></p>
+
+---
+
+## 📥 Installation & Import
+
+SentinelOps is a **ServiceNow Scoped Application** — it lives entirely on a ServiceNow instance and is imported via the built-in Studio source control integration. You do not clone the repo locally or run `npm install`. The import process pulls the application directly from GitHub into your Personal Developer Instance (PDI).
+
+### Viewing the Code
+
+Recruiters and developers can explore all scripts, ACLs, Business Rules, and Flow Designer logic directly in this repository:
+
+- **`src/`** — Human-readable JavaScript mirrors of every Script Include and Business Rule
+- **`docs/`** — Architecture deep-dive, security model, flow specifications
+- **`50e1684c3b8d8310982a9dc643e45a23/update/`** — Raw ServiceNow XML artifacts (source of truth)
+
+### Importing Into Your Own PDI
+
+**Prerequisites:**
+- A free ServiceNow PDI on the **Australia release** — request one at [developer.servicenow.com](https://developer.servicenow.com)
+- `admin` role on the instance
 - GitHub credentials configured in ServiceNow Source Control settings
 
-### Installation
+**Steps:**
 
-```bash
-# 1. Fork this repository
-# 2. In your ServiceNow instance:
-#    Studio → Import From Source Control
-#    Enter your repository URL and branch
+```
+1. In your ServiceNow instance, navigate to:
+   System Applications → Studio
+
+2. Click: Import From Source Control
+
+3. Enter:
+   URL:    https://github.com/Tej95-GiT/SentinelOps
+   Branch: main
+
+4. ServiceNow imports the full application from
+   50e1684c3b8d8310982a9dc643e45a23/ and activates all artifacts.
 ```
 
 ServiceNow will import the application from `50e1684c3b8d8310982a9dc643e45a23/` and activate all artifacts automatically.

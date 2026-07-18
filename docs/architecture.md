@@ -8,7 +8,24 @@
 
 ---
 
-## Executive Summary
+## Table of Contents
+
+- [Executive Summary](#executive-summary)
+- [1 — Platform Inventory](#1--platform-inventory)
+- [2 — Data Model Architecture](#2--data-model-architecture)
+- [3 — Governance Lifecycle and State Machine](#3--governance-lifecycle-and-state-machine)
+- [4 — Business Rule Architecture](#4--business-rule-architecture)
+- [5 — Script Include Architecture](#5--script-include-architecture)
+- [6 — Flow Designer Orchestration](#6--flow-designer-orchestration)
+- [7 — REST API: SentinelOps Ingestion](#7--rest-api-sentinelops-ingestion)
+- [8 — Security Model: RBAC Architecture](#8--security-model-rbac-architecture)
+- [9 — Source Control Architecture](#9--source-control-architecture)
+- [10 — UI Builder: Next Experience Workspaces](#10--ui-builder-next-experience-workspaces)
+- [11 — Reporting and Observability](#11--reporting-and-observability)
+- [12 — Scaling Considerations](#12--scaling-considerations)
+- [Artifact Cross-Reference](#artifact-cross-reference)
+
+---
 
 SentinelOps is a **scoped ServiceNow application** implementing an automated CSDM governance and pipeline readiness engine. It is not a GRC platform. It is not ITOM. It is a **precision enforcement gate** that sits between development completion and production promotion — wiring telemetry ingestion, CSDM graph traversal, weighted policy scoring, and approval orchestration into one auditable pipeline.
 
@@ -335,6 +352,11 @@ STEP 10 — If approved → state = 40 (Approved), notify
 STEP 11 — If rejected → state = 50 (Blocked), notify
 ```
 
+<p align="center">
+  <img src="../img/fl001.png" alt="FL001 Assessment Orchestration Flow" width="820" />
+</p>
+<p align="center"><em>FL001 Assessment Orchestration — submission trigger through approval routing, with CMDB/CSDM gate branches and remediation handoff</em></p>
+
 ### SF001: CMDB Validation
 
 Validates that the `service_ci` exists in `cmdb_ci_service` and has required CI relationships in `cmdb_rel_ci`. Returns `cmdb_valid` and a human-readable `cmdb_message` for the notification template.
@@ -342,6 +364,11 @@ Validates that the `service_ci` exists in `cmdb_ci_service` and has required CI 
 ### SF002: CSDM Validation
 
 Invokes `CSDMTraversalEngine` to walk the CI relationship graph. Returns `csdm_valid` and gap details. If gaps are found, the output feeds into SF003.
+
+<p align="center">
+  <img src="../img/sf002.png" alt="SF002 CSDM Validation Subflow" width="820" />
+</p>
+<p align="center"><em>SF002 CSDM Validation — CSDMTraversalEngine graph walk, relationship gap detection, and SF003 remediation task handoff</em></p>
 
 ### SF003: Generate Remediation Task
 
