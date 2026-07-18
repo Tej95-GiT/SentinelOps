@@ -25,7 +25,7 @@ Thank you for your interest in contributing to SentinelOps. This document outlin
 ### Prerequisites
 
 - ServiceNow Personal Developer Instance (PDI) — request at [developer.servicenow.com](https://developer.servicenow.com)
-- ServiceNow instance on **Zurich release**
+- ServiceNow instance on **Australia release**
 - GitHub account with repository access
 
 ### Setup

@@ -1,7 +1,7 @@
 # SentinelOps — Technical Architecture
 
 > **Scope:** `x_1858206_sentin_0`
-> **Platform:** ServiceNow Zurich Release
+> **Platform:** ServiceNow Australia Release
 > **Audience:** Principal Architects, Hiring Managers, Senior Engineers
 > **Source of Truth:** `50e1684c3b8d8310982a9dc643e45a23/` (ServiceNow-managed)
 > **Human Layer:** `src/`, `docs/`, `flows/`, `atf/` (manually maintained)

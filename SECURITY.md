@@ -6,7 +6,7 @@ SentinelOps is a ServiceNow scoped application maintained for the following plat
 
 | ServiceNow Release | Supported |
 |---|---|
-| Zurich | ✅ |
+| Australia | ✅ |
 | Previous releases | ❌ |
 
 ---

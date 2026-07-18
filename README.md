@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/SentinelOps0.png" width="400" alt="SentinelOps Logo" />
+</p>
+
 <div align="center">
 
 # SentinelOps
@@ -5,7 +9,7 @@
 **Automated CSDM Governance & Pipeline Readiness Engine for ServiceNow**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![ServiceNow: Zurich](https://img.shields.io/badge/ServiceNow-Zurich%20Release-00b559?logo=servicenow&logoColor=white)](https://www.servicenow.com)
+[![ServiceNow: Australia](https://img.shields.io/badge/ServiceNow-Australia%20Release-00b559?logo=servicenow&logoColor=white)](https://www.servicenow.com)
 [![Build: Passing](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/Tej95-GiT/SentinelOps/actions)
 [![Scope](https://img.shields.io/badge/Scope-x__1858206__sentin__0-7c3aed)](./docs/architecture.md)
 [![UI: Next Experience](https://img.shields.io/badge/UI-Next%20Experience-f97316)](https://www.servicenow.com/products/next-experience.html)
@@ -45,15 +49,17 @@ If the answer is no, the release is blocked — automatically, traceably, and wi
 
 ## Screenshots
 
-> Place your screenshots in `./assets/` and update the paths below.
-
-| Governance Workspace | Assessment Intelligence (Approvals) |
+| Governance Workspace | Assessment Intelligence — Approvals |
 |:---:|:---:|
-| ![Governance Workspace Dashboard](./assets/governance_workspace_dashboard.png) | ![Assessment Intelligence Approvals](./assets/assessment_intelligence_approvals.png) |
+| ![Governance Workspace Dashboard](img/Governance%20Workspace%20dashboard.png) | ![Assessment Intelligence Main](img/Assessment%20intellignece%20main%20page.png) |
 
-| Assessment Detail — Agent Assist & CSDM | Studio Inventory |
+| Agent Assist & Now Assist | CSDM Compliance Tab |
 |:---:|:---:|
-| ![Assessment Intelligence Tabs](./assets/assessment_intelligence_tabs.png) | ![Studio Inventory](./assets/studio_inventory_view.png) |
+| ![Agent Assist](img/Assessment%20intellignece%20main%20page%20now%20assist%20func.png%20.png) | ![CSDM Compliance](img/Assessment%20intellignece%20main%20page%20tab%203%20CSDM%20complience.png) |
+
+| Governance Evidence Tab | ATF Test Results |
+|:---:|:---:|
+| ![Governance Evidence](img/Assessment%20intellignece%20main%20page%20tab%202%20governance%20evidance.png) | ![ATF Results](img/SentinelOps%20End-to-End%20Governance%20Engine%20Validation%20ATF%20Test%20Results.png) |
 
 ---
 
@@ -315,7 +321,7 @@ See [`docs/implementation-roadmap.md`](./docs/implementation-roadmap.md) for the
 
 | Layer | Technology |
 |---|---|
-| Platform | ServiceNow Zurich Release (Scoped Application) |
+| Platform | ServiceNow Australia Release (Scoped Application) |
 | App Scope | `x_1858206_sentin_0` |
 | Data Model | Task-extended assessment + 4 custom tables |
 | Backend Logic | Script Includes (OOP), 12 Business Rules |
@@ -333,7 +339,7 @@ See [`docs/implementation-roadmap.md`](./docs/implementation-roadmap.md) for the
 
 ### Prerequisites
 
-- ServiceNow instance on **Zurich release** or later
+- ServiceNow instance on **Australia release** or later
 - `admin` role on the target instance
 - GitHub credentials configured in ServiceNow Source Control settings
 
